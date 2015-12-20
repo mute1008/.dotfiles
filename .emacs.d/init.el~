@@ -1,0 +1,6 @@
+;;startup
+(setq inhibit-startup-message t)
+;;menu bar
+(menu-bar-mode 0)
+;;scroll
+(setq scroll-conservatively 1)

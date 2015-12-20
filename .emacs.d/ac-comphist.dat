@@ -1,0 +1,168 @@
+((("promptinit" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("compinit" .
+   [1 0 0 0 0 0 0 0])
+  ("autoload" .
+   [1 0 0 0 0 1 0 0])
+  ("math" .
+   [1 0 0 0])
+  ("sqrt" .
+   [9 0 0 0])
+  ("cout" .
+   [3 0 1 0])
+  ("ac-config-default" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("auto-complete-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("scala-mode" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("scala-mode2" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("widgetFile" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("defaultLayout" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("retPkt" .
+   [1 0 0 0 0 0])
+  ("conn" .
+   [2 0 0 0])
+  ("putStrLn" .
+   [0 0 0 0 0 0 0 1])
+  ("putStr" .
+   [0 0 0 0 0 1])
+  ("main" .
+   [1 0 0 0])
+  ("Network" .
+   [0 0 0 1 0 0 0])
+  ("pass" .
+   [1 0 0 0])
+  ("Text" .
+   [0 0 0 1])
+  ("fcitx" .
+   [2 0 0 0 0])
+  ("elscreen-display-screen-number" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("elscreen-default-buffer-name" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("elscreen-get-alist-to-nickname" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("elscreen" .
+   [1 0 0 0 0 0 0 0])
+  ("elscreen-tab-format" .
+   [1 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("initial-scratch-message" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("t" .
+   [1])
+  ("turn-on-haskell-indentation" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("hadle" .
+   [0 0 0 1 0])
+  ("System.IO" .
+   [0 0 5 1 0 0 0 0 0])
+  ("import" .
+   [0 0 2 1 3 0])
+  ("twittering-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tabbar-backward" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("tabbar-backward-tab" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("tabbar-forward-tab" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("tabbar-forward" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("kbd" .
+   [3 0 1])
+  ("tabbar-mwheel-mode" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [9 0 0])
+  ("tabbar-buffer-groups-function" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("tabbar-buffer-groups" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("setq" .
+   [10 0 2 3])
+  ("set" .
+   [1 0 0])
+  ("return" .
+   [0 0 1 0 2 1])
+  ("include" .
+   [0 0 0 0 2 1 0])
+  ("require" .
+   [7 0 0 1 0 0 1])
+  ("nav" .
+   [1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 3 1 1 0 0])
+  ("tabbar" .
+   [2 1 0 1 1 0])
+  ("tabbar-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  (":underline" .
+   [1 0 0 0 0 0 0 0 1 0])
+  ("underline" .
+   [1 0 0 0 0 0 0 0 0])
+  ("twittering-icon-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("twittering-timer-interval" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("twittering-url-show-status" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("twittering-status-format" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("w3m-load-list" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("turn-on-haskell-simple-indent" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("bindkey" .
+   [1 0 0 0 0 0 0])
+  ("elscreen--set-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("elscreen-tab-display-control" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0])
+  ("elscreen-tab-display-kill-screen" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("elscreen-color-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PATH" .
+   [0 0 1 3])
+  ("export" .
+   [0 0 0 0 0 1])
+  ("ibus" .
+   [2 0 0 0])
+  ("spawn" .
+   [1 0 0 0 0])
+  ("theText" .
+   [2 0 0 0 0 0 0])
+  ("getEchoR" .
+   [0 0 0 0 0 0 0 1])
+  ("setq-default" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("indent-tabs-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("Import" .
+   [1 0 0 0 0 0])
+  ("encode" .
+   [1 0 0 0 0 0])
+  ("msg" .
+   [1 0 0])
+  ("namespace" .
+   [0 0 0 0 1 0 0 0 0])
+  ("num" .
+   [6 0 0])
+  ("square_num" .
+   [1 0 1 5 0 0 0 0 1 0])
+  ("square_a" .
+   [5 0 0 9 0 0 0 3])
+  ("square_b" .
+   [12 0 1 0 0 0 0 0])
+  ("setopt" .
+   [1 0 0 0 0 0])))

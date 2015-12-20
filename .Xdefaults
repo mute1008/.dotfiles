@@ -1,0 +1,8 @@
+URxvt*font: xft:Source Code Pro for Powerline:Regular:size=12:antialias=true, \
+	    xft:VL Gothic:size=12
+URxvt*background: Black
+URxvt*foreground: White
+URxvt.scrollBar: false
+
+URxvt.depth: 32
+URxvt.background: [70]#000000

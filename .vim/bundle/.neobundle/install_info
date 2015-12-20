@@ -1,0 +1,2 @@
+3.0
+{'neobundle.vim': {'checked_time': 1450592356, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/home/mute/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': '1450483919'}, 'lightline.vim': {'checked_time': 1450592396, 'installed_uri': 'https://github.com/itchyny/lightline.vim.git', 'installed_path': '/home/mute/.vim/bundle/lightline.vim', 'revisions': {'1449886249': '4b1dea2efc7d1b546af5e6ddbe804c45d4296ea5'}, 'updated_time': '1449886249'}}
