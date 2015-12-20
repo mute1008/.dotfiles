@@ -17,6 +17,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jpo/vim-railscasts-theme'
+
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
@@ -33,10 +36,15 @@ NeoBundleCheck
 
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'jellybeans',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+syntax on
+set t_Co=256
+colorscheme railscasts
+set number
