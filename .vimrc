@@ -48,3 +48,10 @@ syntax on
 set t_Co=256
 colorscheme railscasts
 set number
+set shortmess+=I
+set noswapfile
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+autocmd VimEnter * execute 'NERDTree'
+let NERDTreeShowHidden = 1

@@ -1,2 +1,4 @@
 lightline.vim
 neobundle.vim
+nerdtree
+vim-railscasts-theme

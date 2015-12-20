@@ -1,4 +1,4 @@
-PS1='\[\e[0;37m\]\u@\h:\w${text}$\[\e[m\] '
+PS1='[\[\e[1;34m\]\u\[\e[00m\]@:\W]\$ '
 
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
