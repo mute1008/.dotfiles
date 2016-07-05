@@ -1,28 +1,20 @@
 if &compatible
-  set nocompatible
+      set nocompatible
 endif
+set runtimepath^=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+call dein#begin(expand('~/.vim/dein'))
 
-if dein#load_state(expand('~/.vim/dein'))
-    call dein#begin(expand('~/.vim/dein'))
+"プラグインを消すには
+"dein#addを消して、ディレクトリを削除する
+call dein#add('Shougo/dein.vim')
+call dein#add('rust-lang/rust.vim')
+call dein#add('sophacles/vim-processing')
 
-    " プラグインリストを収めたTOMLファイル
-    let g:dein_dir = expand('~/.vim/dein')
-    let s:toml = g:dein_dir . '/dein.toml'
-    let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+call dein#end()
 
-    " TOMLファイルにpluginを記述
-    call dein#load_toml(s:toml, {'lazy': 0})
-    call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-    call dein#end()
-    call dein#save_state()
-endif
-
-" 未インストールを確認
 if dein#check_install()
-    call dein#install()
+  call dein#install()
 endif
 
 filetype plugin indent on

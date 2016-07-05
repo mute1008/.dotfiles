@@ -1,3 +1,0 @@
-['/home/mute/.config/nvim/init.vim']
-{"rust.vim": {"lazy": 0, "path": "/home/mute/.vim/dein/repos/github.com/rust-lang/rust.vim", "repo": "rust-lang/rust.vim", "rtp": "/home/mute/.vim/dein/repos/github.com/rust-lang/rust.vim", "normalized_name": "rust", "type": "git", "merged": 1, "sourced": 1, "name": "rust.vim"}}
-{}
