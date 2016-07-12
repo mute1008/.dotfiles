@@ -1,2 +1,3 @@
-sudo apt install texlive texlive-full texlive-luatex pandoc <br>
-みたいなことをする
+.vim/deinのなかでdein.vimをインストールする<br>
+sh install.sh ~/.vim/dein/repos/github.com/Shougo/dein.vim
+
