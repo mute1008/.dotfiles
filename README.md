@@ -1,3 +1,4 @@
 .vim/deinのなかでdein.vimをインストールする<br>
-sh install.sh ~/.vim/dein/repos/github.com/Shougo/dein.vim
-
+$ mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
+$ git clone https://github.com/Shougo/dein.vim.git \
+    ~/.vim/dein/repos/github.com/Shougo/dein.vim
