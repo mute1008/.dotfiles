@@ -12,6 +12,7 @@ call dein#add('rust-lang/rust.vim')
 call dein#add('sophacles/vim-processing')
 call dein#add('derekwyatt/vim-scala')
 call dein#add('thinca/vim-quickrun')
+call dein#add('kana/vim-filetype-haskell')
 
 call dein#end()
 
