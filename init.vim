@@ -30,3 +30,8 @@ set shiftwidth=4
 let g:quickrun_config={'*':{'split': ''}}
 set splitbelow
 nnoremap <Leader>q :<C-u>bw! \[quickrun\ output\]<CR>
+
+let g:quickrun_config.cpp = {
+            \   'command':'clang++',
+            \   'cmdopt':'-std=c+11'
+            \}
