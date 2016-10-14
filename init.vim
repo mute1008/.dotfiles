@@ -33,5 +33,5 @@ nnoremap <Leader>q :<C-u>bw! \[quickrun\ output\]<CR>
 
 let g:quickrun_config.cpp = {
             \   'command':'clang++',
-            \   'cmdopt':'-std=c+11'
+            \   'cmdopt':'-std=c++11'
             \}
