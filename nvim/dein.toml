@@ -1,0 +1,13 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    nnoremap D :Denite file_rec<Esc>
+    nnoremap L :Denite line<Esc>
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
