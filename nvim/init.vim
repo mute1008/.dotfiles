@@ -1,10 +1,6 @@
 filetype plugin indent on
 set tabstop=4 autoindent expandtab shiftwidth=4 number
 let mapleader=','
-autocmd BufNewFile,BufRead *.py nnoremap <Leader>r :<C-u>!python3 %<CR>
-autocmd BufNewFile,BufRead *.cpp nnoremap <Leader>r :<C-u>!clang++ -std=c++11 % && ./a.out && rm -f a.out<CR>
-autocmd BufNewFile,BufRead *.java nnoremap <Leader>r :<C-u>!cd %:h && javac % && java %:r && rm -f *.class<CR>
-autocmd BufNewFile,BufRead *.rs nnoremap <Leader>r :<C-u>!rustc % -o a && ./a && rm a<CR>
 
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -33,4 +29,3 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-

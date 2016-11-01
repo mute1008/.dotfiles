@@ -1,3 +1,4 @@
+
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
