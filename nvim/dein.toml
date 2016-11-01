@@ -11,3 +11,6 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
