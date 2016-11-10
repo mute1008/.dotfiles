@@ -2,6 +2,10 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = 'colorscheme iceberg'
+
+[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
 nnoremap D :Denite file_rec<Esc>
