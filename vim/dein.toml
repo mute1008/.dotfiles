@@ -15,7 +15,7 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
-    nnoremap q :ccl<CR>
+    nnoremap <Leader>q :ccl<CR>
     let g:quickrun_config = get(g:, 'quickrun_config', {})
     if filereadable('in')
         nnoremap <Leader>r :ccl<CR> :write<CR> :QuickRun<in<CR>
