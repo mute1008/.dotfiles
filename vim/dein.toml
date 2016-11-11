@@ -19,12 +19,12 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
-    nnoremap <Leader>q :ccl<CR>
+    nnoremap <silent> q :ccl<CR>
     let g:quickrun_config = get(g:, 'quickrun_config', {})
     if filereadable('in')
-        nnoremap <Leader>r :ccl<CR> :write<CR> :QuickRun<in<CR>
+        nnoremap <silent> <Leader>r :ccl<CR> :write<CR> :QuickRun<in<CR>
     else
-        nnoremap <Leader>r :ccl<CR> :write<CR> :QuickRun<CR>
+        nnoremap <silent> <Leader>r :ccl<CR> :write<CR> :QuickRun<CR>
     endif
     let g:quickrun_config._ = {
     \   'outputter' : 'error',
@@ -36,3 +36,6 @@ hook_add = '''
     \   'cmdopt':'-std=c++11'
     \}
 '''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
