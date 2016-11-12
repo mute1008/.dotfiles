@@ -33,6 +33,6 @@ hook_add = '''
     \ }
     let g:quickrun_config.cpp = {
     \   'command':'clang++',
-    \   'cmdopt':'-std=c++11'
+    \   'cmdopt':'-std=c++11 -I/opt/boost/gcc/include -L/opt/boost/gcc/lib'
     \}
 '''
