@@ -36,6 +36,3 @@ hook_add = '''
     \   'cmdopt':'-std=c++11'
     \}
 '''
-
-#[[plugins]]
-#repo = 'rust-lang/rust.vim'
