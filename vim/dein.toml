@@ -37,5 +37,5 @@ hook_add = '''
     \}
 '''
 
-[[plugins]]
-repo = 'rust-lang/rust.vim'
+#[[plugins]]
+#repo = 'rust-lang/rust.vim'
