@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
+repo = 'rust-lang/rust.vim'
+
+[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
 nnoremap D :Denite file_rec<Esc>
