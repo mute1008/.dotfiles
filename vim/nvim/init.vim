@@ -1,10 +1,15 @@
+if has('nvim')
+    tnoremap <silent> <ESC> <C-\><C-n>
+    autocmd VimEnter * colorscheme iceberg
+endif
+
+autocmd BufRead,BufNewFile *.rs setfiletype rust
 nnoremap s <Nop>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap s= <C-w>=
 nnoremap sv :sv<CR>
 nnoremap vs :vs<CR>
 nnoremap sw <C-w>w
-tnoremap <silent> <ESC> <C-\><C-n>
 filetype plugin indent on
 set tabstop=4 autoindent expandtab shiftwidth=4 number
 let mapleader=','
@@ -28,6 +33,10 @@ if dein#load_state(s:dein_dir)
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
+  if has('nvim')
+      call dein#add('Shougo/deoplete.nvim')
+  endif
+
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
@@ -38,5 +47,3 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-colorscheme iceberg
