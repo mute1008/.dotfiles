@@ -37,4 +37,7 @@ hook_add = '''
     \   'command':'clang++',
     \   'cmdopt':'-std=c++11 -I/opt/boost/gcc/include -L/opt/boost/gcc/lib'
     \}
+    let g:quickrun_config.cs = {
+    \   'command':'mcs',
+    \}
 '''
