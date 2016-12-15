@@ -41,3 +41,11 @@ hook_add = '''
     \   'command':'mcs',
     \}
 '''
+
+[[plugins]]
+repo = 'neomake/neomake'
+hook_add = '''
+    autocmd! BufWritePost * Neomake
+    let g:neomake_error_sign = {'text': '>>', 'texthl':'Error'}
+    let g:neomake_warning_sign = {'text': '>>', 'texthl': 'Todo'}
+'''
