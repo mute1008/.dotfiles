@@ -3,6 +3,10 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 
 [[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'jsx'
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
