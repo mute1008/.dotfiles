@@ -25,9 +25,9 @@ hook_add = '''
     let g:quickrun_config = get(g:, 'quickrun_config', {})
 
     if filereadable('in')
-        nnoremap <silent> <Leader>r :ccl<CR> :QuickRun<in -mode n<CR>
+        nnoremap <silent> , :ccl<CR> :QuickRun<in -mode n<CR>
     else
-        nnoremap <silent> <Leader>r :ccl<CR> :QuickRun -mode n<CR>
+        nnoremap <silent> , :ccl<CR> :QuickRun -mode n<CR>
     endif
 
     let g:quickrun_config._ = {

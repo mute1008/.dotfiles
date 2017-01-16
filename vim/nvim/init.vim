@@ -12,7 +12,6 @@ nnoremap vs :vs<CR>
 nnoremap sw <C-w>w
 filetype plugin indent on
 set tabstop=4 autoindent expandtab shiftwidth=4 number
-let mapleader=','
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
 
