@@ -5,10 +5,13 @@ on_ft = 'rust'
 [[plugins]]
 repo = 'pangloss/vim-javascript'
 on_ft = 'javascript'
+hook_add = '''
+let g:jsx_ext_required = 0
+'''
 
 [[plugins]]
-repo = 'maxmellon/vim-jsx-pretty'
-on_ft = 'javascript.jsx'
+repo = 'mxw/vim-jsx'
+on_ft = 'javascript'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
