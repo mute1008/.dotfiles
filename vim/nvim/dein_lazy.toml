@@ -3,8 +3,16 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 
 [[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = 'jsx'
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = 'javascript.jsx'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'

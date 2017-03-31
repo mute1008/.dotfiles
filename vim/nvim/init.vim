@@ -3,15 +3,20 @@ if has('nvim')
     autocmd VimEnter * colorscheme iceberg
 endif
 
+autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
+autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.rs setfiletype rust
+
 nnoremap s <Nop>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap s= <C-w>=
 nnoremap sv :sv<CR>
 nnoremap vs :vs<CR>
 nnoremap sw <C-w>w
+
 filetype plugin indent on
-set tabstop=4 autoindent expandtab shiftwidth=4 number
+set tabstop=2 shiftwidth=2 autoindent number
+
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
 
