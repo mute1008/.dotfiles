@@ -10,7 +10,8 @@ repo = 'jonathanfilip/vim-lucius'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
-    nnoremap D :Denite -mode=normal file_rec<Esc>
+    nnoremap <silent>D :Denite -mode=normal file_rec<CR>
+    nnoremap <silent>B :Denite Buffer -mode=normal<CR>
 '''
 
 [[plugins]]
