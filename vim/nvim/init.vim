@@ -2,7 +2,7 @@
 "------command imports-----------------
 "--------------------------------------
 
-source ./commands.vim
+source ~/.config/nvim/commands.vim
 
 "--------------------------------------
 "------main settings-------------------
