@@ -1,9 +1,14 @@
 if has('nvim')
-    tnoremap <silent> <ESC> <C-\><C-n>
+    tnoremap <silent> <ESC> <C-\><C-n> 
+
+    autocmd VimEnter * split | resize 6 | terminal 
+    autocmd VimEnter * call feedkeys("\<Esc>")
+    autocmd VimEnter * call feedkeys("\<C-w>w")
+
+    set background=dark
+    autocmd VimEnter * colorscheme lucius
 endif
 
-set background=dark
-autocmd VimEnter * colorscheme lucius
 
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
