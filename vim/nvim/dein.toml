@@ -5,7 +5,7 @@ repo = 'Shougo/dein.vim'
 repo = 'kassio/neoterm'
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'jonathanfilip/vim-lucius'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'

@@ -3,7 +3,7 @@ if has('nvim')
 endif
 
 set background=dark
-autocmd VimEnter * colorscheme hybrid
+autocmd VimEnter * colorscheme lucius
 
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
