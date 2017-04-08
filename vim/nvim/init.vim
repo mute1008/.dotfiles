@@ -1,14 +1,21 @@
+"--------------------------------------
+"------command imports-----------------
+"--------------------------------------
+
+source ./commands.vim
+
+"--------------------------------------
+"------main settings-------------------
+"--------------------------------------
+
 if has('nvim')
     tnoremap <silent> <ESC> <C-\><C-n> 
 
-    autocmd VimEnter * split | resize 6 | terminal 
-    autocmd VimEnter * call feedkeys("\<Esc>")
-    autocmd VimEnter * call feedkeys("\<C-w>w")
+    autocmd VimEnter * T
 
     set background=dark
     autocmd VimEnter * colorscheme lucius
 endif
-
 
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
