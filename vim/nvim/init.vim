@@ -1,7 +1,9 @@
 if has('nvim')
     tnoremap <silent> <ESC> <C-\><C-n>
-    autocmd VimEnter * colorscheme iceberg
 endif
+
+set background=dark
+autocmd VimEnter * colorscheme hybrid
 
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
