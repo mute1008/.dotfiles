@@ -2,6 +2,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'kassio/neoterm'
+
+[[plugins]]
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
@@ -10,8 +13,7 @@ repo = 'w0ng/vim-hybrid'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
-    nnoremap D :Denite file_rec<Esc>
-    nnoremap L :Denite line<Esc>
+    nnoremap D :Denite -mode=normal file_rec<Esc>
 '''
 
 [[plugins]]
