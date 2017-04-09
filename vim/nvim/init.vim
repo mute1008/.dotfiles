@@ -11,8 +11,6 @@ source ~/.config/nvim/commands.vim
 if has('nvim')
     tnoremap <silent> <ESC> <C-\><C-n> 
 
-    autocmd VimEnter * T
-
     set background=dark
     autocmd VimEnter * colorscheme lucius
 endif
