@@ -40,6 +40,9 @@ hook_add = '''
     let g:quickrun_config.cs = {
     \   'command':'mcs',
     \}
+    let g:quickrun_config.python = {
+    \   'command':'python3',
+    \}
 '''
 
 [[plugins]]
