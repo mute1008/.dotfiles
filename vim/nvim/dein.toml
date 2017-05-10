@@ -48,8 +48,18 @@ hook_add = '''
 [[plugins]]
 repo = 'neomake/neomake'
 hook_add = '''
-    autocmd! BufWritePost * Neomake
+    autocmd! BufWritePost,BufEnter * Neomake
     let g:neomake_error_sign = {'text': '>>', 'texthl':'Error'}
     let g:neomake_warning_sign = {'text': '>>', 'texthl': 'Todo'}
+
     let g:neomake_cpp_enable_markers=['clang']
+
+    if findfile('.eslintrc.js', '.;') !=# ''
+      let g:neomake_javascript_enabled_makers=['eslint']
+      let g:neomake_javascript_eslint_maker = {
+          \ 'exe': $PWD . '/node_modules/.bin/eslint',
+          \ 'args': ['-f', 'compact'],
+          \ 'errorformat': '%f: line %l\, col %c\, %m'
+          \ }
+    endif
 '''
