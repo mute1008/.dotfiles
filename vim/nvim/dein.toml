@@ -2,7 +2,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'jonathanfilip/vim-lucius'
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
@@ -63,3 +63,18 @@ hook_add = '''
           \ }
     endif
 '''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  map <C-n> :NERDTree<CR>
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
