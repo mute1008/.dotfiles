@@ -2,6 +2,8 @@
 mkdir -p ~/.config/nvim
 cp ./vim/nvim/* ~/.config/nvim/
 cp ./vim/.vimrc ~/.vimrc
+cp ./.tmux.conf ~/.tmux.conf
+cp ./.bash_profile ~/.bash_profile
 
 # GDB
 if [ `uname` == 'Linux' ]; then
