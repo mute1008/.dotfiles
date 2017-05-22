@@ -4,6 +4,7 @@ cp ./vim/nvim/* ~/.config/nvim/
 cp ./vim/.vimrc ~/.vimrc
 cp ./.tmux.conf ~/.tmux.conf
 cp ./.bash_profile ~/.bash_profile
+cp ./.tmux.conf ~/.tmux.conf
 
 # GDB
 if [ `uname` == 'Linux' ]; then
