@@ -15,6 +15,7 @@ hook_add = '''
 
   nnoremap <silent><C-k>f :Denite -mode=normal file_rec<CR>
   nnoremap <silent><C-k>g :Denite grep -mode=normal<CR>
+  nnoremap <silent><C-k>y :Denite neoyank -mode=normal<CR>
 '''
 
 [[plugins]]
