@@ -3,11 +3,9 @@ alias vim='nvim'
 
 if [ -z $TMUX ]; then
   if [ -z `tmux ls` ]; then
-    echo a
     tmux -2
   else
-    echo b
-    tmux attach
+    tmux attach -d
   fi
   exit
 fi
