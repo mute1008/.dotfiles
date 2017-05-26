@@ -64,14 +64,11 @@ hook_add = '''
 
     let g:neomake_cpp_enable_markers=['clang']
 
-    if findfile('.eslintrc.js', '.;') !=# ''
-      let g:neomake_javascript_enabled_makers=['eslint']
-      let g:neomake_javascript_eslint_maker = {
-          \ 'exe': $PWD . '/node_modules/.bin/eslint',
-          \ 'args': ['-f', 'compact'],
-          \ 'errorformat': '%f: line %l\, col %c\, %m'
-          \ }
-    endif
+    "let g:neomake_javascript_enabled_makers=['standard']
+    let g:neomake_javascript_eslint_maker = {
+        \ 'exe': $PWD . '/node_modules/.bin/standard',
+        \ 'errorformat': '%W  %f:%l:%c: %m'
+        \ }
 '''
 
 [[plugins]]
