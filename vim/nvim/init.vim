@@ -20,7 +20,7 @@ nnoremap vs :vs<CR>
 nnoremap sw <C-w>w
 
 filetype plugin indent on
-set tabstop=2 shiftwidth=2 autoindent expandtab number
+set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a
 
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
