@@ -16,7 +16,7 @@ hook_add = '''
   nnoremap <silent>sf :Denite file_rec<CR>
   nnoremap <silent>sg :Denite grep -mode=normal<CR>
   nnoremap <silent>sy :Denite neoyank -mode=normal<CR>
-  nnoremap <silent>sy :Denite buffer -mode=normal<CR>
+  nnoremap <silent>sb :Denite buffer -mode=normal<CR>
 '''
 
 [[plugins]]
