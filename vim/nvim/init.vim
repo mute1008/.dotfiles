@@ -2,7 +2,7 @@ if has('nvim')
     tnoremap <silent> <ESC> <C-\><C-n> 
 
     set background=dark
-    autocmd VimEnter * colorscheme onedark
+    autocmd VimEnter * colorscheme moneyforward
     autocmd VimEnter * NERDTree
 endif
 
@@ -12,6 +12,7 @@ autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.rs setfiletype rust
 
+set scrolloff=1000
 nnoremap s <Nop>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap s= <C-w>=
