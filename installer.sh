@@ -14,6 +14,4 @@ git config --global mergetool.prompt true
 if [ `uname` == 'Linux' ]; then
   wget -q -O- https://github.com/hugsy/gef/raw/master/gef.sh | sh
   echo "disassembly-flavor intel" >> $HOME/.gdbinit
-
-  mv ~/.bash_profile ~/.bashrc
 fi
