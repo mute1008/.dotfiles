@@ -2,9 +2,9 @@ if has('nvim')
     tnoremap <silent> <ESC> <C-\><C-n> 
 
     set background=dark
-    autocmd VimEnter * colorscheme moneyforward
     autocmd VimEnter * NERDTree
 endif
+autocmd VimEnter * colorscheme moneyforward
 
 let g:netrw_liststyle = 3
 

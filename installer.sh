@@ -6,6 +6,11 @@ cp ./.tmux.conf ~/.tmux.conf
 cp ./.bash_profile ~/.bash_profile
 cp ./.tmux.conf ~/.tmux.conf
 
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global merge.tool vimdiff
+git config --global mergetool.prompt false
+
 if [ `uname` == 'Linux' ]; then
   wget -q -O- https://github.com/hugsy/gef/raw/master/gef.sh | sh
   echo "disassembly-flavor intel" >> $HOME/.gdbinit
