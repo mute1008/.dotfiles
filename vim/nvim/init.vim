@@ -11,6 +11,7 @@ let g:netrw_liststyle = 3
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.rs setfiletype rust
+autocmd BufRead,BufNewFile *.vue setfiletype html
 
 set scrolloff=1000
 nnoremap s <Nop>
