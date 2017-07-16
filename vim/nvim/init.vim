@@ -10,6 +10,7 @@ autocmd VimEnter * colorscheme moneyforward
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.rs setfiletype rust
+autocmd BufRead,BufNewFile *.vue setfiletype html
 
 autocmd FileType php :setlocal expandtab
 autocmd FileType php :setlocal softtabstop=2
