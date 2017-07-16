@@ -13,8 +13,8 @@ autocmd BufRead,BufNewFile *.rs setfiletype rust
 autocmd BufRead,BufNewFile *.vue setfiletype html
 
 autocmd FileType php :setlocal expandtab
-autocmd FileType php :setlocal softtabstop=2
-autocmd FileType php :setlocal shiftwidth=2
+autocmd FileType php :setlocal softtabstop=4
+autocmd FileType php :setlocal shiftwidth=4
 
 set scrolloff=1000
 nnoremap s <Nop>
