@@ -1,16 +1,19 @@
 if has('nvim')
+    " ターミナルをESCで抜けられるように
     tnoremap <silent> <ESC> <C-\><C-n> 
-
-    set background=dark
-    autocmd VimEnter * NERDTree
 endif
-autocmd VimEnter * colorscheme moneyforward
 
-let g:netrw_liststyle = 3
+set background=dark
+" autocmd VimEnter * NERDTree
+autocmd VimEnter * colorscheme moneyforward
 
 autocmd BufRead,BufNewFile *.jsx setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.js setfiletype javascript.jsx
 autocmd BufRead,BufNewFile *.rs setfiletype rust
+
+autocmd FileType php :setlocal expandtab
+autocmd FileType php :setlocal softtabstop=2
+autocmd FileType php :setlocal shiftwidth=2
 
 set scrolloff=1000
 nnoremap s <Nop>
@@ -19,9 +22,6 @@ nnoremap s= <C-w>=
 nnoremap sv :sv<CR>
 nnoremap vs :vs<CR>
 nnoremap sw <C-w>w
-
-filetype plugin indent on
-set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a
 
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -40,10 +40,6 @@ if dein#load_state(s:dein_dir)
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
-  if has('nvim')
-      call dein#add('Shougo/deoplete.nvim')
-  endif
-
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
@@ -54,3 +50,7 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+syntax on
+filetype plugin indent on
+set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a

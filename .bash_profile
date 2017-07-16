@@ -1,7 +1,3 @@
-alias ls='ls -G'
-alias vim='nvim'
-alias ls='ls --color'
-
 if [ -z $TMUX ]; then
   if [ -z `tmux ls` ]; then
     tmux -2
@@ -10,3 +6,7 @@ if [ -z $TMUX ]; then
   fi
   exit
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

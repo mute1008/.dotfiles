@@ -1,17 +1,34 @@
 #!/bin/bash
+
+# ------------------------------------ #
+echo "dotfiles setting"
 mkdir -p ~/.config/nvim
 cp ./vim/nvim/* ~/.config/nvim/
-cp ./vim/.vimrc ~/.vimrc
+
 cp ./.tmux.conf ~/.tmux.conf
 cp ./.bash_profile ~/.bash_profile
-cp ./.tmux.conf ~/.tmux.conf
+# ------------------------------------ #
 
-git config --global diff.tool vimdiff
-git config --global difftool.prompt true
-git config --global merge.tool vimdiff
-git config --global mergetool.prompt true
+# ------------------------------------ #
+# vimとnvimで設定ファイルの共通化
+rm -r ~/.vim # シンボリックリンクの削除
+rm ~/.vimrc
 
+ln -s ~/.config/nvim ~/.vim  # vimの設定にnvimの設定をシンボリックリンク
+ln -s ~/.config/nvim/init.vim ~/.vimrc 
+# ------------------------------------ #
+
+# ------------------------------------ #
+echo "git setting"
+git config --global user.name mute1997
+git config --global user.email mute1008@gmail.com
+# ------------------------------------ #
+
+# ------------------------------------ #
+# OSごとにlsの設定を追加
 if [ `uname` == 'Linux' ]; then
-  wget -q -O- https://github.com/hugsy/gef/raw/master/gef.sh | sh
-  echo "disassembly-flavor intel" >> $HOME/.gdbinit
+  echo "alias ls='ls --color'" >> ~/.bash_profile
+else
+  echo "alias ls='ls -G'" >> ~/.bash_profile
 fi
+# ------------------------------------ #
