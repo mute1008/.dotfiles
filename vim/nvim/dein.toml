@@ -20,17 +20,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/neoyank.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-hook_add = '''
-  if has('nvim')
-    let g:deoplete#enable_at_startup = 1
-   end
-'''
-
-[[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
     nnoremap <silent>q :ccl<CR>
@@ -69,7 +58,6 @@ hook_add = '''
 
     let g:neomake_cpp_enable_markers=['clang']
 
-    "let g:neomake_javascript_enabled_makers=['standard']
     let g:neomake_javascript_eslint_maker = {
         \ 'exe': 'standard',
         \ 'errorformat': '%W  %f:%l:%c: %m'
