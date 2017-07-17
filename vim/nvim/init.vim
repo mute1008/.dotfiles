@@ -74,10 +74,32 @@ set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double
 " 参考 : http://io-fia.blogspot.jp/2012/11/vimvimrc.html
 " -----------------------------------------------------
 set completeopt=menuone "補完候補が一つでもポップアップする
+
+" キーが押されたらキーワード補完
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap " . k . " " . k . "<C-N><C-P>"
 endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
-imap <expr> . pumvisible() ? "\<C-E>.\<C-X>\<C-O>\<C-P>" : ".\<C-X>\<C-O>\<C-P>"
+" タブを押したらオムニ補完
+" 参考 : http://vim.wikia.com/wiki/Smart_mapping_for_tab_completion
+function! TabComplete()
+  let line = getline('.')                         " current line
+
+  let substr = strpart(line, -1, col('.')+1)      " from the start of the current
+                                                  " line to one character right
+                                                  " of the cursor
+  let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
+  if (strlen(substr)==0)                          " nothing to match on empty string
+    return "\<tab>"
+  endif
+  let has_slash = match(substr, '\/') != -1       " position of slash, if any
+  if ( has_slash )
+    return "\<C-X>\<C-F>\<C-P>"                         " file matching
+  else
+    return "\<C-X>\<C-O>\<C-P>"                         " plugin matching
+  endif
+endfunction
+
+inoremap <tab> <c-r>=TabComplete()<CR>
 " -----------------------------------------------------
