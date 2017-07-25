@@ -24,7 +24,6 @@ on_ft = 'javascript'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-# pythonのオムニ補完
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
+repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
