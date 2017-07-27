@@ -65,5 +65,5 @@ endif
 " -----------------------------------------------------
 syntax on
 filetype plugin indent on
-set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double
+set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double smartindent
 " -----------------------------------------------------
