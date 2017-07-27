@@ -48,19 +48,16 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 0
-let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_camel_case = 0
 let g:deoplete#enable_ignore_case = 0
 let g:deoplete#enable_smart_case = 1
-let g:deoplete#max_list = 10
 '''
+on_i = 1
 
 [[plugins]]
 repo = 'neomake/neomake'
 hook_add = '''
     autocmd! BufWritePost,BufEnter * Neomake
-    let g:neomake_error_sign = {'text': '>>', 'texthl':'Error'}
-    let g:neomake_warning_sign = {'text': '>>', 'texthl': 'Todo'}
 
     let g:neomake_cpp_enable_markers=['clang']
 
@@ -98,16 +95,4 @@ hook_add = '''
     let g:quickrun_config.python = {
     \   'command':'python3',
     \}
-'''
-
-[[plugins]]
-repo = 'Shougo/neosnippet'
-hook_add = '''
-imap <expr><TAB>
-\ pumvisible() ? "\<C-n>" :
-\ neosnippet#expandable_or_jumpable() ?
-\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
 '''

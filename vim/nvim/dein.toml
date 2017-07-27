@@ -5,9 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'anoike/vim-moneyforward'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
   call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
