@@ -98,3 +98,6 @@ let g:deoplete#omni_patterns.php =
 let g:deoplete#omni_patterns.javascript =
 \ '[.]'
 '''
+
+[[plugins]]
+repo = 'Shougo/vinarise.vim'
