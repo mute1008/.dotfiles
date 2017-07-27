@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'anoike/vim-moneyforward'
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
   call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
@@ -18,86 +21,3 @@ hook_add = '''
   nnoremap <silent>sy :Denite neoyank -mode=normal<CR>
   nnoremap <silent>sb :Denite buffer -mode=normal<CR>
 '''
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-    nnoremap <silent>q :ccl<CR>
-    let g:quickrun_config = get(g:, 'quickrun_config', {})
-
-    if filereadable('in')
-        nnoremap <silent> , :ccl<CR> :QuickRun<in -mode n<CR>
-    else
-        nnoremap <silent> , :ccl<CR> :QuickRun -mode n<CR>
-    endif
-
-    let g:quickrun_config._ = {
-    \   'outputter' : 'error',
-    \   'outputter/error/success' : 'quickfix',
-    \   'outputter/error/error'   : 'quickfix',
-    \   'outputter/buffer/split'  : ':rightbelow 8sp',
-    \ }
-    let g:quickrun_config.cpp = {
-    \   'command':'clang++',
-    \   'cmdopt':'-std=c++11'
-    \}
-    let g:quickrun_config.cs = {
-    \   'command':'mcs',
-    \}
-    let g:quickrun_config.python = {
-    \   'command':'python3',
-    \}
-'''
-
-[[plugins]]
-repo = 'neomake/neomake'
-hook_add = '''
-    autocmd! BufWritePost,BufEnter * Neomake
-    let g:neomake_error_sign = {'text': '>>', 'texthl':'Error'}
-    let g:neomake_warning_sign = {'text': '>>', 'texthl': 'Todo'}
-
-    let g:neomake_cpp_enable_markers=['clang']
-
-    let g:neomake_javascript_eslint_maker = {
-        \ 'exe': 'standard',
-        \ 'errorformat': '%W  %f:%l:%c: %m'
-        \ }
-'''
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  map <C-n> :NERDTreeToggle<CR>
-'''
-
-[[plugins]]
-repo = 'jistr/vim-nerdtree-tabs'
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 0
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_camel_case = 0
-let g:deoplete#enable_ignore_case = 0
-let g:deoplete#enable_refresh_always = 0
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#max_list = 10
-
-
-let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.php =
-\ '[_]'
-let g:deoplete#omni_patterns.javascript =
-\ '[.]'
-'''
-
-[[plugins]]
-repo = 'Shougo/vinarise.vim'
