@@ -32,15 +32,6 @@ on_ft = 'python'
 repo = 'Shougo/vinarise.vim'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  map <C-n> :NERDTreeToggle<CR>
-  autocmd vimenter * if !argc() | NERDTree | endif
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-'''
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
@@ -92,4 +83,11 @@ hook_add = '''
     let g:quickrun_config.python = {
     \   'command':'python3',
     \}
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  map <C-n> :NERDTreeToggle<CR>
+  autocmd vimenter * if !argc() | NERDTree | endif
 '''
