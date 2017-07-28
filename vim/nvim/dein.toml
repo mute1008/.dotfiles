@@ -5,6 +5,12 @@ repo = 'Shougo/dein.vim'
 repo = 'anoike/vim-moneyforward'
 
 [[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
   call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])

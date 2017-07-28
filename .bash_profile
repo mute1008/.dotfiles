@@ -12,3 +12,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 alias vim='nvim'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

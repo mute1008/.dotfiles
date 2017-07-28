@@ -32,3 +32,9 @@ else
   echo "alias ls='ls -G'" >> ~/.bash_profile
 fi
 # ------------------------------------ #
+
+# ------------------------------------ #
+# fzfのインストール
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+yes | ~/.fzf/install
+# ------------------------------------ #

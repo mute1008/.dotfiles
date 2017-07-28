@@ -35,13 +35,10 @@ repo = 'Shougo/vinarise.vim'
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   map <C-n> :NERDTreeToggle<CR>
+  autocmd vimenter * if !argc() | NERDTree | endif
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 '''
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
