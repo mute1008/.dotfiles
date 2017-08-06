@@ -65,18 +65,7 @@ curl -O http://tamacom.com/global/global-6.5.7.tar.gz
 tar xvf global-6.5.7.tar.gz
 cd global-6.5.7
 ./configure && make && sudo make install
-rm -rf global-6.5.7 global-6.5.7.tar.gz && cd ..
-# ------------------------------------ #
-
-
-# ------------------------------------ #
-# global-pygments-pluginのインストール
-pyenv global 2.7.13
-pyenv global
-git clone https://github.com/yoshizow/global-pygments-plugin
-cd global-pygments-plugin
-./reconf.sh && ./configure && make && sudo make install
-curl -O https://raw.githubusercontent.com/yoshizow/global-pygments-plugin/master/sample.globalrc
-cp sample.globalrc ~/.globalrc
-rm -rf global-pygments-plugin && pyenv global 3.6.1 && cd ..
+cd .. && rm -rf global-6.5.7 global-6.5.7.tar.gz
+sudo sed -ie "1s/.*/#\!\/usr\/bin\/env python/g" /usr/local/share/gtags/script/pygments_parser.py
+curl -O ~/.globalrc https://github.com/yoshizow/global-pygments-plugin/blob/master/sample.globalrc
 # ------------------------------------ #
