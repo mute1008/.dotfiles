@@ -91,3 +91,9 @@ hook_add = '''
   map <C-n> :NERDTreeToggle<CR>
   autocmd vimenter * if !argc() | NERDTree | endif
 '''
+
+[[plugins]]
+repo = 'zebult/auto-gtags.vim'
+hook_add = '''
+  let g:auto_update_gtags = 1
+'''
