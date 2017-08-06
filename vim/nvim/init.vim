@@ -3,11 +3,19 @@ if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n> 
 endif
 
-
 " colorscheme設定
 " -----------------------------------------------------
 set background=dark
 autocmd VimEnter * colorscheme moneyforward
+" -----------------------------------------------------
+
+" buffer設定
+" -----------------------------------------------------
+nnoremap b <Nop>
+nnoremap <silent>bb :b#<CR>
+nnoremap <silent>bn :bnext<CR>
+nnoremap <silent>bp :bprevious<CR>
+nnoremap <silent>bd :bd<CR>
 " -----------------------------------------------------
 
 " filetype設定
@@ -26,9 +34,16 @@ set scrolloff=1000 " 常にカーソルが真ん中に来るように
 nnoremap s <Nop>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap s= <C-w>=
+
+" ウインドウ分割
 nnoremap sv :sv<CR>
 nnoremap vs :vs<CR>
-nnoremap sw <C-w>w
+
+" ウインドウ移動
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
 " -----------------------------------------------------
 
 " dein設定
