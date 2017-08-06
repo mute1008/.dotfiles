@@ -67,5 +67,5 @@ cd global-6.5.7
 ./configure && make && sudo make install
 cd .. && rm -rf global-6.5.7 global-6.5.7.tar.gz
 sudo sed -ie "1s/.*/#\!\/usr\/bin\/env python/g" /usr/local/share/gtags/script/pygments_parser.py
-curl -O ~/.globalrc https://github.com/yoshizow/global-pygments-plugin/blob/master/sample.globalrc
+curl -O ~/.globalrc https://raw.githubusercontent.com/yoshizow/global-pygments-plugin/master/sample.globalrc
 # ------------------------------------ #
