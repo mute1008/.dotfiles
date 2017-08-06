@@ -23,8 +23,11 @@ hook_add = '''
   nnoremap <silent>sg :Denite grep -mode=normal<CR>
   nnoremap <silent>sy :Denite neoyank -mode=normal<CR>
   nnoremap <silent>sb :Denite buffer -mode=normal<CR>
-  nnoremap <silent>t :DeniteCursorWord tag -mode=normal<CR>
+	nnoremap <silent>t :DeniteCursorWord -buffer-name=gtags_def gtags_def -mode=normal<CR>
 '''
 
 [[plugins]]
 repo = 'Shougo/Vinarise'
+
+[[plugins]]
+repo = 'ozelentok/denite-gtags'
