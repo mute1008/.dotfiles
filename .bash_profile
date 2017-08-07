@@ -1,3 +1,14 @@
+# alias
+# --------------------------------
+alias vim='nvim `find .`'
+alias vi='nvim `find .`'
+alias ls='ls --color'
+if [ `uname` == 'Darwin' ]; then
+  export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+	alias find=gfind
+	alias xargs=gxargs
+fi
+
 # tmux
 # --------------------------------
 if [ -z $TMUX ]; then
@@ -96,8 +107,3 @@ g () {
   git ${*}
 }
 # --------------------------------
-
-# alias
-# --------------------------------
-alias vim='nvim `find .`'
-alias vi='nvim `find .`'
