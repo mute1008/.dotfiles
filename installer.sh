@@ -2,7 +2,7 @@
 
 # ------------------------------------ #
 mkdir -p ~/.config/nvim
-cp ./vim/nvim/* ~/.config/nvim/
+cp ./nvim/* ~/.config/nvim/
 
 cp ./.tmux.conf ~/.tmux.conf
 cp ./.bash_profile ~/.bash_profile
