@@ -26,46 +26,50 @@ git config --global user.email mute1008@gmail.com
 
 
 # ------------------------------------ #
-# OSごとにlsの設定を追加
-if [ `uname` == 'Linux' ]; then
-  echo "alias ls='ls --color'" >> ~/.bash_profile
-else
-  echo "alias ls='ls -G'" >> ~/.bash_profile
+# Mac用に必要なソフトウェアをインストール
+if [ `uname` == 'Darwin' ]; then
+  brew install coreutils binutils findutils
 fi
 # ------------------------------------ #
 
 
 # ------------------------------------ #
 # fzfのインストール
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-yes | ~/.fzf/install
+if [[ ! `which fzf` ]];then
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  yes | ~/.fzf/install
+fi
 # ------------------------------------ #
 
 
 # ------------------------------------ #
 # pyenvの設定
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-source ~/.bash_profile
-pyenv install 2.7.13
-pyenv install 3.6.1
+if [[ ! `which pyenv` ]];then
+  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  source ~/.bash_profile
+  pyenv install 2.7.13
+  pyenv install 3.6.1
 
-# 2.7.13
-pyenv global 2.7.13
-pip install Pygments
+  # 2.7.13
+  pyenv global 2.7.13
+  pip install Pygments
 
-# 3.6.1
-pyenv global 3.6.1
-pip install neovim
+  # 3.6.1
+  pyenv global 3.6.1
+  pip install neovim
+fi
 # ------------------------------------ #
 
 
 # ------------------------------------ #
-# GNU globalの設定
-curl -O http://tamacom.com/global/global-6.5.7.tar.gz
-tar xvf global-6.5.7.tar.gz
-cd global-6.5.7
-./configure && make && sudo make install
-cd .. && rm -rf global-6.5.7 global-6.5.7.tar.gz
-sudo sed -ie "1s/.*/#\!\/usr\/bin\/env python/g" /usr/local/share/gtags/script/pygments_parser.py
-curl -O ~/.globalrc https://raw.githubusercontent.com/yoshizow/global-pygments-plugin/master/sample.globalrc
+# GNU globalのインストール
+if [[ ! `which global` ]];then
+  curl -O http://tamacom.com/global/global-6.5.7.tar.gz
+  tar xvf global-6.5.7.tar.gz
+  cd global-6.5.7
+  ./configure && make && sudo make install
+  cd .. && rm -rf global-6.5.7 global-6.5.7.tar.gz
+  sudo sed -ie "1s/.*/#\!\/usr\/bin\/env python/g" /usr/local/share/gtags/script/pygments_parser.py
+  curl -O ~/.globalrc https://raw.githubusercontent.com/yoshizow/global-pygments-plugin/master/sample.globalrc
+fi
 # ------------------------------------ #
