@@ -32,11 +32,11 @@ gtags () {
 }
 
 find () {
-  `which find` ${*} 2>/dev/null | fzf
+  `which find` ${*} 2>/dev/null
 }
 
 git_preview() {
-  git diff --color ${*} 1>/dev/null 2>/dev/null
+  git diff --color ${*} 2>/dev/null
 
   # git diffに失敗 -> 
   #   delete this file
@@ -53,13 +53,10 @@ git_preview() {
   fi
 
   # ステージングに上がっているファイル
-  git diff --name-only --cached | xargs echo | grep "${*}"
+  git diff --name-only --cached | xargs echo | grep "${*}" 1>/dev/null 2>/dev/null
   if [[ $? -eq 0 ]]; then
     git diff --color --cached ${*}
   fi
-
-  # 上記以外
-  git diff --color ${*}
 }
 
 g () {
@@ -72,7 +69,7 @@ g () {
 
     return 0
   elif [ "status" == ${1} ]; then
-    #staged files
+    # staged files
     # modified files
     # untracking files
     while gitfiles=`git diff --name-only --cached | xargs -n1 -I{} echo -e "\e[32m{}\e[m" &&
@@ -99,5 +96,5 @@ g () {
 
 # alias
 # --------------------------------
-alias vim='nvim `find .`'
-alias vi='nvim `find .`'
+alias vim='nvim'
+alias vi='nvim'
