@@ -14,15 +14,6 @@ autocmd VimEnter * colorscheme moneyforward
 inoremap <silent> jj <ESC> 
 " -----------------------------------------------------
 
-" buffer設定
-" -----------------------------------------------------
-nnoremap f <Nop>
-nnoremap <silent>fb :b#<CR>
-nnoremap <silent>fn :bnext<CR>
-nnoremap <silent>fp :bprevious<CR>
-nnoremap <silent>fd :bd<CR>
-" -----------------------------------------------------
-
 " filetype設定
 " -----------------------------------------------------
 autocmd BufRead,BufNewFile *.rs setfiletype rust
