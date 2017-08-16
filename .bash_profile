@@ -1,6 +1,9 @@
+PYVERSION2=2.7.13
+PYVERSION3=3.6.1
+
 # alias
 # --------------------------------
-alias vim='nvim'
+alias vim='pyenv global $PYVERSION3 && nvim'
 alias vi='nvim'
 alias ls='ls --color'
 if [ `uname` == 'Darwin' ]; then
@@ -38,70 +41,22 @@ eval "$(pyenv init -)"
 # --------------------------------
 gtags () {
   version=`pyenv global`
-  pyenv global 2.7.13
+  pyenv global $PYVERSION2
   `which gtags` ${1}
-  pyenv global 3.6.1
+  pyenv global $PYVERSION3
 }
 
 find () {
   `which find` ${*} 2>/dev/null
 }
+# --------------------------------
 
-git_preview() {
-  git diff --color ${*} 2>/dev/null
-
-  # git diffに失敗 -> 
-  #   delete this file
-  if [[ $? -ne 0 ]]; then
-    echo "delete this file"
-    return 0
-  fi
-  
-  # ファイルが存在するかつ, ステージングに上がっていない
-  git ls-files --others --exclude-standard | xargs echo | grep "${*}" 1>/dev/null 2>/dev/null
-  if [[ $? -eq 0 ]]; then
-    pyenv global 2.7.13 && pygmentize -O style=monokai -f console256 -O encoding=utf-8 -g ${*} && pyenv global 3.6.1
-    return 0
-  fi
-
-  # ステージングに上がっているファイル
-  git diff --name-only --cached | xargs echo | grep "${*}" 1>/dev/null 2>/dev/null
-  if [[ $? -eq 0 ]]; then
-    git diff --color --cached ${*}
-  fi
-}
-
-g () {
-  if [ "checkout" == ${1} ]; then
-    git ${*} `git branch --all | fzf | sed "s/remotes\/origin\///g" | sed "s/ //g"` 2>/dev/null 1>/dev/null
-    echo -n "Your branch is up-to-date with"
-
-    branch=`git rev-parse --abbrev-ref @`
-    echo -e '\e[33m '$branch' \e[m'
-
-    return 0
-  elif [ "status" == ${1} ]; then
-    # staged files
-    # modified files
-    # untracking files
-    while gitfiles=`git diff --name-only --cached | xargs -n1 -I{} echo -e "\e[32m{}\e[m" &&
-                    git diff --name-only | xargs -n1 -I{} echo -e "\e[31m{}\e[m" &&
-                    git ls-files --others --exclude-standard | xargs -n1 -I{} echo -e "\e[31m{}\e[m"` &&
-          out=`echo -e $gitfiles | xargs -n1 echo -e |
-          fzf --expect=ctrl-c,ctrl-a,enter --ansi --preview 'source ~/.bash_profile && git_preview {}'`; do
-
-      body=`echo $out | sed -e "s/.* //g"`
-      if [[ `echo $out | grep ctrl-c` ]]; then
-        return 0
-      elif [[ `echo $out | grep ctrl-a` ]];then
-        git add $body
-        continue
-      fi
-
-      git diff --color $body | less -R
-    done
-  fi
-
-  git ${*}
-}
+# linuxbrew
+# --------------------------------
+if [ `uname` == 'Linux' ]; then
+	test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$PATH"
+	test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+	test -r ~/.bash_profile && echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.bash_profile
+	echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.profile
+fi
 # --------------------------------

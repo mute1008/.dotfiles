@@ -9,13 +9,18 @@ set background=dark
 autocmd VimEnter * colorscheme moneyforward
 " -----------------------------------------------------
 
+" モード切替
+" -----------------------------------------------------
+inoremap <silent> jj <ESC> 
+" -----------------------------------------------------
+
 " buffer設定
 " -----------------------------------------------------
-nnoremap b <Nop>
-nnoremap <silent>bb :b#<CR>
-nnoremap <silent>bn :bnext<CR>
-nnoremap <silent>bp :bprevious<CR>
-nnoremap <silent>bd :bd<CR>
+nnoremap f <Nop>
+nnoremap <silent>fb :b#<CR>
+nnoremap <silent>fn :bnext<CR>
+nnoremap <silent>fp :bprevious<CR>
+nnoremap <silent>fd :bd<CR>
 " -----------------------------------------------------
 
 " filetype設定
