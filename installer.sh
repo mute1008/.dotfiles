@@ -2,12 +2,23 @@
 
 PYVERSION2=2.7.13
 PYVERSION3=3.6.1
+UPDATE=false
 
 # ------------------------------------ #
 # 依存関係確認
-which git && which ruby && which gcc
-if [[ ! $? ]];then
+`which git && which ruby && which gcc` 2>/dev/null 1>/dev/null
+if [[ ! $? ]]; then
   echo "git, ruby, gccをインストールしてください"
+fi
+# ------------------------------------ #
+
+
+# ------------------------------------ #
+# linuxbrewのインストール
+if [ `uname` == 'Linux' ]; then
+  if [ ! `which brew` ]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+  fi
 fi
 # ------------------------------------ #
 
@@ -39,7 +50,7 @@ git config --global user.email mute1008@gmail.com
 
 
 # ------------------------------------ #
-# Mac用に必要なソフトウェアをインストール
+# MacにGNUのソフトウェアをインストール
 if [ `uname` == 'Darwin' ]; then
   brew install coreutils binutils findutils
 fi
@@ -75,28 +86,31 @@ fi
 
 
 # ------------------------------------ #
-# agのインストール
-if [[ ! `which ag` ]];then
-  # TODO: Linuxだとうまくインストールできないことあり
-fi
+if [ $UPDATE ]; then
+  # agのインストール
+  if [[ ! `which ag` ]];then
+    # TODO: Linuxだとうまくインストールできないことあり
+    echo "pass ag command"
+  fi
 
-# GNU globalのインストール
-if [[ ! `which global` ]];then
-  brew install global
-fi
+  # GNU globalのインストール
+  if [[ ! `which global` ]];then
+    brew install global
+  fi
 
-# tigのインストール
-if [[ ! `which tig` ]];then
-  brew install tig
-fi
+  # tigのインストール
+  if [[ ! `which tig` ]];then
+    brew install tig
+  fi
 
-# neovimのインストール
-if [[ ! `which nvim` ]];then
-  brew install neovim
-fi
+  # neovimのインストール
+  if [[ ! `which nvim` ]];then
+    brew install neovim
+  fi
 
-# tmuxのインストール
-if [[ ! `which tmux` ]];then
-  brew install tmux
+  # tmuxのインストール
+  if [[ ! `which tmux` ]];then
+    brew install tmux
+  fi
 fi
 # ------------------------------------ #
