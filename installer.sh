@@ -29,6 +29,7 @@ cp ./nvim/* ~/.config/nvim/
 
 cp ./.tmux.conf ~/.tmux.conf
 cp ./.bash_profile ~/.bash_profile
+cp ./.gitignore_global ~/.gitignore_global
 # ------------------------------------ #
 
 
@@ -46,6 +47,7 @@ ln -s ~/.config/nvim/init.vim ~/.vimrc
 # gitの設定
 git config --global user.name mute1997
 git config --global user.email mute1008@gmail.com
+git config --global core.excludesfile ~/.gitignore_global
 # ------------------------------------ #
 
 
