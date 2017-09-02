@@ -1,26 +1,7 @@
 #!/bin/bash
 
-PYVERSION2=2.7.13
-PYVERSION3=3.6.1
-UPDATE=false
-
-# ------------------------------------ #
-# 依存関係確認
-`which git && which ruby && which gcc` 2>/dev/null 1>/dev/null
-if [[ ! $? ]]; then
-  echo "git, ruby, gccをインストールしてください"
-fi
-# ------------------------------------ #
-
-
-# ------------------------------------ #
-# linuxbrewのインストール
-if [ `uname` == 'Linux' ]; then
-  if [ ! `which brew` ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
-fi
-# ------------------------------------ #
+export PYVERSION2=2.7.13
+export PYVERSION3=3.6.1
 
 
 # ------------------------------------ #
@@ -28,18 +9,10 @@ mkdir -p ~/.config/nvim
 cp ./nvim/* ~/.config/nvim/
 
 cp ./.tmux.conf ~/.tmux.conf
-cp ./.bash_profile ~/.bash_profile
+cp ./.bashrc ~/.bashrc
 cp ./.gitignore_global ~/.gitignore_global
-# ------------------------------------ #
-
-
-# ------------------------------------ #
-# vimとnvimで設定ファイルの共通化
-rm -r ~/.vim # シンボリックリンクの削除
-rm ~/.vimrc
-
-ln -s ~/.config/nvim ~/.vim  # vimの設定にnvimの設定をシンボリックリンク
-ln -s ~/.config/nvim/init.vim ~/.vimrc 
+cp ./.globalrc ~/.globalrc
+cp -r ./.xmonad ~/.xmonad
 # ------------------------------------ #
 
 
@@ -72,7 +45,7 @@ fi
 # pyenvの設定
 if [[ ! `which pyenv` ]];then
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-  source ~/.bash_profile
+  source ~/.bashrc
   pyenv install $PYVERSION2
   pyenv install $PYVERSION3
 
@@ -88,11 +61,10 @@ fi
 
 
 # ------------------------------------ #
-if [ $UPDATE ]; then
+if [ `uname` == 'Darwin' ]; then
   # agのインストール
   if [[ ! `which ag` ]];then
-    # TODO: Linuxだとうまくインストールできないことあり
-    echo "pass ag command"
+    brew install the_silver_searcher
   fi
 
   # GNU globalのインストール
@@ -105,14 +77,8 @@ if [ $UPDATE ]; then
     brew install tig
   fi
 
-  # neovimのインストール
-  if [[ ! `which nvim` ]];then
-    brew install neovim
-  fi
-
-  # tmuxのインストール
-  if [[ ! `which tmux` ]];then
-    brew install tmux
+  if [[ ! `which ranger` ]];then
+    brew install ranger
   fi
 fi
 # ------------------------------------ #

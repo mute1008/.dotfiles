@@ -1,5 +1,5 @@
-PYVERSION2=2.7.13
-PYVERSION3=3.6.1
+export PYVERSION2=2.7.13
+export PYVERSION3=3.6.1
 
 # alias
 # --------------------------------
@@ -25,13 +25,14 @@ if [ -z $TMUX ]; then
 fi
 # --------------------------------
 
+# 
 # pyenv
 # --------------------------------
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 # --------------------------------
-
+# 
 # fzf
 # --------------------------------
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -49,14 +50,4 @@ gtags () {
 find () {
   `which find` ${*} 2>/dev/null
 }
-# --------------------------------
-
-# linuxbrew
-# --------------------------------
-if [ `uname` == 'Linux' ]; then
-	test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$PATH"
-	test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-	test -r ~/.bash_profile && echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.bash_profile
-	echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.profile
-fi
 # --------------------------------

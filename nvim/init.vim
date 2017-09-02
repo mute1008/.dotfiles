@@ -78,4 +78,12 @@ endif
 syntax on
 filetype plugin indent on
 set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double smartindent hidden
+
+" undo
+set undofile
+set undodir=~/.cache/undo/
+
+" clickboard
+set clipboard+=unnamedplus
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " -----------------------------------------------------
