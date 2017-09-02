@@ -1,5 +1,6 @@
 export PYVERSION2=2.7.13
 export PYVERSION3=3.6.1
+export EDITOR=nvim
 
 # alias
 # --------------------------------
