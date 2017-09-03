@@ -12,6 +12,7 @@ cp ./.tmux.conf ~/.tmux.conf
 cp ./.bashrc ~/.bashrc
 cp ./.gitignore_global ~/.gitignore_global
 cp ./.globalrc ~/.globalrc
+cp ./.Xdefaults ~/.Xdefaults
 cp -r ./.xmonad ~/.xmonad
 # ------------------------------------ #
 

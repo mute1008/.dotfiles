@@ -11,6 +11,7 @@ import XMonad.Hooks.DynamicLog         -- for xmobar
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.FadeWindows
 import XMonad.Hooks.ManageDocks        -- avoid xmobar area import XMonad.Hooks.Place
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.Place
 import XMonad.Layout
 import XMonad.Layout.DragPane          -- see only two window
@@ -30,12 +31,13 @@ import XMonad.Layout.PerWorkspace      -- Configure layouts on a per-workspace
 import XMonad.Layout.TwoPane
 import XMonad.Layout.Simplest
 import XMonad.Layout.SimplestFloat
+import XMonad.Layout.Accordion
 import XMonad.Util.EZConfig            -- removeKeys, additionalKeys
 import XMonad.Util.Run(spawnPipe)      -- spawnPipe, hPutStrLn
 import XMonad.Util.Run
 import Graphics.X11.ExtraTypes.XF86
 
-myWorkspaces = ["  1  ", "  2  ", "  3  ", "  4  ", "  5  "]
+myWorkspaces = ["  1  ", "  2  ", "  3  ", "  4  ", "  5  ", "  6  ", "  7  ", "  8  ", "  9  "]
 modm = mod1Mask
 
 colorOrange    = "#ffa81e"
@@ -44,19 +46,19 @@ colorGreen     = "#88b986"
 colorGray      = "#676767"
 colorWhite     = "#d3d7cf"
 colorGrayAlt   = "#313131"
-colorNormalbg  = "#1a1e1b"
+colorNormalbg  = "#0a0a0a"
 
 main :: IO ()
 
 main = do
     wsbar <- spawnPipe myWsBar
     xmonad $ defaultConfig
-       { borderWidth = 2
+       { borderWidth = 3
        , terminal = "gnome-terminal"
        , normalBorderColor = colorGray
-       , focusedBorderColor = colorOrange
+       , focusedBorderColor = colorWhite
        , startupHook = myStartupHook
-       , manageHook = placeHook myPlacement <+> myManageHookShift <+> myManageHookFloat <+> manageDocks
+       , manageHook = myManageHookShift <+> myManageHookFloat <+> manageDocks
         -- any time Full mode, avoid xmobar area
        , layoutHook = toggleLayouts (noBorders Full) $ avoidStruts $ myLayout
         -- xmobar setting
@@ -78,7 +80,7 @@ main = do
 -- Handle Window behaveior
 myLayout = gaps [(U, 30)] $ (spacing 10 $ ResizableTall 1 (3/100) (3/5) [])
             |||  (spacing 10 $ (dragPane Horizontal (1/10) (1/2)))
-	          |||  Full
+            |||  Simplest
 
 -- Start up (at xmonad beggining), like "wallpaper" or so on
 myStartupHook = do
@@ -94,7 +96,7 @@ myManageHookShift = composeAll
 
 -- new window will created in Float mode
 myManageHookFloat = composeAll
-            [ className =? "MPlayer"          --> doFloat ]
+            [ className =? "MPlayer"          --> doCenterFloat ]
 
 
 myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
@@ -111,5 +113,3 @@ wsPP = xmobarPP { ppOrder               = \(ws:l:t:_)   -> [ws,t]
                 , ppWsSep               = ""
                 , ppSep                 = "  ::: "
                 }
-
-myPlacement = fixed (0.5, 0.5)

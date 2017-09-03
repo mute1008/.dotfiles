@@ -1,6 +1,6 @@
 -- -*- mode:haskell -*-
 Config { font = "xft:MigMix 1P-10:Bold"
-       , bgColor = "#1a1e1b"
+       , bgColor = "#0a0a0a"
        , fgColor = "#676767"
        , position = Top
        , lowerOnStart = False
@@ -33,6 +33,6 @@ Config { font = "xft:MigMix 1P-10:Bold"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{RAM: %memory%  LAN: %wlan0%  Battery: %battery%  <fc=#a8a8b0>%date%</fc> "
+       , template = " %StdinReader% } <fc=#a8a8b0>%date%</fc> {RAM: %memory%  LAN: %wlan0%  Battery: %battery% "
        }
 

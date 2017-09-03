@@ -40,6 +40,12 @@ nnoremap sh <C-w>h
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
+
+" ウインドウリサイズ
+nnoremap s> <C-w>>
+nnoremap s< <C-w><
+nnoremap s+ <C-w>+
+nnoremap s- <C-w>-
 " -----------------------------------------------------
 
 " dein設定
@@ -77,13 +83,12 @@ endif
 " -----------------------------------------------------
 syntax on
 filetype plugin indent on
-set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double smartindent hidden
+set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double smartindent hidden clipboard+=unnamedplus sh=bash
 
 " undo
 set undofile
 set undodir=~/.cache/undo/
 
 " clickboard
-set clipboard+=unnamedplus
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " -----------------------------------------------------
