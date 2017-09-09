@@ -36,17 +36,27 @@ nnoremap sv :sv<CR>
 nnoremap vs :vs<CR>
 
 " ウインドウ移動
-nnoremap sh <C-w>h
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
+nnoremap sh :call MaximumWindow("h")<CR>
+nnoremap sj :call MaximumWindow("j")<CR>
+nnoremap sk :call MaximumWindow("k")<CR>
+nnoremap sl :call MaximumWindow("l")<CR>
 
 " ウインドウリサイズ
 nnoremap s> <C-w>>
 nnoremap s< <C-w><
-nnoremap s+ <C-w>+
-nnoremap s- <C-w>-
-nnoremap s_ <C-w>_
+nnoremap s- <C-w>_
+
+function! MaximumWindow(key)
+  call execute(":wincmd ".a:key)
+
+  if 1 == winheight(0)
+    if a:key == "j" || a:key == "k"
+      call feedkeys("\<C-w>_")
+    else
+      call feedkeys("\<C-w>|")
+    endif
+  endif
+endfunction
 
 " ウインドウ操作
 nnoremap sq <C-w>q

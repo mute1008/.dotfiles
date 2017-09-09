@@ -90,3 +90,6 @@ repo = 'scrooloose/nerdtree'
 hook_add = '''
   map <C-n> :NERDTreeToggle<CR>
 '''
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
