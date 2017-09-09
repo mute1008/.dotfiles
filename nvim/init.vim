@@ -46,6 +46,11 @@ nnoremap s> <C-w>>
 nnoremap s< <C-w><
 nnoremap s+ <C-w>+
 nnoremap s- <C-w>-
+nnoremap s_ <C-w>_
+nnoremap s| <C-w>|
+
+" ウインドウ操作
+nnoremap sq <C-w>q
 " -----------------------------------------------------
 
 " dein設定
