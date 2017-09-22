@@ -8,8 +8,9 @@ export PYVERSION3=3.6.1
 mkdir -p ~/.config/nvim
 cp ./nvim/* ~/.config/nvim/
 
-cp ./.tmux.conf ~/.tmux.conf
 cp ./.bashrc ~/.bashrc
+cp ./.bash_profile ~/.bash_profile
+cp ./.tmux.conf ~/.tmux.conf
 cp ./.gitignore_global ~/.gitignore_global
 cp ./.globalrc ~/.globalrc
 cp ./.Xdefaults ~/.Xdefaults
