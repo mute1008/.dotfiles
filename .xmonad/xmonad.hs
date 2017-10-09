@@ -54,7 +54,7 @@ main = do
     wsbar <- spawnPipe myWsBar
     xmonad $ defaultConfig
        { borderWidth = 3
-       , terminal = "gnome-terminal"
+       , terminal = "urxvt"
        , normalBorderColor = colorGray
        , focusedBorderColor = colorWhite
        , startupHook = myStartupHook
@@ -80,6 +80,7 @@ main = do
 -- Handle Window behaveior
 myLayout = gaps [(U, 30)] $ (spacing 10 $ ResizableTall 1 (3/100) (3/5) [])
             |||  (spacing 10 $ (dragPane Horizontal (1/10) (1/2)))
+            |||  (spacing 10 $ (ThreeColMid 1 (3/100) (1/2)))
             |||  Simplest
 
 -- Start up (at xmonad beggining), like "wallpaper" or so on
