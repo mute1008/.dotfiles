@@ -13,6 +13,7 @@ import XMonad.Hooks.FadeWindows
 import XMonad.Hooks.ManageDocks        -- avoid xmobar area import XMonad.Hooks.Place
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.Place
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout
 import XMonad.Layout.DragPane          -- see only two window
 import XMonad.Layout.Gaps
@@ -63,7 +64,7 @@ main = do
        , layoutHook = toggleLayouts (noBorders Full) $ avoidStruts $ myLayout
         -- xmobar setting
        , logHook = myLogHook wsbar
-       , handleEventHook = fadeWindowsEventHook
+       , handleEventHook = fullscreenEventHook
        , workspaces = myWorkspaces
        , modMask = modm }
 
