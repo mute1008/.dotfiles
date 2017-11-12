@@ -5,7 +5,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # prompt
 # --------------------------------
-export PS1="[\u@\h \W]\$ "
+export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+source ~/.git-prompt.sh
 # --------------------------------
 
 # alias
