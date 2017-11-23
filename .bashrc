@@ -7,6 +7,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # --------------------------------
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 source ~/.git-prompt.sh
+source ~/.git-completion.bash
 # --------------------------------
 
 # alias

@@ -17,6 +17,7 @@ cp ./.Xdefaults ~/.Xdefaults
 cp -r ./.xmonad ~/.xmonad
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 # ------------------------------------ #
 
 
@@ -62,7 +63,6 @@ if [[ ! `which pyenv` ]];then
   pip install neovim
 fi
 # ------------------------------------ #
-
 
 # ------------------------------------ #
 if [ `uname` == 'Darwin' ]; then
