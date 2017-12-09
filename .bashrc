@@ -14,6 +14,7 @@ source ~/.git-prompt.sh
 alias vim='pyenv global $PYVERSION3 && nvim'
 alias vi='nvim'
 alias ls='ls --color'
+alias d='docker-compose'
 # --------------------------------
 
 # pyenv
