@@ -40,6 +40,8 @@ nnoremap sh :call MaximumWindow("h")<CR>
 nnoremap sj :call MaximumWindow("j")<CR>
 nnoremap sk :call MaximumWindow("k")<CR>
 nnoremap sl :call MaximumWindow("l")<CR>
+nnoremap K gt
+nnoremap J gT
 
 " ウインドウリサイズ
 nnoremap s> <C-w>>
