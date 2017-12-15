@@ -3,6 +3,13 @@ if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n> 
 endif
 
+
+" シンタックスプラグインの設定
+" -----------------------------------------------------
+let g:jsx_ext_required = 0
+let g:vim_json_syntax_conceal = 0
+" -----------------------------------------------------
+
 " colorscheme設定
 " -----------------------------------------------------
 set background=dark

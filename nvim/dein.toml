@@ -1,4 +1,13 @@
 [[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]

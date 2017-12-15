@@ -1,30 +1,4 @@
 [[plugins]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
-on_ft = 'javascript'
-hook_add = '''
-let g:jsx_ext_required = 0
-'''
-
-[[plugins]]
-repo = 'elzr/vim-json'
-on_ft = 'json'
-hook_add = '''
-let g:vim_json_syntax_conceal = 0
-'''
-
-[[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = 'javascript'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
-[[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
 
@@ -39,6 +13,8 @@ let g:deoplete#auto_complete_delay = 0
 let g:deoplete#enable_camel_case = 0
 let g:deoplete#enable_ignore_case = 0
 let g:deoplete#enable_smart_case = 1
+let g:deoplete#enable_refresh_always = 1
+let g:deoplete#auto_complete_start_length = 1
 '''
 on_i = 1
 
