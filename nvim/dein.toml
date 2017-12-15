@@ -40,3 +40,9 @@ repo = 'Shougo/Vinarise'
 
 [[plugins]]
 repo = 'ozelentok/denite-gtags'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
