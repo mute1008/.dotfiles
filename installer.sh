@@ -23,8 +23,10 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 
 # universal-ctags #
 # ------------------------------------ #
-brew tap universal-ctags/universal-ctags
-brew install --HEAD universal-ctags
+if [ `uname` == 'Darwin' ]; then
+  brew tap universal-ctags/universal-ctags
+  brew install --HEAD universal-ctags
+fi
 # ------------------------------------ #
 
 # ------------------------------------ #
