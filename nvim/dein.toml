@@ -46,3 +46,10 @@ repo = 'tpope/vim-endwise'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+nmap <C-l> :TagbarToggle<CR>
+autocmd VimEnter * nested :TagbarOpen
+'''

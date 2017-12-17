@@ -21,6 +21,12 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 # ------------------------------------ #
 
 
+# universal-ctags #
+# ------------------------------------ #
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
+# ------------------------------------ #
+
 # ------------------------------------ #
 # gitの設定
 git config --global user.name mute1997
@@ -54,10 +60,6 @@ if [[ ! `which pyenv` ]];then
   pyenv install $PYVERSION2
   pyenv install $PYVERSION3
 
-  # pyversion2
-  pyenv global $PYVERSION2
-  pip install Pygments
-
   # pyversion3
   pyenv global $PYVERSION3
   pip install neovim
@@ -69,11 +71,6 @@ if [ `uname` == 'Darwin' ]; then
   # agのインストール
   if [[ ! `which ag` ]];then
     brew install the_silver_searcher
-  fi
-
-  # GNU globalのインストール
-  if [[ ! `which global` ]];then
-    brew install global
   fi
 
   # tigのインストール
