@@ -8,8 +8,7 @@ export PYVERSION3=3.6.1
 mkdir -p ~/.config/nvim
 cp ./nvim/* ~/.config/nvim/
 
-cp ./.bashrc ~/.bashrc
-cp ./.bash_profile ~/.bash_profile
+cp ./.zshrc ~/.zshrc
 cp ./.tmux.conf ~/.tmux.conf
 cp ./.gitignore_global ~/.gitignore_global
 cp ./.globalrc ~/.globalrc
@@ -18,6 +17,9 @@ cp -r ./.xmonad ~/.xmonad
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ------------------------------------ #
 
 
