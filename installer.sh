@@ -17,9 +17,6 @@ cp -r ./.xmonad ~/.xmonad
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ------------------------------------ #
 
 
@@ -86,4 +83,9 @@ if [ `uname` == 'Darwin' ]; then
     brew install ranger
   fi
 fi
+# ------------------------------------ #
+
+# Install oh-my-zsh
+# ------------------------------------ #
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ------------------------------------ #
