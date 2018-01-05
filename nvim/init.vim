@@ -33,7 +33,6 @@ autocmd FileType php :setlocal shiftwidth=4
 
 " タブ,ウインドウ設定
 " -----------------------------------------------------
-set scrolloff=1000 " 常にカーソルが真ん中に来るように
 nnoremap s <Nop>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap s= <C-w>=
