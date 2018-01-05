@@ -52,3 +52,6 @@ repo = 'majutsushi/tagbar'
 hook_add = '''
 nmap <C-l> :TagbarToggle<CR>
 '''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
