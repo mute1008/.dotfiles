@@ -14,9 +14,6 @@ cp ./.gitignore_global ~/.gitignore_global
 cp ./.globalrc ~/.globalrc
 cp ./.Xdefaults ~/.Xdefaults
 cp -r ./.xmonad ~/.xmonad
-
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 # ------------------------------------ #
 
 
