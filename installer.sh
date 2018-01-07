@@ -7,7 +7,7 @@ export PYVERSION3=3.6.1
 # ------------------------------------ #
 # Install oh-my-zsh
 # ------------------------------------ #
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" >/dev/null
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null
 # ------------------------------------ #
 
 
@@ -26,24 +26,6 @@ cp -r ./.xmonad ~/.xmonad
 
 
 # ------------------------------------ #
-# tmux yank
-# ------------------------------------ #
-if [ ! -e ~/.tmux-yank ]; then
-  git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux-yank
-fi
-# ------------------------------------ #
-
-
-# ------------------------------------ #
-# universal-ctags
-# ------------------------------------ #
-if [ `uname` == 'Darwin' ]; then
-  brew tap universal-ctags/universal-ctags
-  brew install --HEAD universal-ctags
-fi
-# ------------------------------------ #
-
-# ------------------------------------ #
 # gitの設定
 # ------------------------------------ #
 git config --global user.name mute1997
@@ -53,18 +35,9 @@ git config --global core.excludesfile ~/.gitignore_global
 
 
 # ------------------------------------ #
-# MacにGNUのソフトウェアをインストール
-# ------------------------------------ #
-if [ `uname` == 'Darwin' ]; then
-  brew install coreutils binutils findutils
-fi
-# ------------------------------------ #
-
-
-# ------------------------------------ #
 # fzfのインストール
 # ------------------------------------ #
-if [[ ! `which fzf` ]];then
+if [[ ! -e `which fzf` ]];then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   yes | ~/.fzf/install
 fi
@@ -74,7 +47,7 @@ fi
 # ------------------------------------ #
 # pyenvの設定
 # ------------------------------------ #
-if [[ ! `which pyenv` ]];then
+if [[ ! -e `which pyenv` ]];then
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   source ~/.bashrc
   pyenv install $PYVERSION2
@@ -88,17 +61,22 @@ fi
 
 
 # ------------------------------------ #
-# Install Middleware
+# Install Middleware for Mac
 # ------------------------------------ #
 if [ `uname` == 'Darwin' ]; then
-  if [[ ! `which ag` ]];then
+  if [[ ! -e `which ag` ]];then
     brew install the_silver_searcher
-  elif [[ ! `which tig` ]];then
+  elif [[ ! -e `which tig` ]];then
     brew install tig
-  elif [[ ! `which ranger` ]];then
+  elif [[ ! -e `which ranger` ]];then
     brew install ranger
-  elif [[ ! `reattach-to-user-namespace` ]];then
+  elif [[ ! -e `which reattach-to-user-namespace` ]];then
     brew install reattach-to-user-namespace
+  elif [[ ! -e `which gfind` ]]; then
+    brew install coreutils binutils findutils
+  elif [[ `ctags --version | grep "Universal Ctags"` = "" ]];then
+    brew tap universal-ctags/universal-ctags
+    brew install --HEAD universal-ctags
   fi
 fi
 # ------------------------------------ #
