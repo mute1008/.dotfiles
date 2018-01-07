@@ -136,6 +136,11 @@ if [[ `uname` == 'Darwin' ]]; then
   export PATH=$coreutils_path/libexec/gnubin:$PATH
   alias find=gfind
   alias xargs=gxargs
+  alias copy=pbcopy
+  alias paste=pbpaste
+elif [[ `uname` == 'Linux' ]]; then
+  alias copy='xsel --clipboard --input'
+  alias paste='xsel --clipboard --output'
 fi
 # --------------------------------
 

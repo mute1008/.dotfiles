@@ -37,7 +37,7 @@ git config --global core.excludesfile ~/.gitignore_global
 # ------------------------------------ #
 # fzfのインストール
 # ------------------------------------ #
-if [[ ! -e `which fzf` ]];then
+if [[ `which fzf` ]];then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   yes | ~/.fzf/install
 fi
