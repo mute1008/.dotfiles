@@ -79,7 +79,7 @@ main = do
        ]
 
 -- Handle Window behaveior
-myLayout = gaps [(U, 30)] $ (spacing 10 $ ResizableTall 1 (3/100) (3/5) [])
+myLayout = gaps [(U, 30)] $ (spacing 10 $ ResizableTall 1 (3/100) (1/2) [])
             |||  (spacing 10 $ (dragPane Horizontal (1/10) (1/2)))
             |||  (spacing 10 $ (ThreeColMid 1 (3/100) (1/2)))
             |||  Simplest
