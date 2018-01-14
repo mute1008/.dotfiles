@@ -13,7 +13,7 @@ let g:vim_json_syntax_conceal = 0
 " colorscheme設定
 " -----------------------------------------------------
 set background=dark
-autocmd VimEnter * colorscheme moneyforward
+autocmd VimEnter * colorscheme farout
 " -----------------------------------------------------
 
 " モード切替
