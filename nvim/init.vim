@@ -13,7 +13,6 @@ let g:vim_json_syntax_conceal = 0
 " colorscheme設定
 " -----------------------------------------------------
 set background=dark
-autocmd VimEnter * colorscheme farout
 " -----------------------------------------------------
 
 " モード切替
@@ -113,4 +112,5 @@ set undodir=~/.cache/undo/
 
 " clickboard
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+colorscheme moneyforward
 " -----------------------------------------------------

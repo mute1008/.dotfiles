@@ -11,7 +11,7 @@ repo = 'Yggdroot/indentLine'
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'fcpg/vim-farout'
+repo = 'anoike/vim-moneyforward'
 
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
