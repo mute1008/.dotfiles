@@ -36,7 +36,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/Vinarise'
+repo = 'Shougo/vinarise.vim'
 
 [[plugins]]
 repo = 'ozelentok/denite-gtags'
