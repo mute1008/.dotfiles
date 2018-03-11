@@ -55,7 +55,7 @@ main = do
     wsbar <- spawnPipe myWsBar
     xmonad $ defaultConfig
        { borderWidth = 3
-       , terminal = "urxvt"
+       , terminal = "alacritty"
        , normalBorderColor = colorGray
        , focusedBorderColor = colorWhite
        , startupHook = myStartupHook
@@ -86,7 +86,8 @@ myLayout = gaps [(U, 30)] $ (spacing 10 $ ResizableTall 1 (3/100) (1/2) [])
 
 -- Start up (at xmonad beggining), like "wallpaper" or so on
 myStartupHook = do
-        spawn "nitrogen --restore"
+        spawn "google-chrome-stable"
+        spawn "alacritty"
 
 -- some window must created there
 myManageHookShift = composeAll

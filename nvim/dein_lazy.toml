@@ -3,9 +3,6 @@ repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
 
 [[plugins]]
-repo = 'Shougo/vinarise.vim'
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
@@ -25,19 +22,6 @@ function! s:check_back_space() abort "{{{
 endfunction"}}}
 '''
 on_i = 1
-
-[[plugins]]
-repo = 'neomake/neomake'
-hook_add = '''
-    autocmd! BufWritePost,BufEnter * Neomake
-
-    let g:neomake_cpp_enable_markers=['clang']
-
-    let g:neomake_javascript_eslint_maker = {
-        \ 'exe': 'standard',
-        \ 'errorformat': '%W  %f:%l:%c: %m'
-        \ }
-'''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
