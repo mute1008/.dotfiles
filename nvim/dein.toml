@@ -35,7 +35,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/vinarise'
+repo = 'Shougo/vinarise.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
