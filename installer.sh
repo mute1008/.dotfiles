@@ -35,16 +35,6 @@ git config --global core.excludesfile ~/.gitignore_global
 
 
 # ------------------------------------ #
-# fzfのインストール
-# ------------------------------------ #
-if [[ ! -e `which fzf` ]];then
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  yes | ~/.fzf/install
-fi
-# ------------------------------------ #
-
-
-# ------------------------------------ #
 # pyenvの設定
 # ------------------------------------ #
 if [[ ! -e `which pyenv` ]];then
