@@ -101,6 +101,7 @@ export PYVERSION2=2.7.13
 export PYVERSION3=3.6.1
 export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=~/.local/bin:$PATH
 # --------------------------------
 
 
@@ -119,12 +120,6 @@ alias d='docker-compose'
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-# --------------------------------
-
-# --------------------------------
-# fzf
-# --------------------------------
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # --------------------------------
 
 # --------------------------------
