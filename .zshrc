@@ -102,6 +102,7 @@ export PYVERSION3=3.6.1
 export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=~/.local/bin:$PATH
+export PATH=/opt/cuda/bin:$PATH
 # --------------------------------
 
 
@@ -120,6 +121,12 @@ alias d='docker-compose'
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+# --------------------------------
+
+# --------------------------------
+# ruby setting
+# --------------------------------
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # --------------------------------
 
 # --------------------------------
@@ -151,3 +158,6 @@ if [ -z $TMUX ]; then
   exit
 fi
 # --------------------------------
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
