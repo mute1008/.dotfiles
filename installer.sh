@@ -52,9 +52,11 @@ fi
 # ------------------------------------ #
 # Install RVM (for Ruby)
 # ------------------------------------ #
-curl -L get.rvm.io > rvm-install
-bash < ./rvm-install
-rm rvm-install
+if [[ ! -e `which rvm` ]];then
+  curl -L get.rvm.io > rvm-install
+  bash < ./rvm-install
+  rm rvm-install
+fi
 # ------------------------------------ #
 
 
