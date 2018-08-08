@@ -26,7 +26,7 @@ cp -r ./.xmonad ~/.xmonad
 
 
 # ------------------------------------ #
-# gitの設定
+# Setting git
 # ------------------------------------ #
 git config --global user.name mute1997
 git config --global user.email mute1008@gmail.com
@@ -35,7 +35,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 
 # ------------------------------------ #
-# pyenvの設定
+# Install pyenv (for Python)
 # ------------------------------------ #
 if [[ ! -e `which pyenv` ]];then
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -48,6 +48,17 @@ if [[ ! -e `which pyenv` ]];then
   pip install neovim
 fi
 # ------------------------------------ #
+
+# ------------------------------------ #
+# Install RVM (for Ruby)
+# ------------------------------------ #
+if [[ ! -e `which rvm` ]];then
+  curl -L get.rvm.io > rvm-install
+  bash < ./rvm-install
+  rm rvm-install
+fi
+# ------------------------------------ #
+
 
 
 # ------------------------------------ #

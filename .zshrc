@@ -101,6 +101,8 @@ export PYVERSION2=2.7.13
 export PYVERSION3=3.6.1
 export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=~/.local/bin:$PATH
+export PATH=/opt/cuda/bin:$PATH
 # --------------------------------
 
 
@@ -131,6 +133,12 @@ export PATH=$PATH:$GOPATH/bin
 
 
 # --------------------------------
+# ruby setting
+# --------------------------------
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# --------------------------------
+
+# --------------------------------
 # Mac setting
 # --------------------------------
 # $(brew --prefix coreutils)が遅いため文字列として埋め込む
@@ -159,3 +167,6 @@ if [ -z $TMUX ]; then
   exit
 fi
 # --------------------------------
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
