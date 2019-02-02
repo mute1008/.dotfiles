@@ -2,6 +2,11 @@
 
 source lib/symlink.sh
 
-symlink ./app/nvim/files/dein.toml ~/.config/nvim/dein.toml
-symlink ./app/nvim/files/dein_lazy.toml ~/.config/nvim/dein_lazy.toml
-symlink ./app/nvim/files/init.vim ~/.config/nvim/init.vim
+# install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+eval $(python -c "import glob,os;print('declare -a array=(', ' '.join(list(map(lambda x: os.path.split(x)[1], glob.glob('./app/nvim/files/*')))), ')')")
+for ((i = 0; i < ${#array[@]}; i++)) {
+    symlink ./app/nvim/files/${array[i]} ~/.config/nvim/${array[i]}
+}

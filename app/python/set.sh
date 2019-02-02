@@ -10,5 +10,11 @@ if [[ ! -e `which pyenv` ]];then
   pyenv global $PYVERSION3
 
   pip install --upgrade pip
+
   pip install neovim
+  pip install pynvim
+
+  pip install python-language-server
+  pip install 'python-language-server[pycodestyle]'
+  pip install 'python-language-server[yapf]'
 fi
