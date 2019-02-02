@@ -48,17 +48,6 @@ if [[ ! -e `which pyenv` ]];then
 fi
 # ------------------------------------ #
 
-# ------------------------------------ #
-# Install RVM (for Ruby)
-# ------------------------------------ #
-if [[ ! -e `which rvm` ]];then
-  curl -L get.rvm.io > rvm-install
-  bash < ./rvm-install
-  rm rvm-install
-fi
-# ------------------------------------ #
-
-
 
 # ------------------------------------ #
 # Install Middleware for Mac
