@@ -133,12 +133,6 @@ export PATH=$PATH:$GOPATH/bin
 
 
 # --------------------------------
-# ruby setting
-# --------------------------------
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# --------------------------------
-
-# --------------------------------
 # Mac setting
 # --------------------------------
 # $(brew --prefix coreutils)が遅いため文字列として埋め込む
