@@ -1,8 +1,7 @@
 #!/bin/bash
 
 export PYVERSION2=2.7.13
-export PYVERSION3=3.6.1
-
+export PYVERSION3=pypy3.5-6.0.0
 
 # ------------------------------------ #
 # Install oh-my-zsh
