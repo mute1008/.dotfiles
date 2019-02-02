@@ -9,5 +9,6 @@ if [[ ! -e `which pyenv` ]];then
   pyenv install $PYVERSION3
   pyenv global $PYVERSION3
 
+  pip install --upgrade pip
   pip install neovim
 fi
