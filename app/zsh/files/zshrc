@@ -93,65 +93,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source ~/.dotfiles/source/alias.sh
+source ~/.dotfiles/source/declare.sh
+source ~/.dotfiles/source/export.sh
 
-# --------------------------------
-# path setting
-# --------------------------------
-export PYVERSION2=2.7.13
-export PYVERSION3=pypy3.5-6.0.0
-export EDITOR=nvim
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=~/.local/bin:$PATH
-export PATH=/opt/cuda/bin:$PATH
-# --------------------------------
-
-
-# --------------------------------
-# alias setting
-# --------------------------------
-alias vim='pyenv global $PYVERSION3 && nvim'
-alias vi='nvim'
-alias ls='ls --color'
-alias d='docker-compose'
-# --------------------------------
-
-# --------------------------------
-# pyenv setting
-# --------------------------------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+# pyenv
 eval "$(pyenv init -)"
-# --------------------------------
 
-
-# --------------------------------
-# go setting
-# --------------------------------
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-# --------------------------------
-
-
-# --------------------------------
-# Mac setting
-# --------------------------------
-# $(brew --prefix coreutils)が遅いため文字列として埋め込む
-if [[ `uname` == 'Darwin' ]]; then
-  coreutils_path="/usr/local/opt/coreutils"
-  export PATH=$coreutils_path/libexec/gnubin:$PATH
-  alias find=gfind
-  alias xargs=gxargs
-  alias copy=pbcopy
-  alias paste=pbpaste
-elif [[ `uname` == 'Linux' ]]; then
-  alias copy='xsel --clipboard --input'
-  alias paste='xsel --clipboard --output'
-fi
-# --------------------------------
-
-# --------------------------------
 # tmux
-# --------------------------------
 if [ -z $TMUX ]; then
   if [ -z `tmux ls` ]; then
     tmux -2
@@ -160,7 +109,3 @@ if [ -z $TMUX ]; then
   fi
   exit
 fi
-# --------------------------------
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
