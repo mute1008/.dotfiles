@@ -69,7 +69,8 @@ main = do
        , modMask = modm }
 
        `additionalKeys`
-       [ ((modm  , xK_p      ), spawn "exe=`dmenu_run -nb '#1a1e1b' -nf '#d3d7cf' -sb '#88b986' -sf '#1a1e1b'` -fn 'TakaoPGothic-9' && exec $exe")
+       [ ((modm  , xK_p      ), spawn "rofi -show run -font 'MigMix 1M 10'")
+       , ((modm  , xK_i      ), spawn "gnome-screensaver-command --lock")
        , ((0     , 0x1008ff13), spawn "amixer -D pulse set Master 5%+")
        , ((0     , 0x1008ff11), spawn "amixer -D pulse set Master 5%-")
        , ((0     , 0x1008ff12), spawn "amixer -D pulse set Master toggle")
