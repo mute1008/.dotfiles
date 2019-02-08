@@ -21,4 +21,4 @@ nnoremap <silent> <Space>r :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <Space>l :Denite references -mode=normal<CR>
 
 " フォーマッティング
-nnoremap <silent> <Space>f :call LanguageClient_textDocument_formatting()
+nnoremap <silent> <Space>f :call LanguageClient_textDocument_formatting()<CR>
