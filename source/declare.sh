@@ -1,5 +1,3 @@
-#!/bin/bash
-
 declare -A GENERAL_APPS;
 declare -A LINUX_APPS;
 declare -A DARWIN_APPS;

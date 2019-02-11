@@ -20,6 +20,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
+# gcloud
+export PATH=${0:A:h}/bin:$PATH
+
 
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then

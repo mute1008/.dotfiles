@@ -1,5 +1,3 @@
-#!/bin/bash
-
 source source/alias.sh
 source source/declare.sh
 source source/export.sh

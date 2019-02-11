@@ -94,7 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.dotfiles/source/alias.sh
-source ~/.dotfiles/source/declare.sh
 source ~/.dotfiles/source/export.sh
 
 # pyenv

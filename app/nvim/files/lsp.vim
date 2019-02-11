@@ -9,13 +9,16 @@ let g:LanguageClient_serverCommands = {
    \ }
 
 " ドキュメントを表示
-nnoremap <silent> <C-d> :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <Space>d :call LanguageClient#textDocument_hover()<CR>
 
 " 定義ジャンプ
-nnoremap <silent> <C-j> :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Space>j :call LanguageClient#textDocument_definition()<CR>
 
 " リネーム
-nnoremap <silent> <C-r> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <Space>r :call LanguageClient#textDocument_rename()<CR>
 
 " 参照場所
-nnoremap <silent> <C-l> :Denite references -mode=normal<CR>
+nnoremap <silent> <Space>l :Denite references -mode=normal<CR>
+
+" フォーマッティング
+nnoremap <silent> <Space>f :call LanguageClient_textDocument_formatting()<CR>
