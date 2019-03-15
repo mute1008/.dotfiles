@@ -1,20 +1,31 @@
 #!/bin/bash
 
-if [[ ! -e `which pyenv` ]];then
+if [ ! -e ~/.pyenv ];then
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
   eval "$(pyenv init -)"
-
-  pyenv install $PYVERSION2
-  pyenv install $PYVERSION3
-  pyenv global $PYVERSION3
 fi
 
-pip install --upgrade pip
+if [ ! "`pyenv versions | grep $PYVERSION2`" ];then
+  pyenv install $PYVERSION2;
+fi
 
-pip install neovim
-pip install pynvim
+if [ ! "`pyenv versions | grep $PYVERSION3`" ];then
+  pyenv install $PYVERSION3;
+fi
 
-pip install python-language-server
-pip install 'python-language-server[pycodestyle]'
-pip install 'python-language-server[yapf]'
+pyenv global $PYVERSION3
+pip install --upgrade pip > /dev/null
+
+if [ ! "`pip freeze | grep pynvim`" ];then
+  pip install pynvim;
+fi
+
+if [ ! "`pip freeze | grep neovim`" ];then
+  pip install neovim;
+fi
+
+if [ ! "`pip freeze | grep python-language-server`" ];then
+  pip install python-language-server
+  pip install 'python-language-server[pycodestyle]'
+  pip install 'python-language-server[yapf]'
+fi

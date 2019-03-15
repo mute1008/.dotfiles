@@ -3,7 +3,7 @@ export EDITOR=nvim
 export PATH=~/.local/bin:$PATH
 
 # python
-export PYVERSION2=2.7.13
+export PYVERSION2=2.7.15
 export PYVERSION3=3.8-dev
 
 # rust
