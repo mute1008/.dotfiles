@@ -11,19 +11,19 @@ function install_if_not_exists_cmd() {
 }
 
 function install_dependencies() {
-  for GENERAL_APPS in ${!APP[@]}; do
-    install_if_not_exists_cmd$GENERAL_APPS $APP
+  for KEY in ${!GENERAL_APPS[@]}; do
+    install_if_not_exists_cmd $KEY ${GENERAL_APPS[$KEY]}
   done
 
   if [ $(get_os) = 'Darwin' ]; then
-    for DARWIN_APPS in ${!APP[@]}; do
-      install_if_not_exists_cmd$GENERAL_APPS $APP
+    for KEY in ${!DARWIN_APPS[@]}; do
+      install_if_not_exists_cmd $KEY ${DARWIN_APPS[$KEY]}
     done
   fi
 
   if [ $(get_os) = 'Linux' ]; then
-    for LINUX_APPS in ${!APP[@]}; do
-      install_if_not_exists_cmd$GENERAL_APPS $APP
+    for KEY in ${!LINUX_APPS[@]}; do
+      install_if_not_exists_cmd $KEY ${LINUX_APPS[$KEY]}
     done
   fi
 }

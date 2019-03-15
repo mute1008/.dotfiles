@@ -13,6 +13,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'tyru/caw.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim'
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 call plug#end()
