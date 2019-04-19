@@ -5,7 +5,7 @@ let g:LanguageClient_serverCommands = {
    \ 'python': ['pyls'],
    \ 'c': ['clangd'],
    \ 'cpp': ['clangd'],
-   \ 'go': ['$GOPATH/bin/go-langserver', '-format-tool', 'gofmt', '-lint-tool', 'golint', '-diagnostics'],
+   \ 'go': ['gopls']
    \ }
 
 " ドキュメントを表示
