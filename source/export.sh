@@ -4,7 +4,7 @@ export PATH=~/.local/bin:$PATH
 
 # python
 export PYVERSION2=2.7.15
-export PYVERSION3=3.8-dev
+export PYVERSION3=3.6.0
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
