@@ -1,5 +1,3 @@
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
-      \ }
+      \ 'active': {'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ], },
       \ }

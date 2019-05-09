@@ -5,7 +5,6 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/neco-syntax'
 Plug 'ujihisa/neco-look'
-Plug 'anoike/vim-moneyforward'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/vinarise.vim'
@@ -17,9 +16,13 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'jonathanfilip/vim-lucius'
+
 call plug#end()
 
-colorscheme moneyforward
+set termguicolors
+colorscheme lucius
+LuciusDarkLowContrast
 
 for f in split(glob('~/.config/nvim/*.vim'), '\n')
   if match(fnameescape(f), 'init.vim') == -1 && match(fnameescape(f), 'general.vim') == -1
