@@ -7,4 +7,4 @@ source lib/package_manager.sh
 source lib/symlink.sh
 
 install_dependencies
-ls app | xargs -n1 -I{} bash ./app/{}/set.sh
+ls --color=never app | xargs -n1 -I{} bash ./app/{}/set.sh

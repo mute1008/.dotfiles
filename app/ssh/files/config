@@ -1,0 +1,10 @@
+Host github.com
+  User git
+  Hostname github.com
+  IdentityFile ~/.ssh/.ecdsa
+
+Host home
+  User mute
+  Hostname home.mute1008.dev
+  Port 1008
+  IdentityFile ~/.ssh/id_ecdsa

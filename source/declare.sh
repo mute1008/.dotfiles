@@ -9,6 +9,7 @@ GENERAL_APPS=(
   ["git"]="git"
   ["tmux"]="tmux"
   ["zsh"]="zsh"
+  ["tig"]="tig"
 )
 
 LINUX_APPS=(
