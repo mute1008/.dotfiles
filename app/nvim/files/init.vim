@@ -17,6 +17,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'jonathanfilip/vim-lucius'
+Plug 'lambdalisue/suda.vim'
 
 call plug#end()
 
