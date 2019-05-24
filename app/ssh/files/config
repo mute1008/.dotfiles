@@ -1,7 +1,7 @@
 Host github.com
   User git
   Hostname github.com
-  IdentityFile ~/.ssh/.ecdsa
+  IdentityFile ~/.ssh/id_ecdsa
 
 Host home
   User mute
