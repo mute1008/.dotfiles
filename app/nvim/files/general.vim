@@ -3,6 +3,13 @@ if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n> 
 endif
 
+" colorscheme設定
+set background=dark
+
+" 不可視文字の設定
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+
 " モード切替
 inoremap <silent> jj <ESC> 
 
