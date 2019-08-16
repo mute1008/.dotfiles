@@ -3,9 +3,6 @@ if has('nvim')
   tnoremap <silent> <ESC> <C-\><C-n> 
 endif
 
-" colorscheme設定
-set background=dark
-
 " モード切替
 inoremap <silent> jj <ESC> 
 

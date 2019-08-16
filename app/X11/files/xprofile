@@ -6,4 +6,6 @@ fcitx-autostart
 xset s off -dpms
 imwheel
 
-xrandr --output DisplayPort-0 --mode 3840x2160 --scale 0.8x0.8 --output DVI-D-0 --mode 1920x1080 --left-of DisplayPort-0
+xrandr --output DP-1 --right-of HDMI-1
+feh --bg-scale ~/Pictures/wallpapers/zWfHddo.jpg
+gnome-screensaver &
