@@ -34,6 +34,7 @@ nnoremap s- <C-w>_
 syntax on
 filetype plugin indent on
 set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double cindent hidden clipboard+=unnamedplus sh=zsh
+au FileType go setlocal sw=4 ts=4 sts=4 noet
 
 " undo
 set undofile

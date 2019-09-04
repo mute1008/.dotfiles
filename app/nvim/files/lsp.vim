@@ -1,24 +1,22 @@
 set hidden
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-   \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-   \ 'python': ['pyls'],
-   \ 'c': ['clangd'],
-   \ 'cpp': ['clangd'],
-   \ 'go': ['gopls']
-   \ }
 
 " ドキュメントを表示
-nnoremap <silent> <Space>d :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <Space>i :LspImplementation<CR>
 
 " 定義ジャンプ
-nnoremap <silent> <Space>j :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Space>j :LspDefinition<CR>
 
 " リネーム
-nnoremap <silent> <Space>r :call LanguageClient#textDocument_rename()<CR>
-
-" 参照場所
-nnoremap <silent> <Space>l :Denite references -mode=normal<CR>
+nnoremap <silent> <Space>r :LspRename<CR>
 
 " フォーマッティング
-nnoremap <silent> <Space>f :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> <Space>f :LspDocumentFormatSync<CR>
+
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif

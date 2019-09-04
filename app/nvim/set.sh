@@ -1,6 +1,7 @@
-#!/bin/bash
-
 source lib/symlink.sh
+
+go get -u golang.org/x/tools/cmd/gopls
+go get -u github.com/sourcegraph/go-langserver
 
 # install vim-plug
 if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ];then
