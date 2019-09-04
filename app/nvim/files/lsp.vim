@@ -18,5 +18,5 @@ if executable('gopls')
         \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
         \ 'whitelist': ['go'],
         \ })
-    autocmd BufWritePre *.go LspDocumentFormatSync
+    autocmd BufWritePre *.go :silent LspDocumentFormatSync
 endif
