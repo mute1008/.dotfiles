@@ -21,6 +21,10 @@ function! s:denite_filter_settings() abort
     imap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
 endfunction
 
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
 call denite#custom#var('file/rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 call denite#custom#filter('matcher/ignore_globs', 'ignore_globs', ['.git', '.svn', 'node_modules'])
 
