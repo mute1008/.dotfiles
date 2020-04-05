@@ -1,7 +1,5 @@
-#!/bin/bash
-
 function absolute_path() {
-  python -c "from pathlib import Path;print(Path('$1').resolve())"
+  python3 -c "from pathlib import Path;print(Path('$1').resolve())"
 }
 
 # $1 = from

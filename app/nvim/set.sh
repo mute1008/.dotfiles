@@ -1,7 +1,12 @@
 source lib/symlink.sh
 
-go get -u golang.org/x/tools/cmd/gopls
-go get -u github.com/sourcegraph/go-langserver
+if [ ! "`pip3 freeze | grep pynvim`" ];then
+  pip3 install pynvim --user
+fi
+
+if [ ! "`pip3 freeze | grep nvim`" ];then
+  pip3 install neovim --user
+fi
 
 # install vim-plug
 if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ];then
@@ -12,3 +17,5 @@ eval $(python -c "import glob,os;print('declare -a array=(', ' '.join(list(map(l
 for ((i = 0; i < ${#array[@]}; i++)) {
     symlink ./app/nvim/files/${array[i]} ~/.config/nvim/${array[i]}
 }
+
+nvim -c "PlugInstall | :q | :q"

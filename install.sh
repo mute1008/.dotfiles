@@ -6,5 +6,19 @@ source lib/os.sh
 source lib/package_manager.sh
 source lib/symlink.sh
 
+declare -a APPS=(
+  go
+  rust
+  git
+  zsh
+  tmux
+  nvim
+  ssh
+  pyenv
+  alacritty
+  X11
+  xmonad
+)
+
 install_dependencies
-ls --color=never app | xargs -n1 -I{} bash ./app/{}/set.sh
+install

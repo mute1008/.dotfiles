@@ -2,23 +2,28 @@ declare -A GENERAL_APPS;
 declare -A LINUX_APPS;
 declare -A DARWIN_APPS;
 
-GENERAL_APPS=(
+declare -A GENERAL_APPS=(
   ["the_silver_searcher"]="ag"
-  ["ranger"]="ranger"
-  ["alacritty"]="alacritty"
   ["git"]="git"
   ["tmux"]="tmux"
   ["zsh"]="zsh"
-  ["tig"]="tig"
+  ["go"]="go"
 )
 
-LINUX_APPS=(
+declare -A LINUX_APPS=(
   ["xmonad"]="xmonad"
 )
 
-DARWIN_APPS=(
+declare -A DARWIN_APPS=(
+  # tmux copy plugin
   ["reattach-to-user-namespace"]="reattach-to-user-namespace"
+
+  # GNU Apps
   ["coreutils"]="gcat"
-  ["binutils"]="gar"
+  ["binutils"]="/usr/local/opt/binutils/bin/gar"
   ["findutils"]="gfind"
+
+  # Kubernetes
+  ["kubectl"]="kubectl"
+  ["kubectx"]="kubectx"
 )
