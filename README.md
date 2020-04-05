@@ -1,10 +1,10 @@
 ## Required
-bash > 5.0
-python > 3.8
+bash > 5.0  
+python > 3.8  
 
 ## Support
-MacOS
-ArchLinux
+MacOS  
+ArchLinux  
 
 ## Description
 TODO source以下のファイルの説明
@@ -15,5 +15,5 @@ $ bash install.sh
 ```
 
 ## FAQ
-Q. zsh起動時になんかエラーが出る場合
-A. compaudit | xargs chmod g-w,o-w
+Q. zsh起動時になんかエラーが出る場合  
+A. compaudit | xargs chmod g-w,o-w  
