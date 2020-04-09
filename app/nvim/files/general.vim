@@ -30,6 +30,10 @@ nnoremap s> <C-w>>
 nnoremap s< <C-w><
 nnoremap s- <C-w>_
 
+" スクロール設定
+nnoremap D <C-d>
+nnoremap U <C-u>
+
 " 汎用設定
 syntax on
 filetype plugin indent on
