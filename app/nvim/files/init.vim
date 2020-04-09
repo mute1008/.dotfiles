@@ -17,6 +17,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'Shougo/deoplete.nvim'
 Plug 'ujihisa/neco-look'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 call plug#end()
 
 " set colorschema
