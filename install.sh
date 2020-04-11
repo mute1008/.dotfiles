@@ -16,8 +16,7 @@ declare -a APPS=(
   ssh
   pyenv
   alacritty
-  X11
-  xmonad
+  sway
 )
 
 install_dependencies

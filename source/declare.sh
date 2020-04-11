@@ -11,7 +11,7 @@ declare -A GENERAL_APPS=(
 )
 
 declare -A LINUX_APPS=(
-  ["xmonad"]="xmonad"
+  ["sway"]="sway"
 )
 
 declare -A DARWIN_APPS=(
