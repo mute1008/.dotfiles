@@ -1,7 +1,0 @@
-URxvt*font: xft:Ricty Diminished Discord:Regular:size=12:antialias=true, \
-URxvt*background: Black
-URxvt*foreground: White
-URxvt.scrollBar: false
-
-URxvt.depth: 32
-URxvt.background: [70]#000000
