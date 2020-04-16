@@ -27,6 +27,7 @@ client.focused          #910000 #910000 #FFFFFF #910000   #910000
 
 # Startup
 exec --no-startup-id fcitx-autostart
+exec --no-startup-id ~/Sources/Scripts/tunnel.sh
 
 ### Key bindings
 #
