@@ -11,10 +11,10 @@ Host home
 
 Host home-over-gateway
   User mute
-  Hostname 34.85.123.229
-  Port 22
+  Hostname localhost
+  Port 2222
   IdentityFile ~/.ssh/id_ecdsa
-  ProxyCommand ssh -i ~/.ssh/id_ecdsa mute@localhost -p 2222
+  ProxyCommand ssh -W %h:%p gateway
 
 Host gateway
   User mute1008
