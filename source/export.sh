@@ -34,4 +34,8 @@ fi
 # Linux
 if [[ `uname` == 'Linux' ]]; then
   export INSTALL_PACKAGE="sudo pacman -S"
+
+  # devkit a64
+  source /etc/profile.d/devkita64.sh
+  export PATH=$DEVKITPRO/devkitA64/bin:$PATH
 fi
