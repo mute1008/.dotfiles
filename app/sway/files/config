@@ -22,11 +22,20 @@ gaps inner 5
 
 output * bg /home/mute/Pictures/wallpapers/polygon-26677-2560x1600.jpg fill
 
+# display settings
+output DVI-D-1 transform 90
+output HDMI-A-1 pos 0 0
+output DVI-D-1 pos 3840 0
+focus output HDMI-A-1
+
 # Color settings
 client.focused          #910000 #910000 #FFFFFF #910000   #910000
 
+mouse_warping container
+
 # Startup
 exec --no-startup-id fcitx-autostart
+exec --no-startup-id pkill tunnel.sh
 exec --no-startup-id ~/Sources/Scripts/tunnel.sh
 
 ### Key bindings
