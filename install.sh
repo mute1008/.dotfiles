@@ -17,6 +17,7 @@ declare -a APPS=(
   pyenv
   alacritty
   sway
+  yabai
 )
 
 install_dependencies
