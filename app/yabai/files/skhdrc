@@ -21,3 +21,6 @@ shift + cmd - h : yabai -m window --swap west
 shift + cmd - l : yabai -m window --swap east
 shift + cmd - k : yabai -m window --swap north
 shift + cmd - j : yabai -m window --swap south
+
+# balance
+cmd - b : yabai -m space --balance
