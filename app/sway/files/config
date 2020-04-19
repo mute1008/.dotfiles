@@ -24,9 +24,9 @@ output * bg /home/mute/Pictures/wallpapers/polygon-26677-2560x1600.jpg fill
 
 # display settings
 output DVI-D-1 transform 90
-output HDMI-A-1 pos 0 0
+output DP-1 pos 0 0
 output DVI-D-1 pos 3840 0
-focus output HDMI-A-1
+focus output DP-1
 
 # Color settings
 client.focused          #910000 #910000 #FFFFFF #910000   #910000
@@ -46,7 +46,7 @@ exec --no-startup-id ~/Sources/Scripts/tunnel.sh
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+c kill
+    bindsym $mod+Shift+w kill
 
     # Start your launcher
     bindsym $mod+p exec $menu
@@ -64,7 +64,7 @@ exec --no-startup-id ~/Sources/Scripts/tunnel.sh
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+r reload
+    bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'

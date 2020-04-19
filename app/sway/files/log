@@ -1,0 +1,351 @@
+[
+   {
+     "id": 3,
+     "name": "DP-1",
+     "rect": {
+       "x": 4920,
+       "y": 0,
+       "width": 3840,
+       "height": 2160
+     },
+     "focus": [
+       4
+     ],
+     "border": "none",
+     "current_border_width": 0,
+     "layout": "output",
+     "orientation": "none",
+     "percent": 0.78048780487804881,
+     "window_rect": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "deco_rect": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "geometry": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "window": null,
+     "urgent": false,
+     "floating_nodes": [
+     ],
+     "sticky": false,
+     "type": "output",
+     "active": true,
+     "dpms": true,
+     "primary": false,
+     "make": "Goldstar Company Ltd",
+     "model": "LG Ultra HD",
+     "serial": "0x00004DB8",
+     "scale": 1.0,
+     "scale_filter": "nearest",
+     "transform": "normal",
+     "current_workspace": "1",
+     "modes": [
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 59940
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 59940
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 60000
+       },
+       {
+         "width": 720,
+         "height": 480,
+         "refresh": 59940
+       },
+       {
+         "width": 720,
+         "height": 480,
+         "refresh": 60000
+       },
+       {
+         "width": 800,
+         "height": 600,
+         "refresh": 60317
+       },
+       {
+         "width": 1024,
+         "height": 768,
+         "refresh": 60004
+       },
+       {
+         "width": 1280,
+         "height": 720,
+         "refresh": 59940
+       },
+       {
+         "width": 1280,
+         "height": 720,
+         "refresh": 60000
+       },
+       {
+         "width": 1280,
+         "height": 720,
+         "refresh": 60000
+       },
+       {
+         "width": 1280,
+         "height": 800,
+         "refresh": 59810
+       },
+       {
+         "width": 1440,
+         "height": 900,
+         "refresh": 59997
+       },
+       {
+         "width": 1280,
+         "height": 1024,
+         "refresh": 60020
+       },
+       {
+         "width": 1600,
+         "height": 900,
+         "refresh": 60000
+       },
+       {
+         "width": 1680,
+         "height": 1050,
+         "refresh": 59997
+       },
+       {
+         "width": 1600,
+         "height": 1200,
+         "refresh": 59997
+       },
+       {
+         "width": 1920,
+         "height": 1080,
+         "refresh": 59940
+       },
+       {
+         "width": 1920,
+         "height": 1080,
+         "refresh": 60000
+       },
+       {
+         "width": 1920,
+         "height": 1080,
+         "refresh": 60000
+       },
+       {
+         "width": 1920,
+         "height": 1200,
+         "refresh": 59997
+       },
+       {
+         "width": 2560,
+         "height": 1440,
+         "refresh": 59951
+       },
+       {
+         "width": 3840,
+         "height": 2160,
+         "refresh": 30000
+       },
+       {
+         "width": 3840,
+         "height": 2160,
+         "refresh": 59997
+       }
+     ],
+     "current_mode": {
+       "width": 3840,
+       "height": 2160,
+       "refresh": 59997
+     },
+     "max_render_time": 0,
+     "focused": true,
+     "subpixel_hinting": "unknown"
+   },
+   {
+     "id": 5,
+     "name": "DVI-D-1",
+     "rect": {
+       "x": 3840,
+       "y": 0,
+       "width": 1080,
+       "height": 1920
+     },
+     "focus": [
+       6
+     ],
+     "border": "none",
+     "current_border_width": 0,
+     "layout": "output",
+     "orientation": "none",
+     "percent": 0.19512195121951217,
+     "window_rect": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "deco_rect": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "geometry": {
+       "x": 0,
+       "y": 0,
+       "width": 0,
+       "height": 0
+     },
+     "window": null,
+     "urgent": false,
+     "floating_nodes": [
+     ],
+     "sticky": false,
+     "type": "output",
+     "active": true,
+     "dpms": true,
+     "primary": false,
+     "make": "Unknown",
+     "model": "RDT272WX",
+     "serial": "31216185AJ",
+     "scale": 1.0,
+     "scale_filter": "nearest",
+     "transform": "90",
+     "current_workspace": "2",
+     "modes": [
+       {
+         "width": 720,
+         "height": 400,
+         "refresh": 70082
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 59940
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 66667
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 72809
+       },
+       {
+         "width": 640,
+         "height": 480,
+         "refresh": 75000
+       },
+       {
+         "width": 800,
+         "height": 600,
+         "refresh": 56250
+       },
+       {
+         "width": 800,
+         "height": 600,
+         "refresh": 60317
+       },
+       {
+         "width": 800,
+         "height": 600,
+         "refresh": 72188
+       },
+       {
+         "width": 800,
+         "height": 600,
+         "refresh": 75000
+       },
+       {
+         "width": 832,
+         "height": 624,
+         "refresh": 74551
+       },
+       {
+         "width": 1024,
+         "height": 768,
+         "refresh": 60004
+       },
+       {
+         "width": 1024,
+         "height": 768,
+         "refresh": 70069
+       },
+       {
+         "width": 1024,
+         "height": 768,
+         "refresh": 75029
+       },
+       {
+         "width": 1280,
+         "height": 720,
+         "refresh": 60000
+       },
+       {
+         "width": 1152,
+         "height": 864,
+         "refresh": 75000
+       },
+       {
+         "width": 1280,
+         "height": 800,
+         "refresh": 60000
+       },
+       {
+         "width": 1440,
+         "height": 900,
+         "refresh": 60000
+       },
+       {
+         "width": 1280,
+         "height": 1024,
+         "refresh": 60020
+       },
+       {
+         "width": 1280,
+         "height": 1024,
+         "refresh": 75025
+       },
+       {
+         "width": 1600,
+         "height": 900,
+         "refresh": 60000
+       },
+       {
+         "width": 1680,
+         "height": 1050,
+         "refresh": 59883
+       },
+       {
+         "width": 1920,
+         "height": 1080,
+         "refresh": 60000
+       }
+     ],
+     "current_mode": {
+       "width": 1920,
+       "height": 1080,
+       "refresh": 60000
+     },
+     "max_render_time": 0,
+     "focused": false,
+     "subpixel_hinting": "unknown"
+   }
+ ]
