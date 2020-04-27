@@ -5,9 +5,9 @@ cmd - k : yabai -m window --focus north
 cmd - j : yabai -m window --focus south
 
 # focus monitor
-cmd + alt - 1  : yabai -m display --focus 1
-cmd + alt - 2  : yabai -m display --focus 2
-cmd + alt - 3  : yabai -m display --focus 3
+cmd + ctrl - 1  : yabai -m display --focus 1
+cmd + ctrl - 2  : yabai -m display --focus 2
+cmd + ctrl - 3  : yabai -m display --focus 3
 
 # focus workspace
 shift + cmd - 1  : yabai -m window --space 1
