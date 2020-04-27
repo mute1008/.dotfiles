@@ -18,6 +18,7 @@ declare -a APPS=(
   alacritty
   sway
   yabai
+  karabiner
 )
 
 install_dependencies

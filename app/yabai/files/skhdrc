@@ -8,13 +8,11 @@ cmd - j : yabai -m window --focus south
 alt - 1  : yabai -m display --focus 1
 alt - 2  : yabai -m display --focus 2
 alt - 3  : yabai -m display --focus 3
-alt - 4  : yabai -m display --focus 4
 
 # focus workspace
 shift + cmd - 1  : yabai -m window --space 1
 shift + cmd - 2  : yabai -m window --space 2
 shift + cmd - 3  : yabai -m window --space 3
-shift + cmd - 4  : yabai -m window --space 4
 
 # swap managed window
 shift + cmd - h : yabai -m window --swap west
