@@ -1,8 +1,8 @@
 # focus window
-cmd - h : yabai -m window --focus west
-cmd - l : yabai -m window --focus east
-cmd - k : yabai -m window --focus north
-cmd - j : yabai -m window --focus south
+cmd - h : ~/.scripts/yabai-move.sh west
+cmd - l : ~/.scripts/yabai-move.sh east
+cmd - k : ~/.scripts/yabai-move.sh north
+cmd - j : ~/.scripts/yabai-move.sh south
 
 # focus monitor
 cmd + ctrl - 1  : yabai -m display --focus 1

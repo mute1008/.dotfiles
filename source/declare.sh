@@ -8,6 +8,7 @@ declare -A GENERAL_APPS=(
   ["tmux"]="tmux"
   ["zsh"]="zsh"
   ["go"]="go"
+  ["jq"]="jq"
 )
 
 declare -A LINUX_APPS=(

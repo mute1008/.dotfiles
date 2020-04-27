@@ -23,6 +23,9 @@ export PATH=$PATH:$GOPATH/bin
 # gcloud
 export PATH=${0:A:h}/bin:$PATH
 
+# scripts
+export PATH=~/.scripts/:$PATH
+
 
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then

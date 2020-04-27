@@ -19,6 +19,7 @@ declare -a APPS=(
   sway
   yabai
   karabiner
+  scripts
 )
 
 install_dependencies
