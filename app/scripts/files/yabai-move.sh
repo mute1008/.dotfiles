@@ -29,4 +29,12 @@ fi
 # move display
 if [ $display_index != null ]; then
   yabai -m display --focus $display_index;
+elif [ $1 = east ]; then
+  yabai -m window --focus west
+elif [ $1 = west ]; then
+  yabai -m window --focus east
+elif [ $1 = north ]; then
+  yabai -m window --focus south
+elif [ $1 = south ]; then
+  yabai -m window --focus north
 fi
