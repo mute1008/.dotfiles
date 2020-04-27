@@ -108,7 +108,7 @@
           "from": {
             "key_code": "v",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": ["control", "shift"]
             }
           },
           "to": [
