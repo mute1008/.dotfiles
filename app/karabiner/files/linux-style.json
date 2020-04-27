@@ -167,21 +167,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "w",
-            "modifiers": {
-              "mandatory": ["control", "shift"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "w",
-              "modifiers": ["command"]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "return_or_enter",
             "modifiers": {
               "mandatory": ["command"]
