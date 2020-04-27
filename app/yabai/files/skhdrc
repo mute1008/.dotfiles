@@ -4,11 +4,6 @@ cmd - l : ~/.scripts/yabai-move.sh east
 cmd - k : ~/.scripts/yabai-move.sh north
 cmd - j : ~/.scripts/yabai-move.sh south
 
-# focus monitor
-cmd + ctrl - 1  : yabai -m display --focus 1
-cmd + ctrl - 2  : yabai -m display --focus 2
-cmd + ctrl - 3  : yabai -m display --focus 3
-
 # focus workspace
 shift + cmd - 1  : yabai -m window --space 1
 shift + cmd - 2  : yabai -m window --space 2
@@ -22,3 +17,6 @@ shift + cmd - j : yabai -m window --swap south
 
 # balance
 cmd - b : yabai -m space --balance
+
+# toggle vertical
+cmd - e : yabai -m space --rotate 90
