@@ -37,6 +37,7 @@ mouse_warping container
 exec --no-startup-id fcitx-autostart
 exec --no-startup-id pkill tunnel.sh
 exec --no-startup-id ~/Sources/Scripts/tunnel.sh
+exec --no-startup-id wmname LG3D
 
 ### Key bindings
 #

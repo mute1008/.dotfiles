@@ -31,4 +31,6 @@ remove_ocr() {
   cp "$WORKING_DIR/$filename.pdf" "$OUTPUT_DIR"
 }
 
-remove_ocr "$file"
+for file in $PDF_DIR/*; do
+  remove_ocr "$file"
+done
