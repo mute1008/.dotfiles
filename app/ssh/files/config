@@ -21,3 +21,25 @@ Host gateway
   Hostname 34.85.123.229
   Port 22
   IdentityFile ~/.ssh/id_ecdsa
+
+Host dev1
+  User naoya_miyaguchi
+  Hostname 172.16.0.33
+  IdentityFile ~/.ssh/id_rsa
+
+Host dev2
+  User naoya_miyaguchi
+  Hostname 172.16.0.34
+  IdentityFile ~/.ssh/id_rsa
+
+Host dev
+  User naoya_miyaguchi
+  Hostname 10.224.146.153
+  IdentityFile ~/.ssh/id_ecdsa
+
+
+Host demo
+  User naoya_miyaguchi
+  Hostname miyaguchi-handson-db-kintone
+  IdentityFile ~/.ssh/id_rsa
+  ProxyCommand ssh -W %h:%p dev1

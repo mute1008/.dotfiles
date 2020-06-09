@@ -14,7 +14,6 @@ declare -a APPS=(
   tmux
   nvim
   ssh
-  pyenv
   alacritty
   sway
   yabai

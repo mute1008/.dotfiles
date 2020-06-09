@@ -53,29 +53,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "c",
-            "modifiers": {
-              "mandatory": ["control"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": ["command"]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.google\\.Chrome"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "w",
             "modifiers": {
               "mandatory": ["control"]
@@ -99,6 +76,29 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": ["command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "v",
             "modifiers": {
               "mandatory": ["control"]
@@ -112,9 +112,9 @@
           ],
           "conditions": [
             {
-              "type": "frontmost_application_if",
+              "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.google\\.Chrome"
+                "^com\\.googlecode\\.iterm2"
               ]
             }
           ]

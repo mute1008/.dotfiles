@@ -3,11 +3,9 @@ declare -A LINUX_APPS;
 declare -A DARWIN_APPS;
 
 declare -A GENERAL_APPS=(
-  ["the_silver_searcher"]="ag"
   ["git"]="git"
   ["tmux"]="tmux"
   ["zsh"]="zsh"
-  ["go"]="go"
   ["jq"]="jq"
 )
 

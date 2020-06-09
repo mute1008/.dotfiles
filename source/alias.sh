@@ -1,7 +1,11 @@
-alias vim='pyenv global $PYVERSION3 && nvim'
+alias vim='nvim'
 alias vi='nvim'
 alias ls='ls --color'
 alias d='docker-compose'
+alias k='kubectl'
+alias kx='kubectx'
+alias kn='kubens'
+alias st='stern'
 
 if [[ `uname` == 'Darwin' ]]; then
   alias find=gfind

@@ -8,6 +8,11 @@ cmd - j : ~/.scripts/yabai-move.sh south
 shift + cmd - 1  : yabai -m window --space 1
 shift + cmd - 2  : yabai -m window --space 2
 shift + cmd - 3  : yabai -m window --space 3
+shift + cmd - 3  : yabai -m window --space 5
+shift + cmd - 3  : yabai -m window --space 6
+shift + cmd - 3  : yabai -m window --space 7
+shift + cmd - 3  : yabai -m window --space 8
+shift + cmd - 3  : yabai -m window --space 9
 
 # swap managed window
 shift + cmd - h : yabai -m window --swap west
