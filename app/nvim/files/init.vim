@@ -1,5 +1,5 @@
-if has('nvim') && isdirectory( $PYENV_ROOT."/versions/nvim" )
-  let g:python3_host_prog = $PYENV_ROOT.'/versions/nvim/bin/python'
+if has('nvim') && isdirectory(expand('~/.anyenv/envs/pyenv/versions/nvim'))
+  let g:python3_host_prog = '~/.anyenv/envs/pyenv/versions/nvim/bin/python'
 endif
 
 source ~/.config/nvim/lib.vim
