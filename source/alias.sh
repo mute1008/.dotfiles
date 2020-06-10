@@ -3,7 +3,7 @@ alias vi='nvim'
 alias ls='ls --color'
 alias d='docker-compose'
 alias k='kubectl'
-alias kx='kubectx'
+alias kc='kubectx'
 alias kn='kubens'
 alias st='stern'
 

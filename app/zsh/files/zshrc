@@ -98,6 +98,7 @@ source ~/.dotfiles/source/export.sh
 
 # env
 eval "$(anyenv lazyload)"
+eval "$(direnv hook zsh)"
 
 # tmux
 if [ -z $TMUX ]; then
