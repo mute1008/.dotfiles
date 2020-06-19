@@ -36,10 +36,3 @@ Host dev
   User naoya_miyaguchi
   Hostname 10.224.146.153
   IdentityFile ~/.ssh/id_ecdsa
-
-
-Host demo
-  User naoya_miyaguchi
-  Hostname miyaguchi-handson-db-kintone
-  IdentityFile ~/.ssh/id_rsa
-  ProxyCommand ssh -W %h:%p dev1

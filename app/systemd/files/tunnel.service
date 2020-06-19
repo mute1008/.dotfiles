@@ -2,6 +2,7 @@
 Description = ssh tunnel script
 
 [Service]
-Type = simple
-User = mute
-ExecStart = /usr/bin/ssh -F /home/mute/.ssh/config -N gateway -R 2222:localhost:22
+Type=simple
+User=mute
+ExecStart=/usr/bin/ssh -F /home/mute/.ssh/config -N gateway -R 2222:localhost:22
+Restart=always
