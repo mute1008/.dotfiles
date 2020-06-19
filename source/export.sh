@@ -19,6 +19,9 @@ export PATH=${0:A:h}/bin:$PATH
 # scripts
 export PATH=~/.scripts/:$PATH
 
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"
