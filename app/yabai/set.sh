@@ -1,9 +1,8 @@
 #!/bin/bash
 
-source lib/symlink.sh
-source lib/os.sh
+source lib/bin.sh
 
-if [ $(get_os) = 'Darwin' ]; then
-  symlink ./app/yabai/files/yabairc ~/.yabairc;
-  symlink ./app/yabai/files/skhdrc ~/.skhdrc;
+if [ $(uname) = 'Darwin' ]; then
+  safe_ln $(pwd)/app/yabai/files/yabairc ~/.yabairc;
+  safe_ln $(pwd)/app/yabai/files/skhdrc ~/.skhdrc;
 fi

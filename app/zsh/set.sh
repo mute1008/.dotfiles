@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source lib/symlink.sh
+source lib/bin.sh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null
-symlink ./app/zsh/files/zshrc ~/.zshrc
+[ ! -d ~/.oh-my-zsh ] && \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+safe_ln $(pwd)/app/zsh/files/zshrc ~/.zshrc

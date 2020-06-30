@@ -1,19 +1,17 @@
-## Required
-bash > 5.0  
-python > 3.8  
-
 ## Support
-MacOS  
 ArchLinux  
-
-## Description
-TODO source以下のファイルの説明
 
 ## Execution
 ```
 $ bash install.sh
 ```
 
-## FAQ
-Q. zsh起動時になんかエラーが出る場合  
-A. compaudit | xargs chmod g-w,o-w  
+## TODO
+[ ] Ubuntuサポート
+[ ] MacOSサポート
+[ ] kube-ps1のインストール
+[ ] ciを用意する (bash install.sh x2)
+[ ] tmuxのコピーを設定する
+
+[ ] anyenv, direnv の再インストール最適化
+[ ] wordsのインストール

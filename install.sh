@@ -1,15 +1,14 @@
 source source/alias.sh
-source source/declare.sh
+source source/apps.sh
 source source/export.sh
 
-source lib/os.sh
-source lib/package_manager.sh
-source lib/symlink.sh
+source lib/sbin.sh
 
 declare -a APPS=(
-  go
-  rust
+  anyenv
+  direnv
   git
+  rust
   zsh
   tmux
   nvim

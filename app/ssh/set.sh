@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source lib/symlink.sh
+source lib/bin.sh
 
-symlink ./app/ssh/files/config ~/.ssh/config
+safe_ln $(pwd)/app/ssh/files/config ~/.ssh/config

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source lib/symlink.sh
-source lib/os.sh
+source lib/bin.sh
 
-symlink ./app/scripts/files/ ~/.scripts;
+mkdir -p ~/.scripts
+safe_ln $(pwd)/app/scripts/files/ ~/.scripts

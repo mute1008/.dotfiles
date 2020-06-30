@@ -1,8 +1,7 @@
 #!/bin/bash
 
-source lib/symlink.sh
-source lib/os.sh
+source lib/bin.sh
 
-if [ $(get_os) = 'Linux' ]; then
-  symlink ./app/sway/files/config ~/.config/sway/config;
+if [ $(uname) = 'Linux' ]; then
+  safe_ln $(pwd)/app/sway/files/config ~/.config/sway/config;
 fi

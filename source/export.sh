@@ -22,6 +22,9 @@ export PATH=~/.scripts/:$PATH
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 
+# for binary
+export PATH="$HOME/.userbin/:$PATH"
+
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"
@@ -33,5 +36,5 @@ fi
 
 # Linux
 if [[ `uname` == 'Linux' ]]; then
-  export INSTALL_PACKAGE="sudo pacman -S"
+  export INSTALL_PACKAGE="sudo pacman -S --noconfirm"
 fi

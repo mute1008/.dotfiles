@@ -11,6 +11,10 @@ declare -A GENERAL_APPS=(
 
 declare -A LINUX_APPS=(
   ["sway"]="sway"
+  ["which"]="which"
+  ["neovim"]="nvim"
+  ["gcc"]="gcc"
+  ["make"]="make"
 )
 
 declare -A DARWIN_APPS=(

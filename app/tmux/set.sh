@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source lib/symlink.sh
+source lib/bin.sh
 
-symlink ./app/tmux/files/tmux.conf ~/.tmux.conf
+safe_ln $(pwd)/app/tmux/files/tmux.conf ~/.tmux.conf

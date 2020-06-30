@@ -1,5 +1,3 @@
 #!/bin/bash
 
-if [ $(get_os) = 'Linux' ]; then
-  test;
-fi
+# TODO 配置する

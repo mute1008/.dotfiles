@@ -1,5 +1,3 @@
-source lib/os.sh
-
 # $1 = install package name
 # $2 = command name
 function install_if_not_exists_cmd() {
@@ -19,7 +17,7 @@ function install_dependencies() {
   done
 
   echo -e "\e[34m ========== Start to install dependencies for MacOS ========== \e[m"
-  if [ $(get_os) = 'Darwin' ]; then
+  if [ $(uname) = 'Darwin' ]; then
     for KEY in ${!DARWIN_APPS[@]}; do
       echo -e "\e[32m ========== install ${KEY} ========== \e[m"
       install_if_not_exists_cmd $KEY ${DARWIN_APPS[$KEY]}
@@ -30,7 +28,7 @@ function install_dependencies() {
   fi
 
   echo -e "\e[34m ========== Start to install dependencies for Linux ========== \e[m"
-  if [ $(get_os) = 'Linux' ]; then
+  if [ $(uname) = 'Linux' ]; then
     for KEY in ${!LINUX_APPS[@]}; do
       echo -e "\e[32m ========== install ${KEY} ========== \e[m"
       install_if_not_exists_cmd $KEY ${LINUX_APPS[$KEY]}
