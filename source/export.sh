@@ -25,6 +25,12 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 # for binary
 export PATH="$HOME/.userbin/:$PATH"
 
+# yakumo
+export PATH="$HOME/yakumo/tools/yakumo:$PATH"
+
+# java
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"

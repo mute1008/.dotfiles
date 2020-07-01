@@ -32,7 +32,12 @@ Host dev2
   Hostname 172.16.0.34
   IdentityFile ~/.ssh/id_rsa
 
-Host dev
+Host dev_ubuntu
   User naoya_miyaguchi
   Hostname 10.224.146.153
+  IdentityFile ~/.ssh/id_ecdsa
+
+Host dev
+  User naoya_miyaguchi
+  Hostname 10.224.146.149
   IdentityFile ~/.ssh/id_ecdsa
