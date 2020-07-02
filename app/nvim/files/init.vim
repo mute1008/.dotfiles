@@ -22,6 +22,7 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'Shougo/deoplete.nvim'
 Plug 'ujihisa/neco-look'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'unkiwii/vim-nerdtree-sync'
 if has("mac")
   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 endif
