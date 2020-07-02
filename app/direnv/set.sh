@@ -2,7 +2,7 @@
 
 mkdir -p $HOME/.userbin
 
-[ -d $HOME/.userbin/direnv ] && exit 0
+[ ! -d $HOME/.userbin/direnv ] && exit 0
 
 if [ $(uname) = "Linux" ]; then
   curl -L https://github.com/direnv/direnv/releases/download/v2.21.3/direnv.linux-amd64 -o $HOME/.userbin/direnv

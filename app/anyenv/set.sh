@@ -7,7 +7,7 @@ mkdir -p $(anyenv root)/plugins
 [ ! -d $(anyenv root)/plugins/anyenv-lazyload ] && \
   git clone https://github.com/amashigeseiji/anyenv-lazyload.git $(anyenv root)/plugins/anyenv-lazyload
 
-[ ! -d /root/.config/anyenv/anyenv-install ] && yes | anyenv install --init
+[ ! -d ~/.config/anyenv/anyenv-install ] && yes | anyenv install --init
 yes no | anyenv install pyenv > /dev/null
 yes no | anyenv install goenv > /dev/null
 eval "$(anyenv init -)"
@@ -17,7 +17,7 @@ eval "$(anyenv init -)"
 eval "$(anyenv init -)"
 
 pyenv versions | grep 3.8.0 > /dev/null
-[ $? = 0 ] && exit 0
+[ $? -eq 0 ] && exit 0
 
 pyenv install 3.8.0
 pyenv virtualenv 3.8.0 nvim
