@@ -12,7 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tyru/caw.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'prabirshrestha/async.vim'

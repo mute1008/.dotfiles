@@ -11,7 +11,7 @@ set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 " モード切替
-inoremap <silent> jj <ESC> 
+inoremap <silent> jj <ESC>
 
 " タブ,ウインドウ設定
 nnoremap s <Nop>
@@ -29,6 +29,8 @@ nnoremap sq <C-w>q
 nnoremap s> <C-w>>
 nnoremap s< <C-w><
 nnoremap s- <C-w>_
+
+nnoremap tt :tabnew<CR>:terminal<CR>
 
 " スクロール設定
 nnoremap D <C-d>
