@@ -28,6 +28,10 @@ export PATH="$HOME/.userbin/:$PATH"
 # yakumo
 export PATH="$HOME/yakumo/tools/yakumo:$PATH"
 
+# kube-ps1
+source ~/.kube-ps1/kube-ps1.sh
+RPROMPT='$(kube_ps1) '$RPROMPT
+
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"
