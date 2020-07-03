@@ -30,7 +30,7 @@ nnoremap s> <C-w>>
 nnoremap s< <C-w><
 nnoremap s- <C-w>_
 
-nnoremap tt :tabnew<CR>:terminal<CR>
+nnoremap tt :tabnew<CR>:terminal<CR>i
 
 " スクロール設定
 nnoremap D <C-d>
