@@ -1,0 +1,6 @@
+#!/bin/bash
+
+current=$(git rev-parse --abbrev-ref @)
+
+git branch --set-upstream-to="origin/${current}" "${current}"
+git pull
