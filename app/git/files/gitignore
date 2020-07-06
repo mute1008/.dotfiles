@@ -1,2 +1,3 @@
 .envrc
 .vim-lsp-settings/
+.DS_Store
