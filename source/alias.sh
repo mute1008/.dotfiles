@@ -6,6 +6,7 @@ alias k='kubectl'
 alias kc='kubectx'
 alias kn='kubens'
 alias st='stern'
+alias cdy='cd ~/yakumo'
 
 if [[ `uname` == 'Darwin' ]]; then
   alias find=gfind
