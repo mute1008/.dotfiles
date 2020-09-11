@@ -25,6 +25,9 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 # for binary
 export PATH="$HOME/.userbin/:$PATH"
 
+# gem
+export PATH="$HOME/.gem/ruby/2.7.0/bin/:$PATH"
+
 # yakumo
 export PATH="$HOME/yakumo/tools/yakumo:$PATH"
 

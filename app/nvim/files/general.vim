@@ -32,6 +32,8 @@ nnoremap s- <C-w>_
 
 nnoremap tt :tabnew<CR>:terminal<CR>i
 
+" let mapleader = "\<Space>"
+
 " xキーの時レジスタに入れない
 nnoremap x "_x
 vnoremap x "_x

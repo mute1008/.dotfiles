@@ -23,9 +23,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'ujihisa/neco-look'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jistr/vim-nerdtree-tabs'
-if has("mac")
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " set colorschema
