@@ -23,8 +23,8 @@ gaps inner 5
 output * bg /home/mute/Pictures/wallpapers/polygon-26677-2560x1600.jpg fill
 
 # display settings
-output DVI-D-1 pos 0 0
-output DP-1 pos 1920 -540
+output DVI-D-1 pos 0 540
+output DP-1 pos 1920 0
 focus output DP-1
 
 # Color settings
