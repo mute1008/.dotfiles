@@ -33,7 +33,7 @@ export PATH="$HOME/yakumo/tools/yakumo:$PATH"
 
 # kube-ps1
 source ~/.kube-ps1/kube-ps1.sh
-RPROMPT='$(kube_ps1) '$RPROMPT
+RPROMPT=$RPROMPT' $(kube_ps1)'
 
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
