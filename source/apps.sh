@@ -11,6 +11,8 @@ declare -A GENERAL_APPS=(
 
 declare -A LINUX_APPS=(
   ["sway"]="sway"
+  ["waybar"]="waybar"
+  ["alacritty"]="alacritty"
   ["which"]="which"
   ["neovim"]="nvim"
   ["gcc"]="gcc"
