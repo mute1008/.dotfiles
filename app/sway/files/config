@@ -183,5 +183,5 @@ bar {
 }
 
 include /etc/sway/config.d/*
-# include ~/.config/sway/laptop.conf
+include ~/.config/sway/laptop.conf
 include ~/.config/sway/desktop.conf
