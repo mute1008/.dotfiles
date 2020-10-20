@@ -31,10 +31,6 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin/:$PATH"
 # yakumo
 export PATH="$HOME/yakumo/tools/yakumo:$PATH"
 
-# kube-ps1
-source ~/.kube-ps1/kube-ps1.sh
-RPROMPT=$RPROMPT' $(kube_ps1)'
-
 # Darwin
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"
