@@ -110,3 +110,7 @@ if [ -z $TMUX ]; then
   fi
   exit
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mute/.sdkman"
+[[ -s "/home/mute/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mute/.sdkman/bin/sdkman-init.sh"

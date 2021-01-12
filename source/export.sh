@@ -11,7 +11,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # golang
 export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/1.15.2/bin
 
 # gcloud
 export PATH=${0:A:h}/bin:$PATH
