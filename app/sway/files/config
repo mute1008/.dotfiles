@@ -46,6 +46,9 @@ exec --no-startup-id wmname LG3D
     # Start your launcher
     bindsym $mod+p exec $menu
 
+    # Screenshot
+    bindsym $mod+z exec grim -g "$(slurp -d)"
+
     # Control volume
     bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+
     bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%-
