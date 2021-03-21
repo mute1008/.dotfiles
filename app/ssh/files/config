@@ -8,36 +8,3 @@ Host home
   Hostname home.mute1008.dev
   Port 1008
   IdentityFile ~/.ssh/id_ecdsa
-
-Host home-over-gateway
-  User mute
-  Hostname localhost
-  Port 2222
-  IdentityFile ~/.ssh/id_ecdsa
-  ProxyCommand ssh -W %h:%p gateway
-
-Host gateway
-  User mute1008
-  Hostname 34.85.123.229
-  Port 22
-  IdentityFile ~/.ssh/id_ecdsa
-
-Host dev1
-  User naoya_miyaguchi
-  Hostname 172.16.0.33
-  IdentityFile ~/.ssh/id_rsa
-
-Host dev2
-  User naoya_miyaguchi
-  Hostname 172.16.0.34
-  IdentityFile ~/.ssh/id_rsa
-
-Host dev_ubuntu
-  User naoya_miyaguchi
-  Hostname 10.224.146.153
-  IdentityFile ~/.ssh/id_ecdsa
-
-Host dev
-  User naoya_miyaguchi
-  Hostname 10.224.146.149
-  IdentityFile ~/.ssh/id_ecdsa

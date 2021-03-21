@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# docker run -d -v $HOME/.ubooquity/books:/books -v $HOME/.ubooquity/comics:/comics -v $HOME/.ubooquity/config:/config -p 2202:2202 -p 2203:2203 -it linuxserver/ubooquity
-
-google-chrome-stable http://localhost:2202/books

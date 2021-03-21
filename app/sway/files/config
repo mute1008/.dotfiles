@@ -13,7 +13,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-# set $term alacritty
+set $term alacritty
 set $term WAYLAND_DISPLAY= alacritty
 
 set $menu rofi -show run
@@ -29,8 +29,6 @@ mouse_warping container
 
 # Startup
 exec --no-startup-id fcitx-autostart
-exec --no-startup-id pkill tunnel.sh
-exec --no-startup-id ~/Sources/Scripts/tunnel.sh
 exec --no-startup-id wmname LG3D
 
 ### Key bindings
@@ -186,6 +184,10 @@ bar {
     swaybar_command waybar
 }
 
-include /etc/sway/config.d/*
-include ~/.config/sway/laptop.conf
-include ~/.config/sway/desktop.conf
+#
+# Display:
+#
+output DVI-D-1 pos 5760 0 transform 90
+output DP-1 pos 1920 0
+
+workspace 9 output DVI-D-1

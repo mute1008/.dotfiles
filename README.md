@@ -1,15 +1,4 @@
-## Support
-ArchLinux  
-
-## Execution
 ```
-$ bash install.sh
+$ pacman -S ttf-hack ttf-font-awesome noto-fonts noto-fonts-emoji
+$ pacman -S fcitx fcitx-mozc fcitx-configtool
 ```
-
-## TODO
-[ ] Ubuntuサポート
-[ ] MacOSサポート
-[ ] kube-ps1のインストール
-[ ] ciを用意する (bash install.sh x2)
-[ ] tmuxのコピーを設定する
-[ ] wordsのインストール

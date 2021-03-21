@@ -6,18 +6,13 @@ source lib/sbin.sh
 
 declare -a APPS=(
   anyenv
-  direnv
   git
-  rust
   zsh
   tmux
   nvim
   ssh
   alacritty
   sway
-  yabai
-  karabiner
-  scripts
 )
 
 install_dependencies
