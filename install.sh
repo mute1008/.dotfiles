@@ -13,6 +13,7 @@ declare -a APPS=(
   ssh
   alacritty
   sway
+  custom
 )
 
 install_dependencies

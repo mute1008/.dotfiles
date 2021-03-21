@@ -15,7 +15,6 @@ declare -A LINUX_APPS=(
   ["waybar"]="waybar"
   ["alacritty"]="alacritty"
   ["rofi"]="rofi"
-  ["fcitx fcitx-mozc fcitx-configtool"]="fcitx"
 
   # utils
   ["which"]="which"
