@@ -5,7 +5,6 @@ if [ $(uname) = 'Linux' ]; then
   fi
 
   # japanese input
-
   if [[ ! -e `which fcitx` ]]; then
     sudo pacman -S fcitx fcitx-mozc fcitx-configtool --noconfirm;
   fi

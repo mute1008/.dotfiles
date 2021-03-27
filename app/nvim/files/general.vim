@@ -1,6 +1,6 @@
 if has('nvim')
   " ターミナルをESCで抜けられるように
-  tnoremap <silent> <ESC> <C-\><C-n> 
+  tnoremap <silent> <ESC> <C-\><C-n>
 endif
 
 " colorscheme設定
@@ -31,8 +31,6 @@ nnoremap s< <C-w><
 nnoremap s- <C-w>_
 
 nnoremap tt :tabnew<CR>:terminal<CR>i
-
-" let mapleader = "\<Space>"
 
 " xキーの時レジスタに入れない
 nnoremap x "_x

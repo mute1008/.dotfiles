@@ -48,9 +48,9 @@ exec --no-startup-id wmname LG3D
     bindsym $mod+z exec grim -g "$(slurp -d)"
 
     # Control volume
-    bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+
-    bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%-
-    bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master toggle
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
     bindsym alt+1 exec amixer set Capture toggle
 
     # Drag floating windows by holding down $mod and left mouse button.

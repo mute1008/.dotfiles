@@ -6,24 +6,28 @@ source ~/.config/nvim/lib.vim
 source ~/.config/nvim/general.vim
 
 call plug#begin('~/.local/share/nvim/site/autoload/')
+" syntax highlight
 Plug 'sheerun/vim-polyglot'
+
+" git
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
+
+" comment out
 Plug 'tyru/caw.vim'
-Plug 'Shougo/denite.nvim'
-Plug 'rbgrouleff/bclose.vim'
+
+" nerdtree
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jonathanfilip/vim-lucius'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'lighttiger2505/deoplete-vim-lsp'
-Plug 'Shougo/deoplete.nvim'
-Plug 'ujihisa/neco-look'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'easymotion/vim-easymotion'
+
+" colorscheme
+Plug 'jonathanfilip/vim-lucius'
+
+" editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" LSP
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " set colorschema
