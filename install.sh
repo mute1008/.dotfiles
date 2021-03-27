@@ -8,7 +8,6 @@ declare -a APPS=(
   anyenv
   git
   zsh
-  tmux
   nvim
   ssh
   alacritty

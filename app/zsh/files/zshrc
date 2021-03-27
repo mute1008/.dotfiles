@@ -59,6 +59,7 @@ ZSH_THEME="gallois"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  adb
   git
   aws
 )
@@ -99,13 +100,3 @@ source ~/.dotfiles/source/export.sh
 
 # env
 eval "$(anyenv lazyload)"
-
-# tmux
-if [ -z $TMUX ]; then
-  if [ -z `tmux ls` ]; then
-    tmux -2
-  else
-    tmux attach -d
-  fi
-  exit
-fi
