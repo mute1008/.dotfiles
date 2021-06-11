@@ -97,6 +97,3 @@ export LANG=ja_JP.UTF-8
 
 source ~/.dotfiles/source/alias.sh
 source ~/.dotfiles/source/export.sh
-
-# env
-eval "$(anyenv lazyload)"

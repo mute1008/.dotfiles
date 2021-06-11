@@ -1,6 +1,6 @@
 # general
 export EDITOR=nvim
-export PATH=~/.local/bin:$PATH
+export PATH="~/.local/bin:$PATH"
 
 # python
 export PYTHON2=2.7.18
@@ -11,13 +11,13 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # golang
 export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/1.15.2/bin
+export PATH="$PATH:$GOPATH/1.15.2/bin"
 
 # gcloud
-export PATH=${0:A:h}/bin:$PATH
+export PATH="${0:A:h}/bin:$PATH"
 
 # scripts
-export PATH=~/.scripts/:$PATH
+export PATH="~/.scripts/:$PATH"
 
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
@@ -35,7 +35,7 @@ export PATH="$HOME/yakumo/tools/yakumo:$PATH"
 if [[ `uname` == 'Darwin' ]]; then
   coreutils_path="/usr/local/opt/coreutils"
   export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-  export PATH=$coreutils_path/libexec/gnubin:$PATH
+  export PATH="$coreutils_path/libexec/gnubin:$PATH"
   export PATH="/usr/local/opt/mysql-client/bin:$PATH"
   export INSTALL_PACKAGE="brew install"
   source <(kubectl completion zsh)
