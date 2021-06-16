@@ -3,8 +3,14 @@ Host github.com
   Hostname github.com
   IdentityFile ~/.ssh/id_ecdsa
 
-Host home
+Host rig
   User mute
-  Hostname home.mute1008.dev
-  Port 1008
+  Hostname mute1008.dev
+  Port 1000
+  IdentityFile ~/.ssh/id_ecdsa
+
+Host router
+  User mute1008
+  Hostname mute1008.dev
+  Port 22
   IdentityFile ~/.ssh/id_ecdsa

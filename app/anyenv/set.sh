@@ -10,17 +10,9 @@ mkdir -p $(anyenv root)/plugins
 [ ! -d ~/.config/anyenv/anyenv-install ] && yes | anyenv install --init
 yes no | anyenv install pyenv > /dev/null
 yes no | anyenv install goenv > /dev/null
+yes no | anyenv install nodenv > /dev/null
 eval "$(anyenv init -)"
 
 [ ! -d $(pyenv root)/plugins/pyenv-virtualenv ] && \
   git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 eval "$(anyenv init -)"
-
-pyenv versions | grep 3.8.0 > /dev/null
-[ $? -eq 0 ] && exit 0
-
-pyenv install 3.8.0
-pyenv virtualenv 3.8.0 nvim
-pyenv activate nvim
-pip install neovim
-pyenv deactivate nvim
