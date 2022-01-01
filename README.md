@@ -3,7 +3,7 @@
 - git
 - neovim
 - ripgrep
-- docker / docker-compose
+- trash-cli
 
 # dependencies (for macOS)
 - coreutils
