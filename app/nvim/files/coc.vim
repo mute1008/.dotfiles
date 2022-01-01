@@ -12,3 +12,5 @@ command! -nargs=0 OR     :call CocAction('runCommand', 'editor.action.organizeIm
 nnoremap <silent> sf :CocList files<CR>
 nnoremap <silent> sg :CocList grep<CR>
 nnoremap <silent> ss  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+
+nnoremap <silent> <C-f>  :Format<CR> :w<CR>
