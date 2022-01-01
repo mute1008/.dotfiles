@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source lib/bin.sh
+source source/lib.sh
 
 [ ! -d ~/.oh-my-zsh ] && \
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended

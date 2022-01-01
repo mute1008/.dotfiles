@@ -1,8 +1,6 @@
+source source/lib.sh
 source source/alias.sh
-source source/apps.sh
 source source/export.sh
-
-source lib/sbin.sh
 
 declare -a APPS=(
   anyenv
@@ -10,10 +8,15 @@ declare -a APPS=(
   zsh
   nvim
   ssh
-  alacritty
-  sway
-  input
+  kube
 )
 
-install_dependencies
-install
+echo -e "\e[34m ========== Start to install Apps ========== \e[m"
+for app in ${APPS[@]}; do
+  echo -e "\e[32m ========== Start to install $app ========== \e[m"
+  bash ./app/$app/set.sh
+  if [ $? -ne 0 ]; then
+    echo -e "\e[31m ========== Failed to install $app ========== \e[m"
+    exit
+  fi
+done

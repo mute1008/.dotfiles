@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source lib/bin.sh
+source source/lib.sh
 
 safe_ln $(pwd)/app/ssh/files/config ~/.ssh/config

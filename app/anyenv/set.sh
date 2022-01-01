@@ -10,7 +10,6 @@ mkdir -p $(anyenv root)/plugins
 [ ! -d ~/.config/anyenv/anyenv-install ] && yes | anyenv install --init
 yes no | anyenv install pyenv > /dev/null
 yes no | anyenv install goenv > /dev/null
-yes no | anyenv install nodenv > /dev/null
 eval "$(anyenv init -)"
 
 [ ! -d $(pyenv root)/plugins/pyenv-virtualenv ] && \
