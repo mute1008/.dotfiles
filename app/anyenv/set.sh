@@ -3,15 +3,17 @@
 [ ! -d ~/.anyenv ] && git clone https://github.com/anyenv/anyenv ~/.anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 
-mkdir -p $(anyenv root)/plugins
-[ ! -d $(anyenv root)/plugins/anyenv-lazyload ] && \
-  git clone https://github.com/amashigeseiji/anyenv-lazyload.git $(anyenv root)/plugins/anyenv-lazyload
+anyenv_root=$(anyenv root)
+mkdir -p $anyenv_root/plugins
+[ ! -d $anyenv_root/plugins/anyenv-lazyload ] && \
+  git clone https://github.com/amashigeseiji/anyenv-lazyload.git $anyenv_root/plugins/anyenv-lazyload
 
 [ ! -d ~/.config/anyenv/anyenv-install ] && yes | anyenv install --init
 yes no | anyenv install pyenv > /dev/null
 yes no | anyenv install goenv > /dev/null
 eval "$(anyenv init -)"
 
-[ ! -d $(pyenv root)/plugins/pyenv-virtualenv ] && \
-  git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+pyenv_root=$(pyenv root)
+[ ! -d $pyenv_root/plugins/pyenv-virtualenv ] && \
+  git clone https://github.com/pyenv/pyenv-virtualenv.git $pyenv_root/plugins/pyenv-virtualenv
 eval "$(anyenv init -)"

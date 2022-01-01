@@ -26,16 +26,16 @@ chmod +x $HOME/.local/bin/kubectl
   )
 
 # プラグインのインストール
-kubectl krew list | grep ctx
+kubectl krew list | grep ctx > /dev/null
 [ $? -ne 0 ] && \
   kubectl krew install ctx
 
-kubectl krew list | grep ns
+kubectl krew list | grep ns > /dev/null
 [ $? -ne 0 ] && \
   kubectl krew install ns
 
 # kustomizeのインストール
-which kustomize
+which kustomize > /dev/null
 [ $? -ne 0 ] && \
   curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && \
   mv kustomize $HOME/.local/bin/
