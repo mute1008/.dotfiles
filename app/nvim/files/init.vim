@@ -8,6 +8,7 @@ source ~/.config/nvim/general.vim
 call plug#begin('~/.local/share/nvim/site/autoload/')
 " syntax highlight
 Plug 'sheerun/vim-polyglot'
+Plug 'tomlion/vim-solidity'
 
 " git
 Plug 'airblade/vim-gitgutter'
