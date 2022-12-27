@@ -10,7 +10,7 @@ export PYTHON3=3.9.5
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # golang
-export PATH="$PATH:$GOPATH/1.16.0/bin"
+export PATH="$PATH:$GOPATH/bin"
 
 # gcloud
 export PATH="${0:A:h}/bin:$PATH"
@@ -20,3 +20,6 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 
 # kube
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# for M1 Mac
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
