@@ -14,3 +14,6 @@ nnoremap <silent> sg :CocList grep<CR>
 nnoremap <silent> ss  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
 nnoremap <silent> <C-f>  :Format<CR> :w<CR>
+
+" 補完をEnterで確定させる
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
