@@ -9,9 +9,6 @@ export PYTHON3=3.9.5
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# golang
-export PATH="$PATH:$GOROOT/bin"
-
 # gcloud
 export PATH="${0:A:h}/bin:$PATH"
 
