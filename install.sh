@@ -8,7 +8,6 @@ declare -a APPS=(
   zsh
   nvim
   ssh
-  kube
 )
 
 echo -e "\e[34m ========== Start to install Apps ========== \e[m"
