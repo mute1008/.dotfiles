@@ -100,4 +100,3 @@ source ~/.dotfiles/source/export.sh
 
 eval "$(anyenv init -)"
 export PATH=$PATH:$GOROOT/bin
-
