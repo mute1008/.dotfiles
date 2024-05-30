@@ -3,11 +3,12 @@ source source/alias.sh
 source source/export.sh
 
 declare -a APPS=(
-  anyenv
-  git
-  zsh
-  nvim
-  ssh
+  # anyenv
+  # git
+  # zsh
+  # nvim
+  # ssh
+  intellij
 )
 
 echo -e "\e[34m ========== Start to install Apps ========== \e[m"
