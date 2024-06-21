@@ -1,0 +1,69 @@
+# Reference: https://github.com/i3/i3/blob/next/etc/config
+
+# i3 didn't have "normalizations" feature that why we disable them here.
+# But the feature is very helpful.
+# Normalizations eliminate all sorts of weird tree configurations that don't make sense.
+# Give normalizations a chance and enable them back.
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+[mode.main.binding]
+cmd-ctrl-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+
+cmd-ctrl-h = 'focus left'
+cmd-ctrl-j = 'focus down'
+cmd-ctrl-k = 'focus up'
+cmd-ctrl-l = 'focus right'
+
+cmd-ctrl-shift-h = 'move left'
+cmd-ctrl-shift-j = 'move down'
+cmd-ctrl-shift-k = 'move up'
+cmd-ctrl-shift-l = 'move right'
+
+cmd-ctrl-f = 'fullscreen'
+
+cmd-ctrl-q = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+
+cmd-ctrl-shift-space = 'layout floating tiling' # 'floating toggle' in i3
+
+# Not supported, because this command is redundant in AeroSpace mental model.
+# See: https://nikitabobko.github.io/AeroSpace/guide#floating-windows
+#cmd-ctrl-space = 'focus toggle_tiling_floating'
+
+# `focus parent`/`focus child` are not yet supported, and it's not clear whether they
+# should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
+# cmd-ctrl-a = 'focus parent'
+
+cmd-ctrl-1 = 'workspace 1'
+cmd-ctrl-2 = 'workspace 2'
+cmd-ctrl-3 = 'workspace 3'
+cmd-ctrl-4 = 'workspace 4'
+cmd-ctrl-5 = 'workspace 5'
+cmd-ctrl-6 = 'workspace 6'
+cmd-ctrl-7 = 'workspace 7'
+cmd-ctrl-8 = 'workspace 8'
+cmd-ctrl-9 = 'workspace 9'
+cmd-ctrl-0 = 'workspace 10'
+
+cmd-ctrl-shift-1 = 'move-node-to-workspace 1'
+cmd-ctrl-shift-2 = 'move-node-to-workspace 2'
+cmd-ctrl-shift-3 = 'move-node-to-workspace 3'
+cmd-ctrl-shift-4 = 'move-node-to-workspace 4'
+cmd-ctrl-shift-5 = 'move-node-to-workspace 5'
+cmd-ctrl-shift-6 = 'move-node-to-workspace 6'
+cmd-ctrl-shift-7 = 'move-node-to-workspace 7'
+cmd-ctrl-shift-8 = 'move-node-to-workspace 8'
+cmd-ctrl-shift-9 = 'move-node-to-workspace 9'
+cmd-ctrl-shift-0 = 'move-node-to-workspace 10'
+
+cmd-ctrl-shift-c = 'reload-config'
+
+cmd-ctrl-e = 'mode resize'
+
+[mode.resize.binding]
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+enter = 'mode main'
+esc = 'mode main'

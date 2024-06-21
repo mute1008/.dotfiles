@@ -1,0 +1,5 @@
+[user]
+	name = mute1997
+	email = mute1008@gmail.com
+[core]
+	excludesfile = /Users/naoyamiyaguchi/.dotfiles/app/git/files/gitignore

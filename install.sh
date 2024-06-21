@@ -9,6 +9,7 @@ declare -a APPS=(
   nvim
   ssh
   intellij
+  aerospace
 )
 
 echo -e "\e[34m ========== Start to install Apps ========== \e[m"
