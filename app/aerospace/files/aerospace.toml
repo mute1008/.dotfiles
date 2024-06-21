@@ -4,7 +4,7 @@ after-startup-command = [
 ]
 
 [mode.main.binding]
-ctrl-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+ctrl-enter = 'exec-and-forget open -n /Applications/iTerm.app'
 
 ctrl-h = 'focus left'
 ctrl-j = 'focus down'
@@ -28,10 +28,10 @@ ctrl-cmd-3 = 'move-node-to-workspace 3'
 ctrl-cmd-4 = 'move-node-to-workspace 4'
 ctrl-cmd-5 = 'move-node-to-workspace 5'
 
-ctrl-8 = 'reload-config'
-ctrl-9 = 'layout tiles horizontal vertical'
-ctrl-0 = 'fullscreen'
-ctrl-r = 'mode resize'
+ctrl-7 = 'reload-config'
+ctrl-8 = 'layout tiles horizontal vertical'
+ctrl-9 = 'fullscreen'
+ctrl-0 = 'mode resize' # ctrl-r is conflicts with shell history keybinding.
 
 [mode.resize.binding]
 h = 'resize width -50'
@@ -42,4 +42,4 @@ enter = 'mode main'
 esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
-5 = 'secondary'                  # Non-main monitor in case when there are only two monitors
+5 = 'secondary'
