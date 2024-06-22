@@ -6,13 +6,8 @@ after-startup-command = [
 [mode.main.binding]
 ctrl-enter = 'exec-and-forget open -n /Applications/iTerm.app'
 
-#ctrl-u = 'focus up'
 ctrl-j = 'focus left'
-#ctrl-h = 'focus right'
-ctrl-n = 'focus down'
-#ctrl-j = 'focus down' # removed because it conflicts with focus left
-#ctrl-k = 'focus up' # removed because it conflicts with shell keybinding.
-#ctrl-l = 'focus right' # ctrl l is conflicts with shell clear keybinding.
+ctrl-h = 'focus down'
 
 ctrl-cmd-h = 'move left'
 ctrl-cmd-j = 'move down'
