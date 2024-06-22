@@ -4,8 +4,6 @@ after-startup-command = [
 ]
 
 [mode.main.binding]
-cmd-enter = 'exec-and-forget open -n /Applications/iTerm.app'
-
 cmd-h = 'focus left'
 cmd-j = 'focus down'
 cmd-k = 'focus up'
