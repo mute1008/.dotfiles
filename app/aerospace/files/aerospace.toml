@@ -31,7 +31,7 @@ cmd-ctrl-5 = 'move-node-to-workspace 5'
 cmd-8 = 'reload-config'
 cmd-9 = 'layout tiles horizontal vertical'
 cmd-0 = 'fullscreen'
-cmd-shift-r = 'mode resize'
+cmd-semicolon = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'
