@@ -6,10 +6,10 @@ after-startup-command = [
 [mode.main.binding]
 ctrl-enter = 'exec-and-forget open -n /Applications/iTerm.app'
 
-ctrl-j = 'focus left'
+ctrl-j = 'focus right'
 #ctrl-j = 'focus down' # removed because it conflicts with focus left
 #ctrl-k = 'focus up' # removed because it conflicts with shell keybinding.
-ctrl-semicolon = 'focus right' # ctrl l is conflicts with shell clear keybinding.
+#ctrl-l = 'focus right' # ctrl l is conflicts with shell clear keybinding.
 
 ctrl-cmd-h = 'move left'
 ctrl-cmd-j = 'move down'
@@ -28,10 +28,10 @@ ctrl-cmd-3 = 'move-node-to-workspace 3'
 ctrl-cmd-4 = 'move-node-to-workspace 4'
 ctrl-cmd-5 = 'move-node-to-workspace 5'
 
-ctrl-7 = 'reload-config'
-ctrl-8 = 'layout tiles horizontal vertical'
-ctrl-9 = 'fullscreen'
-ctrl-0 = 'mode resize' # ctrl-r is conflicts with shell history keybinding.
+ctrl-8 = 'reload-config'
+ctrl-9 = 'layout tiles horizontal vertical'
+ctrl-0 = 'fullscreen'
+ctrl-semicolon = 'mode resize' # ctrl-r is conflicts with shell history keybinding.
 
 [mode.resize.binding]
 h = 'resize width -50'
