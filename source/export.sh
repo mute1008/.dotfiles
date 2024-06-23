@@ -28,3 +28,10 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # brew
 export PATH=$PATH:/opt/homebrew/bin/
+
+# bin
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+export PATH="/opt/homebrew/opt/findutils/bin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH=$PATH:$GOROOT/bin
