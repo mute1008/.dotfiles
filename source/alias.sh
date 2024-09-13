@@ -10,6 +10,10 @@ if [[ `uname` == 'Darwin' ]]; then
   alias xargs=gxargs
 fi
 
+cd() {
+    builtin cd "$@" && ls
+}
+
 ext() {
   if [ -f "$1" ] ; then
     dir_name="${1%.*}"
