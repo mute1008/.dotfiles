@@ -1,5 +1,6 @@
 alias vim='nvim'
 alias vi='nvim'
+alias v='nvim'
 alias ls='ls --color'
 alias d='docker-compose'
 alias rm='trash'
