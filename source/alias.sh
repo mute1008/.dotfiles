@@ -3,6 +3,7 @@ alias vi='nvim'
 alias v='nvim'
 alias ls='ls --color'
 alias l='ls --color'
+unfunction d
 alias d='docker-compose'
 
 alias rm='trash'
