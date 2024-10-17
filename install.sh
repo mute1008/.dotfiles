@@ -3,7 +3,7 @@ source source/alias.sh
 source source/export.sh
 
 declare -a APPS=(
-  anyenv
+  asdf
   git
   zsh
   nvim

@@ -27,8 +27,6 @@ Plug 'jonathanfilip/vim-lucius'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-" LSP
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " set colorschema
