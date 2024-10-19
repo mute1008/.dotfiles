@@ -1,11 +1,20 @@
+if [ "$(ps -o comm= -p $$)" = "zsh" ]; then
+  unfunction d
+fi
+
+# editor
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
+
+# ls
 alias ls='ls --color'
 alias l='ls --color'
-unfunction d
+
+# docker-compose
 alias d='docker-compose'
 
+# trash
 alias rm='trash'
 alias empty='trash-empty'
 alias restore='trash-restore'
