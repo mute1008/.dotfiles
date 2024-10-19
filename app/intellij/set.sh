@@ -7,6 +7,5 @@ safe_ln $(pwd)/app/intellij/files/ideavimrc ~/.ideavimrc
 # For Windows (WSL)
 if [ -d "/mnt/c/Users" ]; then
   username=$(whoami.exe | cut -d "\\" -f2 | tr -d "\\r")
-  rm -f /mnt/c/Users/${username}/.ideavimrc
-  safe_ln $(pwd)/app/intellij/files/ideavimrc /mnt/c/Users/${username}/.ideavimrc
+  cp $(pwd)/app/intellij/files/ideavimrc /mnt/c/Users/${username}/.ideavimrc
 fi
