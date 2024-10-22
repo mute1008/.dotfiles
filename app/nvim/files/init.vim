@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 " syntax highlight
 Plug 'sheerun/vim-polyglot'
 Plug 'tomlion/vim-solidity'
+Plug 'delphinus/vim-firestore'
 
 " git
 Plug 'airblade/vim-gitgutter'
