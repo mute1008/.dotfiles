@@ -4,42 +4,46 @@ after-startup-command = [
 ]
 
 [mode.main.binding]
-cmd-h = 'focus left'
-cmd-j = 'focus down'
-cmd-k = 'focus up'
-cmd-l = 'focus right'
+f1 = 'workspace 1'
+f2 = 'workspace 2'
+f3 = 'workspace 3'
+f4 = 'workspace 4'
+f5 = 'workspace 5'
+f6 = 'workspace 6'
+f7 = 'workspace 7'
+f8 = 'workspace 8'
 
-cmd-ctrl-h = 'move left'
-cmd-ctrl-j = 'move down'
-cmd-ctrl-k = 'move up'
-cmd-ctrl-l = 'move right'
+cmd-h = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left', 'move-mouse window-lazy-center']
+cmd-j = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down', 'move-mouse window-lazy-center']
+cmd-k = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up', 'move-mouse window-lazy-center']
+cmd-l = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right', 'move-mouse window-lazy-center']
 
-cmd-1 = 'workspace 1'
-cmd-2 = 'workspace 2'
-cmd-3 = 'workspace 3'
-cmd-4 = 'workspace 4'
-cmd-e = 'workspace 5'
-cmd-d = 'workspace 6'
+cmd-ctrl-h = ['move left', 'move-mouse window-lazy-center']
+cmd-ctrl-j = ['move down', 'move-mouse window-lazy-center']
+cmd-ctrl-k = ['move up', 'move-mouse window-lazy-center']
+cmd-ctrl-l = ['move right', 'move-mouse window-lazy-center']
 
-cmd-ctrl-1 = 'move-node-to-workspace 1'
-cmd-ctrl-2 = 'move-node-to-workspace 2'
-cmd-ctrl-3 = 'move-node-to-workspace 3'
-cmd-ctrl-4 = 'move-node-to-workspace 4'
-cmd-ctrl-e = 'move-node-to-workspace 5'
-cmd-ctrl-d = 'move-node-to-workspace 6'
+cmd-1 = 'workspace prev'
+cmd-2 = 'workspace next'
 
-cmd-minus = 'layout tiles horizontal vertical'
+cmd-ctrl-1 = ['move-node-to-workspace prev', 'workspace prev']
+cmd-ctrl-2 = ['move-node-to-workspace next', 'workspace next']
+
+cmd-8 = 'mode resize'
+cmd-9 = ['move-node-to-monitor --wrap-around --focus-follows-window next']
 cmd-0 = 'fullscreen'
-cmd-semicolon = 'mode resize'
+cmd-minus = 'layout tiles horizontal vertical'
 
 [mode.resize.binding]
-h = 'resize width -50'
 j = 'resize height +50'
 k = 'resize height -50'
-l = 'resize width +50'
+l = 'resize width -50'
+h = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
 5 = 'secondary'
 6 = 'secondary'
+7 = 'secondary'
+8 = 'secondary'
