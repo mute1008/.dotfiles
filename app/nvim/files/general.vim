@@ -53,3 +53,6 @@ set undodir=~/.cache/undo/
 
 " clickboard
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" polyglotのcsv無効化
+let g:polyglot_disabled = ['csv']
