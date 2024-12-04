@@ -1,38 +1,47 @@
 start-at-login = true
 after-startup-command = [
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=10.0',
   'layout tiles horizontal vertical'
 ]
 
+[gaps]
+inner.horizontal = 15
+inner.vertical =   15
+outer.left =       15
+outer.bottom =     10
+outer.top =        10
+outer.right =      15
+
 [mode.main.binding]
-f1 = 'workspace 1'
-f2 = 'workspace 2'
-f3 = 'workspace 3'
-f4 = 'workspace 4'
-f5 = 'workspace 5'
-f6 = 'workspace 6'
-f7 = 'workspace 7'
-f8 = 'workspace 8'
+cmd-f1 = 'workspace 1'
+cmd-f2 = 'workspace 2'
+cmd-f3 = 'workspace 3'
+cmd-f4 = 'workspace 4'
+cmd-f5 = 'workspace 5'
+cmd-f6 = 'workspace 6'
+cmd-f7 = 'workspace 7'
+cmd-f8 = 'workspace 8'
 
-cmd-h = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left', 'move-mouse window-lazy-center']
-cmd-j = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down', 'move-mouse window-lazy-center']
-cmd-k = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up', 'move-mouse window-lazy-center']
-cmd-l = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right', 'move-mouse window-lazy-center']
+cmd-h = ['focus left', 'move-mouse window-force-center']
+cmd-j = ['focus down', 'move-mouse window-force-center']
+cmd-k = ['focus up', 'move-mouse window-force-center']
+cmd-l = ['focus right', 'move-mouse window-force-center']
+cmd-n = 'focus-monitor --wrap-around next'
 
-cmd-ctrl-h = ['move left', 'move-mouse window-lazy-center']
-cmd-ctrl-j = ['move down', 'move-mouse window-lazy-center']
-cmd-ctrl-k = ['move up', 'move-mouse window-lazy-center']
-cmd-ctrl-l = ['move right', 'move-mouse window-lazy-center']
+cmd-ctrl-h = 'move left'
+cmd-ctrl-j = 'move down'
+cmd-ctrl-k = 'move up'
+cmd-ctrl-l = 'move right'
 
-cmd-1 = 'workspace prev'
-cmd-2 = 'workspace next'
-
-cmd-ctrl-1 = ['move-node-to-workspace prev', 'workspace prev']
-cmd-ctrl-2 = ['move-node-to-workspace next', 'workspace next']
+cmd-1 = 'workspace --wrap-around prev'
+cmd-2 = 'workspace --wrap-around next'
+cmd-ctrl-1 = ['move-node-to-workspace --wrap-around prev', 'workspace --wrap-around prev']
+cmd-ctrl-2 = ['move-node-to-workspace --wrap-around next', 'workspace --wrap-around next']
 
 cmd-8 = 'mode resize'
-cmd-9 = ['move-node-to-monitor --wrap-around --focus-follows-window next']
+cmd-9 = 'move-node-to-monitor --wrap-around --focus-follows-window next'
 cmd-0 = 'fullscreen'
-cmd-minus = 'layout tiles horizontal vertical'
+cmd-slash = 'layout tiles horizontal vertical'
 
 [mode.resize.binding]
 j = 'resize height +50'
