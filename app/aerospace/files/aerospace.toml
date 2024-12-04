@@ -22,11 +22,12 @@ cmd-f6 = 'workspace 6'
 cmd-f7 = 'workspace 7'
 cmd-f8 = 'workspace 8'
 
-cmd-h = ['focus left', 'move-mouse window-force-center']
-cmd-j = ['focus down', 'move-mouse window-force-center']
-cmd-k = ['focus up', 'move-mouse window-force-center']
-cmd-l = ['focus right', 'move-mouse window-force-center']
-cmd-n = 'focus-monitor --wrap-around next'
+# Turn off "Displays have separate Spaces"
+# ref. https://github.com/nikitabobko/AeroSpace/issues/726
+cmd-h = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left', 'move-mouse window-force-center']
+cmd-j = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down', 'move-mouse window-force-center']
+cmd-k = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up', 'move-mouse window-force-center']
+cmd-l = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right', 'move-mouse window-force-center']
 
 cmd-ctrl-h = 'move left'
 cmd-ctrl-j = 'move down'
