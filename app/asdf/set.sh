@@ -2,7 +2,7 @@
 
 # Python
 bash -c "\
-  asdf plugin-add python && \
+  asdf plugin add python https://github.com/danhper/asdf-python.git && \
   asdf install python 2.7.18 && \
   asdf install python 3.12.0 && \
   asdf set -u python 3.12.0" 1>/dev/null
