@@ -2,9 +2,6 @@
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
 
-# asdf
-source "$HOME/.asdf/asdf.sh"
-
 # for Apple Silicon
 export DOCKER_DEFAULT_PLATFORM="linux/amd64"
 
@@ -12,6 +9,7 @@ export DOCKER_DEFAULT_PLATFORM="linux/amd64"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/build-tools/35.0.0:$PATH"
 
 # brew
 export PATH="/opt/homebrew/bin/:$PATH"

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-[ ! -d ~/.asdf ] && git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
-source "$HOME/.asdf/asdf.sh"
-
 # Python
 bash -c "\
   asdf plugin-add python && \
