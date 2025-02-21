@@ -2,6 +2,9 @@
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
 
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # for Apple Silicon
 export DOCKER_DEFAULT_PLATFORM="linux/amd64"
 
