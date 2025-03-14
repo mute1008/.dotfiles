@@ -3,18 +3,8 @@ Host github.com
   Hostname github.com
   IdentityFile ~/.ssh/id_ed25519
 
-Host router
-  User mute1008
-  Hostname mute1008.dev
+Host hyper-v
+  User root
+  Hostname 192.168.2.250
   Port 22
-  IdentityFile ~/.ssh/id_ecdsa
-
-Host isucon1
-  HostName 3.115.114.221 
-  User root
-Host isucon2
-  HostName 52.192.30.221
-  User root
-Host isucon3
-  HostName 35.74.192.211
-  User root
+  IdentityFile ~/.ssh/id_ed25519
