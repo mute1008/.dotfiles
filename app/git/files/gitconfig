@@ -2,4 +2,4 @@
 	name = mute1997
 	email = mute1008@gmail.com
 [core]
-	excludesfile = $HOME/.dotfiles/app/git/files/gitignore
+	excludesfile = ~/.dotfiles/app/git/files/gitignore
