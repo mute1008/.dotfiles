@@ -58,5 +58,7 @@ enter = 'mode main'
 esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
+6 = 'secondary'
+7 = 'secondary'
 8 = 'secondary'
 9 = 'secondary'
