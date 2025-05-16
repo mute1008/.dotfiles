@@ -1,7 +1,12 @@
 start-at-login = true
 after-startup-command = [
+  'exec-and-forget sketchybar --config /Users/naoya/.config/sketchybar/sketchybarrc',
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=10.0',
   'layout tiles horizontal vertical'
+]
+
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 [gaps]
@@ -9,7 +14,7 @@ inner.horizontal = 15
 inner.vertical =   15
 outer.left =       15
 outer.bottom =     10
-outer.top =        10
+outer.top =        40
 outer.right =      15
 
 [mode.main.binding]
@@ -53,7 +58,5 @@ enter = 'mode main'
 esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
-5 = 'secondary'
-6 = 'secondary'
-7 = 'secondary'
 8 = 'secondary'
+9 = 'secondary'

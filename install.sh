@@ -10,6 +10,7 @@ declare -a APPS=(
   ssh
   intellij
   aerospace
+  sketchybar
 )
 
 echo -e "\e[34m ========== Start to install Apps ========== \e[m"

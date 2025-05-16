@@ -1,7 +1,3 @@
-if has('nvim') && isdirectory(expand('~/.anyenv/envs/pyenv/versions/nvim'))
-  let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/versions/nvim/bin/python')
-endif
-
 source ~/.config/nvim/lib.vim
 source ~/.config/nvim/general.vim
 
