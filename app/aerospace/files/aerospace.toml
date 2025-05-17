@@ -18,21 +18,33 @@ outer.top =        40
 outer.right =      15
 
 [mode.main.binding]
-cmd-f1 = 'workspace 1'
-cmd-f2 = 'workspace 2'
-cmd-f3 = 'workspace 3'
-cmd-f4 = 'workspace 4'
-cmd-f5 = 'workspace 5'
-cmd-f6 = 'workspace 6'
-cmd-f7 = 'workspace 7'
-cmd-f8 = 'workspace 8'
+# cmd-f1 = 'workspace 1'
+# cmd-f2 = 'workspace 2'
+# cmd-f3 = 'workspace 3'
+# cmd-f4 = 'workspace 4'
+# cmd-f5 = 'workspace 5'
+# cmd-f6 = 'workspace 6'
+# cmd-f7 = 'workspace 7'
+# cmd-f8 = 'workspace 8'
 
 # Turn off "Displays have separate Spaces"
 # ref. https://github.com/nikitabobko/AeroSpace/issues/726
-cmd-h = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left', 'move-mouse window-force-center']
-cmd-j = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down', 'move-mouse window-force-center']
-cmd-k = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up', 'move-mouse window-force-center']
-cmd-l = ['focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right', 'move-mouse window-force-center']
+cmd-h = [
+  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left',
+  'move-mouse window-force-center'
+]
+cmd-j = [
+  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down',
+  'move-mouse window-force-center'
+]
+cmd-k = [
+  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up',
+  'move-mouse window-force-center'
+]
+cmd-l = [
+  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right',
+  'move-mouse window-force-center'
+]
 
 cmd-ctrl-h = 'move left'
 cmd-ctrl-j = 'move down'
@@ -41,21 +53,29 @@ cmd-ctrl-l = 'move right'
 
 cmd-1 = 'workspace --wrap-around prev'
 cmd-2 = 'workspace --wrap-around next'
-cmd-ctrl-1 = ['move-node-to-workspace --wrap-around prev', 'workspace --wrap-around prev']
-cmd-ctrl-2 = ['move-node-to-workspace --wrap-around next', 'workspace --wrap-around next']
 
-cmd-8 = 'mode resize'
+cmd-ctrl-1 = ['move-node-to-workspace 1']
+cmd-ctrl-2 = ['move-node-to-workspace 2']
+cmd-ctrl-3 = ['move-node-to-workspace 3']
+cmd-ctrl-4 = ['move-node-to-workspace 4']
+cmd-ctrl-5 = ['move-node-to-workspace 5']
+cmd-ctrl-6 = ['move-node-to-workspace 6']
+cmd-ctrl-7 = ['move-node-to-workspace 7']
+cmd-ctrl-8 = ['move-node-to-workspace 8']
+cmd-ctrl-9 = ['move-node-to-workspace 9']
+
+# cmd-8 = 'mode resize'
 cmd-9 = 'move-node-to-monitor --wrap-around --focus-follows-window next'
 cmd-0 = 'fullscreen'
 cmd-slash = 'layout tiles horizontal vertical'
 
-[mode.resize.binding]
-j = 'resize height +50'
-k = 'resize height -50'
-l = 'resize width -50'
-h = 'resize width +50'
-enter = 'mode main'
-esc = 'mode main'
+# [mode.resize.binding]
+# j = 'resize height +50'
+# k = 'resize height -50'
+# l = 'resize width -50'
+# h = 'resize width +50'
+# enter = 'mode main'
+# esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
 6 = 'secondary'

@@ -48,7 +48,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '40px'
+    top: '45px'
     right: '6px'
     bottom: '6px'
     left: '6px'
@@ -126,10 +126,11 @@ workspaces:
   - name: '4'
   - name: '5'
   - name: '6'
+    bind_to_monitor: 0
   - name: '7'
+    bind_to_monitor: 0
   - name: '8'
     bind_to_monitor: 0
-    keep_alive: true
   - name: "9"
     bind_to_monitor: 0
 
@@ -189,21 +190,21 @@ keybindings:
     bindings: ['alt+0']
 
   # Move focused window to a workspace defined in `workspaces` config.
-  - commands: ['move --workspace 1', 'focus --workspace 1']
+  - commands: ['move --workspace 1']
     bindings: ['alt+ctrl+1']
-  - commands: ['move --workspace 2', 'focus --workspace 2']
+  - commands: ['move --workspace 2']
     bindings: ['alt+ctrl+2']
-  - commands: ['move --workspace 3', 'focus --workspace 3']
+  - commands: ['move --workspace 3']
     bindings: ['alt+ctrl+3']
-  - commands: ['move --workspace 4', 'focus --workspace 4']
+  - commands: ['move --workspace 4']
     bindings: ['alt+ctrl+4']
-  - commands: ['move --workspace 5', 'focus --workspace 5']
+  - commands: ['move --workspace 5']
     bindings: ['alt+ctrl+5']
-  - commands: ['move --workspace 6', 'focus --workspace 6']
+  - commands: ['move --workspace 6']
     bindings: ['alt+ctrl+6']
-  - commands: ['move --workspace 7', 'focus --workspace 7']
+  - commands: ['move --workspace 7']
     bindings: ['alt+ctrl+7']
-  - commands: ['move --workspace 8', 'focus --workspace 8']
+  - commands: ['move --workspace 8']
     bindings: ['alt+ctrl+8']
-  - commands: ['move --workspace 9', 'focus --workspace 9']
+  - commands: ['move --workspace 9']
     bindings: ['alt+ctrl+9']
