@@ -8,6 +8,7 @@ declare -a APPS=(
   git
   zsh
   ssh
+  karabiner
 
   # Editor
   nvim

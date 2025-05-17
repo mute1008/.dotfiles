@@ -3,7 +3,6 @@
 source source/lib.sh
 
 # For Linux
-rm -f ~/.ideavimrc
 safe_ln $(pwd)/app/intellij/files/ideavimrc ~/.ideavimrc
 
 # For Windows (WSL)
