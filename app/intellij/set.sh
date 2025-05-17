@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source source/lib.sh
 
 # For Linux

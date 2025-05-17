@@ -9,6 +9,7 @@ alias v='nvim'
 
 # ls
 alias ls='ls --color'
+alias lls='ls --color'
 alias l='ls --color'
 
 # docker-compose

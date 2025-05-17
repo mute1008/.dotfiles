@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source source/lib.sh
 
 if [ -d "/mnt/c/Users" ]; then
