@@ -1,6 +1,6 @@
 function safe_rm() {
-  mkdir -p ~/.dotfiles-backups
-  [ -d $1 ] && cp -r $1 ~/.dotfiles-backups/$(basename $1)-$(date +"%Y-%m-%d-%T")
+  mkdir -p ~/.backup-dotfiles
+  [ -d $1 ] && cp -r $1 ~/.backup-dotfiles/$(basename $1)-$(date +"%Y-%m-%d-%T")
   rm -rf $1
 }
 

@@ -3,14 +3,19 @@ source source/alias.sh
 source source/export.sh
 
 declare -a APPS=(
+  # Dev
   mise
   git
   zsh
-  nvim
   ssh
+
+  # Editor
+  nvim
   intellij
+
+  # WM
   aerospace
-  sketchybar
+  glazewm
 )
 
 echo -e "\e[34m ========== Start to install Apps ========== \e[m"

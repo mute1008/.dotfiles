@@ -1,6 +1,5 @@
 # dependencies
 - zsh
-- mise
 - git
 - neovim
 - ripgrep
