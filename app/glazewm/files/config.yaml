@@ -121,10 +121,15 @@ window_behavior:
 
 workspaces:
   - name: '1'
+    bind_to_monitor: 1
   - name: '2'
+    bind_to_monitor: 1
   - name: '3'
+    bind_to_monitor: 1
   - name: '4'
+    bind_to_monitor: 1
   - name: '5'
+    bind_to_monitor: 1
   - name: '6'
     bind_to_monitor: 0
   - name: '7'
