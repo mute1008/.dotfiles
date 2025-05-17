@@ -2,4 +2,4 @@
 	name = mute1997
 	email = mute1008@gmail.com
 [core]
-	excludesfile = /home/mute/.dotfiles/app/git/files/gitignore
+	excludesfile = /Users/naoya/.dotfiles/app/git/files/gitignore

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f '$HOME/.local/bin/mise' ]; then
+if [ ! -f $HOME/.local/bin/mise ]; then
   curl https://mise.run | sh
 
   mise settings set python.compile false

@@ -18,12 +18,12 @@ declare -a APPS=(
   glazewm
 )
 
-echo -e "\e[34m ========== Start to install Apps ========== \e[m"
+printf "\e[34m ========== Start to install Apps ========== \e[m\n"
 for app in ${APPS[@]}; do
-  echo -e "\e[32m ========== Start to install $app ========== \e[m"
+  printf "\e[32m ========== Start to install $app ========== \e[m\n"
   bash ./app/$app/set.sh
   if [ $? -ne 0 ]; then
-    echo -e "\e[31m ========== Failed to install $app ========== \e[m"
+    printf "\e[31m ========== Failed to install $app ========== \e[m\n"
     exit
   fi
 done
