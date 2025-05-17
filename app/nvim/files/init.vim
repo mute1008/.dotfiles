@@ -24,6 +24,9 @@ Plug 'jonathanfilip/vim-lucius'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Lint
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " set colorschema
