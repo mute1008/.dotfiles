@@ -174,20 +174,24 @@ keybindings:
     bindings: ['alt+ctrl+j']
 
   # Workspace cycle
-  - commands: ["focus --prev-workspace"]
+  - commands: ["focus --workspace 1"]
     bindings: ["alt+1"]
-  - commands: ["focus --next-workspace"]
+  - commands: ["focus --workspace 2"]
     bindings: ["alt+2"]
-
-  # Focus
-  - commands: ['focus --next-active-workspace']
-    bindings: ['alt+ctrl+1']
-  - commands: ['focus --prev-active-workspace']
-    bindings: ['alt+ctrl+2']
-
-  # Fullscreen
-  - commands: ['toggle-fullscreen']
-    bindings: ['alt+0']
+  - commands: ["focus --workspace 3"]
+    bindings: ["alt+3"]
+  - commands: ["focus --workspace 4"]
+    bindings: ["alt+4"]
+  - commands: ["focus --workspace 5"]
+    bindings: ["alt+5"]
+  - commands: ["focus --workspace 6"]
+    bindings: ["alt+6"]
+  - commands: ["focus --workspace 7"]
+    bindings: ["alt+7"]
+  - commands: ["focus --workspace 8"]
+    bindings: ["alt+8"]
+  - commands: ["focus --workspace 9"]
+    bindings: ["alt+9"]
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ['move --workspace 1']
@@ -208,3 +212,8 @@ keybindings:
     bindings: ['alt+ctrl+8']
   - commands: ['move --workspace 9']
     bindings: ['alt+ctrl+9']
+
+  # Fullscreen
+  - commands: ['toggle-fullscreen']
+    bindings: ['alt+0']
+
