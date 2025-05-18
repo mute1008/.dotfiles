@@ -157,6 +157,10 @@ window_rules:
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
 
+      # Ignore Steam
+      - window_process: { equals: "Steam" }
+      - window_process: { equals: "steamwebhelper" }
+
 keybindings:
   # Shift focus in a given direction.
   - commands: ['focus --direction left']
