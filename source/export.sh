@@ -22,8 +22,5 @@ export PATH="/opt/homebrew/opt/coreutils/bin:$PATH"
 # OpenJDK
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
-# Rancher
-export PATH="$HOME/.rd/bin:$PATH"
-
 # Chrome
 export PATH="$HOME/.depot_tools:$PATH"

@@ -94,7 +94,7 @@
             ]
           },
           {
-            "description": "⌃C/V/X/A/Z → ⌘C/V/X/A/Z （Terminal.app, iTerm2 を除外）",
+            "description": "⌃C/V/X/A/Z/R → ⌘C/V/X/A/Z/R （Terminal.app, iTerm2 を除外）",
             "manipulators": [
               {
                 "type": "basic",
@@ -156,6 +156,20 @@
                 "type": "basic",
                 "from": { "key_code": "z", "modifiers": { "mandatory": ["control"], "optional": ["any"] } },
                 "to": [{ "key_code": "z", "modifiers": ["command"] }],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": { "key_code": "r", "modifiers": { "mandatory": ["control"], "optional": ["any"] } },
+                "to": [{ "key_code": "r", "modifiers": ["command"] }],
                 "conditions": [
                   {
                     "type": "frontmost_application_unless",
