@@ -4,7 +4,7 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Control+F to Command+F in Browser",
+            "description": "Control+T to Command+T in Browser",
             "manipulators": [
               {
                 "conditions": [
@@ -94,7 +94,7 @@
             ]
           },
           {
-            "description": "⌃C/V/X/A/Z/R → ⌘C/V/X/A/Z/R （Terminal.app, iTerm2 を除外）",
+            "description": "⌃C/V/X/A/Z/R → ⌘C/V/X/A/Z/R",
             "manipulators": [
               {
                 "type": "basic",
@@ -175,7 +175,9 @@
                     "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.Terminal$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.jetbrains\\..*$",
+                      "^com\\.microsoft\\.VSCode$"
                     ]
                   }
                 ]
