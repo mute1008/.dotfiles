@@ -2,9 +2,6 @@
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
 
-# for Apple Silicon
-export DOCKER_DEFAULT_PLATFORM="linux/amd64"
-
 # Android SDK
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
