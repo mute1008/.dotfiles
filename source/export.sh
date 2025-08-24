@@ -11,6 +11,9 @@ export PATH="$HOME/Library/Android/sdk/build-tools/35.0.0:$PATH"
 # brew
 export PATH="/opt/homebrew/bin/:$PATH"
 
+# snap
+export PATH="/snap/bin:$PATH"
+
 # bin
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 export PATH="/opt/homebrew/opt/findutils/bin:$PATH"
