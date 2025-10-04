@@ -44,11 +44,11 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '6px'
+  inner_gap: '2px'
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '6px'
+    top: '40px'
     right: '6px'
     bottom: '6px'
     left: '6px'

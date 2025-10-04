@@ -6,4 +6,5 @@ if [ -d "/mnt/c/Users" ]; then
   username=$(whoami.exe | cut -d "\\" -f2 | tr -d "\\r")
   cp $(pwd)/app/glazewm/files/config.yaml /mnt/c/Users/${username}/.glzr/glazewm/config.yaml
   glazewm.exe command wm-reload-config > /dev/null
+  echo ""
 fi
