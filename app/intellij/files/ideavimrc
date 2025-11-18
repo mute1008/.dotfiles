@@ -28,6 +28,10 @@ nnoremap <Space>r :action FindUsages<CR>
 nnoremap <Space><Space> :action QuickImplementations<CR>
 nnoremap <Space>f :action ToggleBookmark<CR>
 
+" 矩形選択
+nnoremap <C-q> <C-v>
+vnoremap <C-q> <C-v>
+
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.

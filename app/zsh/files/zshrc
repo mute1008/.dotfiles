@@ -38,3 +38,8 @@ if [ -f '/Users/naoya/Documents/tools/google-cloud-sdk/completion.zsh.inc' ]; th
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/naoya/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Work-specific settings (not committed)
+if [ -f ~/.dotfiles/work/zshrc ]; then
+  source ~/.dotfiles/work/zshrc
+fi

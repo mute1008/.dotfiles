@@ -19,19 +19,19 @@ outer.right =      15
 
 [mode.main.binding]
 cmd-h = [
-  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left',
+  'focus --boundaries all-monitors-outer-frame left',
   'move-mouse window-force-center'
 ]
 cmd-j = [
-  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down',
+  'focus --boundaries all-monitors-outer-frame down',
   'move-mouse window-force-center'
 ]
 cmd-k = [
-  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up',
+  'focus --boundaries all-monitors-outer-frame up',
   'move-mouse window-force-center'
 ]
 cmd-l = [
-  'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right',
+  'focus --boundaries all-monitors-outer-frame right',
   'move-mouse window-force-center'
 ]
 
