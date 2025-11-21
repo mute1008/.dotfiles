@@ -21,7 +21,8 @@ nnoremap J gT
 nnoremap ff :action SearchEverywhere<CR>
 
 " コードリーディング
-nnoremap <Space>j :action GotoDeclaration<CR>
+nnoremap <Space>j :action GotoImplementation<CR>
+nnoremap <Space>d :action GotoDeclaration<CR>
 nnoremap <Space>k :action Back<CR>
 nnoremap <Space>l :action Forward<CR>
 nnoremap <Space>r :action FindUsages<CR>

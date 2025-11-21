@@ -15,7 +15,4 @@ if [ ! -f $HOME/.local/bin/mise ]; then
 
   mise install ruby@3.4.4
   mise use ruby@3.4.4 -g
-
-  mise install rust@stable
-  mise use rust@stable -g
 fi
