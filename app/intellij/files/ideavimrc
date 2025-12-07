@@ -1,16 +1,36 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+" =============================================================
+" 1. LEADER KEY SETUP
+" =============================================================
+let mapleader = "\<Space>"
 
-" クリップボード設定
+" =============================================================
+" 2. PLUGIN
+" =============================================================
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+" =============================================================
+" 3. PLUGIN SETTING
+" =============================================================
+" NERDTree
+map <C-n> :NERDTreeFocus<CR>
+
+" easymotion
+map <leader>w <Plug>(easymotion-bd-w)
+map <leader>s <Plug>(easymotion-bd-f2)
+
+" =============================================================
+" 4. VIM OPTIONS
+" =============================================================
 set clipboard=unnamed
-
-" モード切替
-inoremap <silent> jj <ESC>
+set scrolloff=20
+set incsearch
 
 " タブを閉じる
 nnoremap <C-w> :action CloseEditor<CR>
+nnoremap sq :action CloseEditor<CR>
 
 " 検索
 nnoremap <C-f> :action FindInPath<CR>
@@ -18,7 +38,6 @@ nnoremap <C-f> :action FindInPath<CR>
 " 移動
 nnoremap K gt
 nnoremap J gT
-nnoremap ff :action SearchEverywhere<CR>
 
 " コードリーディング
 nnoremap <Space>j :action GotoImplementation<CR>
@@ -29,24 +48,5 @@ nnoremap <Space>r :action FindUsages<CR>
 nnoremap <Space><Space> :action QuickImplementations<CR>
 nnoremap <Space>f :action ToggleBookmark<CR>
 
-" 矩形選択
-nnoremap <C-q> <C-v>
-vnoremap <C-q> <C-v>
-
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=20
-
-" Do incremental searching.
-set incsearch
-
-" Don't use Ex mode, use Q for formatting.
+" Exモードへの移行を無効化
 map Q gq
-
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-Plug 'tpope/vim-commentary'

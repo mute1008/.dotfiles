@@ -3,3 +3,4 @@ work/
 *.work
 *_work.*
 local.*
+lazy-lock.json

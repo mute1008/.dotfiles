@@ -1,7 +1,13 @@
 -- ~/.config/nvim/init.lua
 
 -- =============================================================
--- 1. PLUGIN MANAGER SETUP (lazy.nvim)
+-- 1. LEADER KEY SETUP
+-- =============================================================
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- =============================================================
+-- 2. PLUGIN MANAGER SETUP (lazy.nvim)
 -- =============================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -16,17 +22,18 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local map = vim.keymap.set
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-vim.g.polyglot_disabled = { 'csv' }
-
 -- =============================================================
--- 2. PLUGIN DEFINITIONS
+-- 3. PLUGIN DEFINITIONS
 -- =============================================================
 local plugins = {
-    -- { 'ribru17/bamboo.nvim', lazy = false, priority = 1000, config = function() vim.cmd("colorscheme bamboo") end, },
-    { 'Mofiqul/vscode.nvim', lazy = false, priority = 1000, config = function() vim.cmd("colorscheme vscode") end, },
+    {
+        'Mofiqul/vscode.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd("colorscheme vscode")
+        end
+    },
     {
         'preservim/nerdtree',
         cmd = 'NERDTree',
@@ -35,13 +42,17 @@ local plugins = {
             'jistr/vim-nerdtree-tabs',
         },
         keys = { { "<C-n>", mode = "n", silent = true } },
-        config = function() 
-            vim.g.NERDTreeShowHidden = 1 
-            vim.keymap.set('n', '<C-n>', '<cmd>NERDTreeMirrorToggle<CR>', { desc = "Toggle NERDTree Mirror" })
+        config = function()
+            vim.g.NERDTreeShowHidden = 1
+            vim.keymap.set('n', '<C-n>', '<cmd>NERDTreeFocus<CR>', { desc = "Open NERDTree"})
+            vim.api.nvim_create_autocmd("FileType", {
+                    pattern = "nerdtree",
+                    callback = function()
+                        vim.keymap.set('n', '<Esc>', '<C-w>p', { buffer = true, silent = true, desc = "Focus back to previous editor" })
+                    end
+                })
         end,
     },
-    { 'sheerun/vim-polyglot' },
-    { 'airblade/vim-gitgutter' },
     {
         'tyru/caw.vim',
         config = function()
@@ -49,7 +60,6 @@ local plugins = {
             vim.keymap.set('v', '<C-K>', '<Plug>(caw:hatpos:toggle)', { desc = "CAW Comment Toggle (Visual)" })
         end
     },
-    { 'editorconfig/editorconfig-vim' },
     {
         'dense-analysis/ale',
         config = function()
@@ -64,12 +74,30 @@ local plugins = {
             vim.g.ale_fix_on_save = 1
         end,
     },
+    {
+        'sheerun/vim-polyglot',
+        init = function()
+            vim.g.polyglot_disabled = { 'csv' }
+        end,
+    },
+    {
+        'easymotion/vim-easymotion',
+        init = function()
+            vim.g.EasyMotion_smartcase = 1
+        end,
+        config = function()
+            vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-bd-w)', { desc = "Easymotion Word" })
+            vim.keymap.set('n', '<leader>s', '<Plug>(easymotion-bd-f2)', { desc = "Easymotion Find 2 chars" })
+        end,
+    },
+    { 'editorconfig/editorconfig-vim' },
+    { 'airblade/vim-gitgutter' },
 }
 
 require("lazy").setup(plugins, { change_detection = { notify = false } })
 
 -- =============================================================
--- 3. CUSTOM FUNCTIONS
+-- 4. CUSTOM FUNCTIONS
 -- =============================================================
 local function MaximumWindow(key)
     vim.cmd("wincmd " .. key)
@@ -83,12 +111,22 @@ end
 end
 
 -- =============================================================
--- 4. VIM OPTIONS
+-- 5. VIM OPTIONS
 -- =============================================================
 vim.cmd([[
     " OPTIONS
     set background=dark
-    set tabstop=2 shiftwidth=2 autoindent expandtab number mouse=a ambiwidth=double cindent hidden clipboard+=unnamedplus sh=zsh
+    set tabstop=2
+    set shiftwidth=2
+    set autoindent
+    set expandtab
+    set number
+    set mouse=a
+    set ambiwidth=double
+    set cindent
+    set hidden
+    set clipboard+=unnamedplus
+    set sh=zsh
     set cursorline
     set list listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
     set undofile undodir=~/.cache/undo/
@@ -98,8 +136,10 @@ vim.cmd([[
 ]])
 
 -- =============================================================
--- 5. KEYMAPS (Window, General)
+-- 6. KEYMAPS (Window, General)
 -- =============================================================
+local map = vim.keymap.set
+
 -- CUSTOM WINDOW FUNCTIONS
 map("n", "sh", function() MaximumWindow("h") end, { desc = "Toggle Maximize Left/Right" })
 map("n", "sj", function() MaximumWindow("j") end, { desc = "Toggle Maximize Up/Down" })
@@ -109,20 +149,10 @@ map("n", "sl", function() MaximumWindow("l") end, { desc = "Toggle Maximize Left
 -- WINDOW MANAGEMENT
 map("n", "s", "<Nop>")
 map("n", "st", "<cmd>tabnew<CR>", { desc = "New Tab" })
-map("n", "s=", "<C-w>=", { desc = "Equalize Splits" })
+map("n", "ss", "<cmd>split<CR>", { desc = "Split" })
 map("n", "sv", "<cmd>vsplit<CR>", { desc = "Vertical Split" })
-map("n", "vs", "<cmd>vsplit<CR>", { desc = "Vertical Split" })
+map("n", "s-", "<C-w>_", { desc = "Window maximize height" })
+map("n", "s=", "<C-w>=", { desc = "Equalize Splits" })
+map("n", "sq", "<C-w>q", { desc = "Close Window" })
 map("n", "K", "gt", { desc = "Next Tab" })
 map("n", "J", "gT", { desc = "Previous Tab" })
-map("n", "sq", "<C-w>q", { desc = "Close Window" })
-map("n", "tt", "<cmd>tabnew | terminal<CR>i", { desc = "Terminal in new tab" })
-map("n", "s>", "<C-w>>", { desc = "Window increase width" })
-map("n", "s<", "<C-w><", { desc = "Window decrease width" })
-map("n", "s-", "<C-w>_", { desc = "Window maximize height" })
-
--- GENERAL
-map("i", "jj", "<Esc>", { silent = true, desc = "Exit Insert Mode" })
-map({"n", "v"}, "x", '"_x', { desc = "Delete without Yanke" })
-map("n", "D", "<C-d>", { desc = "Scroll Down Half Page" })
-map("n", "U", "<C-u>", { desc = "Scroll Up Half Page" })
-map("n", "L", "<C-l>", { desc = "Scroll Down Half Page" })
