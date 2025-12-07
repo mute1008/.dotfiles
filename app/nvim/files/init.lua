@@ -87,6 +87,7 @@ local plugins = {
         config = function()
             vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-bd-w)', { desc = "Easymotion Word" })
             vim.keymap.set('n', '<leader>s', '<Plug>(easymotion-bd-f2)', { desc = "Easymotion Find 2 chars" })
+            vim.keymap.set('n', '<leader>a', '<Plug>(easymotion-bd-jk)', { desc = "Easymotion Line Down" })
         end,
     },
     { 'editorconfig/editorconfig-vim' },

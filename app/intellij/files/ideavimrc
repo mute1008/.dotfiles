@@ -6,7 +6,6 @@ let mapleader = "\<Space>"
 " =============================================================
 " 2. PLUGIN
 " =============================================================
-Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
@@ -20,6 +19,7 @@ map <leader>n :NERDTreeFocus<CR>
 " easymotion
 map <leader>w <Plug>(easymotion-bd-w)
 map <leader>s <Plug>(easymotion-bd-f2)
+map <leader>a <Plug>(easymotion-bd-jk)
 
 " =============================================================
 " 4. VIM OPTIONS
