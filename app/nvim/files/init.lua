@@ -4,7 +4,6 @@
 -- 1. LEADER KEY SETUP
 -- =============================================================
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- =============================================================
 -- 2. PLUGIN MANAGER SETUP (lazy.nvim)
@@ -41,10 +40,10 @@ local plugins = {
             'Xuyuanp/nerdtree-git-plugin',
             'jistr/vim-nerdtree-tabs',
         },
-        keys = { { "<C-n>", mode = "n", silent = true } },
+        keys = { { "<leader>n", mode = "n", silent = true } },
         config = function()
             vim.g.NERDTreeShowHidden = 1
-            vim.keymap.set('n', '<C-n>', '<cmd>NERDTreeFocus<CR>', { desc = "Open NERDTree"})
+            vim.keymap.set('n', '<leader>n', '<cmd>NERDTreeFocus<CR>', { desc = "Open NERDTree"})
             vim.api.nvim_create_autocmd("FileType", {
                     pattern = "nerdtree",
                     callback = function()
@@ -147,12 +146,12 @@ map("n", "sk", function() MaximumWindow("k") end, { desc = "Toggle Maximize Up/D
 map("n", "sl", function() MaximumWindow("l") end, { desc = "Toggle Maximize Left/Right" })
 
 -- WINDOW MANAGEMENT
-map("n", "s", "<Nop>")
-map("n", "st", "<cmd>tabnew<CR>", { desc = "New Tab" })
+-- map("n", "s", "<Nop>")
 map("n", "ss", "<cmd>split<CR>", { desc = "Split" })
 map("n", "sv", "<cmd>vsplit<CR>", { desc = "Vertical Split" })
 map("n", "s-", "<C-w>_", { desc = "Window maximize height" })
 map("n", "s=", "<C-w>=", { desc = "Equalize Splits" })
+map("n", "st", "<cmd>tabnew<CR>", { desc = "New Tab" })
 map("n", "sq", "<C-w>q", { desc = "Close Window" })
 map("n", "K", "gt", { desc = "Next Tab" })
 map("n", "J", "gT", { desc = "Previous Tab" })

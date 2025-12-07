@@ -15,7 +15,7 @@ Plug 'easymotion/vim-easymotion'
 " 3. PLUGIN SETTING
 " =============================================================
 " NERDTree
-map <C-n> :NERDTreeFocus<CR>
+map <leader>n :NERDTreeFocus<CR>
 
 " easymotion
 map <leader>w <Plug>(easymotion-bd-w)
