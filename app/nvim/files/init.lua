@@ -131,6 +131,13 @@ vim.cmd([[
     set list listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
     set undofile undodir=~/.cache/undo/
 
+    " automatically reload files changed outside vim
+    set autoread
+
+    " set autoread events for better experience, omit when in cmdline mode
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+      \ if getcmdwintype() == '' | checktime | endif
+
     " TERMINAL EXIT
     tnoremap <silent> <ESC> <C-\><C-n>
 ]])
