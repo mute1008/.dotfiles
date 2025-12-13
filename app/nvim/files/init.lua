@@ -105,9 +105,9 @@ local function MaximumWindow(key)
         local target_keys
         if key == "j" or key == "k" then target_keys = "<C-w>_"
     else target_keys = "<C-w>|" end
-    local converted_keys = vim.api.nvim_replace_termcodes(target_keys, true, true, true)
-    vim.api.nvim_feedkeys(converted_keys, 'n', { nowait = true, silent = true })
-end
+        local converted_keys = vim.api.nvim_replace_termcodes(target_keys, true, true, true)
+        vim.api.nvim_feedkeys(converted_keys, 'n', { nowait = true, silent = true })
+    end
 end
 
 -- =============================================================
