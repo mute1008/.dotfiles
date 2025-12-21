@@ -18,7 +18,7 @@ winget install -e --id Google.Chrome --accept-source-agreements --accept-package
 winget install -e --id AgileBits.1Password --accept-source-agreements --accept-package-agreements
 winget install -e --id Discord.Discord --accept-source-agreements --accept-package-agreements
 winget install -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements
-winget install -e --id glzr-io.GlazeWM --accept-source-agreements --accept-package-agreements
+winget install -e --id glzr-io.glazewm --accept-source-agreements --accept-package-agreements
 winget install -e --id Microsoft.PowerToys --accept-source-agreements --accept-package-agreements
 winget install -e --id Google.JapaneseIME --accept-source-agreements --accept-package-agreements
 winget install -e --id Microsoft.Sysinternals.Ctrl2Cap --accept-source-agreements --accept-package-agreements

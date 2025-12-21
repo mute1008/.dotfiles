@@ -12,7 +12,4 @@ if [ ! -f $HOME/.local/bin/mise ]; then
 
   mise install go@1.24.3
   mise use go@1.24.3 -g
-
-  mise install ruby@3.4.4
-  mise use ruby@3.4.4 -g
 fi
