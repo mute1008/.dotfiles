@@ -1,5 +1,6 @@
 autoload -Uz compinit && compinit -C
 bindkey -e
+zstyle ':completion:*' menu select
 
 # theme
 source ~/.dotfiles/app/zsh/files/ys-orange.zsh-theme
