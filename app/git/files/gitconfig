@@ -1,5 +1,11 @@
 [user]
-	name = mute1008
+	name = mute1997
 	email = mute1008@gmail.com
 [core]
 	excludesfile = ~/.dotfiles/app/git/files/gitignore
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

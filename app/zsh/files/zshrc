@@ -1,25 +1,14 @@
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="af-magic"
-plugins=(
-  alias-finder
-  aws
-  brew
-  command-not-found
-  docker
-  docker-compose
-  extract
-  git
-  gh
-  npm
-  ssh
-  yarn
-  z
-)
+autoload -Uz compinit && compinit -C
 
-# alias-finder
-zstyle ':omz:plugins:alias-finder' autoload yes
+# theme
+source ~/.dotfiles/app/zsh/files/ys-orange.zsh-theme
 
-source $ZSH/oh-my-zsh.sh
+# tmux auto-start
+if [[ -z "$TMUX" && -o interactive ]]; then
+  export COLORFGBG="15;0"
+  while read -t 0.1 -k 1 2>/dev/null; do :; done
+  exec tmux new-session
+fi
 
 # User configuration
 export LANG=ja_JP.UTF-8

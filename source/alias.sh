@@ -1,7 +1,3 @@
-if [ "$(ps -o comm= -p $$)" = "zsh" ]; then
-  unfunction d
-fi
-
 # editor
 alias vim='nvim'
 alias vi='nvim'
