@@ -26,11 +26,11 @@ vim.opt.rtp:prepend(lazypath)
 -- =============================================================
 local plugins = {
     {
-        "folke/tokyonight.nvim",
+        "savq/melange-nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd[[colorscheme tokyonight]]
+            vim.cmd[[colorscheme melange]]
         end
     },
     {
@@ -43,7 +43,7 @@ local plugins = {
         keys = { { "<leader>n", mode = "n", silent = true } },
         config = function()
             vim.g.NERDTreeShowHidden = 1
-            vim.keymap.set('n', '<leader>n', '<cmd>NERDTreeFocus<CR>', { desc = "Open NERDTree"})
+            vim.keymap.set('n', '<leader>n', '<cmd>NERDTreeToggle<CR>', { desc = "Toggle NERDTree"})
             vim.api.nvim_create_autocmd("FileType", {
                     pattern = "nerdtree",
                     callback = function()
