@@ -16,6 +16,12 @@ in
 
   programs.home-manager.enable = true;
 
+  # ユーザー名 / ホームは固定せず、実行時の環境から取る（--impure 前提）。
+  # これで「セットアップしたマシンの、そのユーザー」に対して設定が入る。
+  # $HOME は mac=/Users/xxx, linux=/home/xxx に解決されるのでパス差も吸収される。
+  home.username = builtins.getEnv "USER";
+  home.homeDirectory = builtins.getEnv "HOME";
+
   # README の brew / apt で手動導入していた CLI ツール群をここに集約。
   # mac / WSL 共通。言語ランタイム(python/node/go)は mise の担当なので入れない。
   home.packages = with pkgs; [

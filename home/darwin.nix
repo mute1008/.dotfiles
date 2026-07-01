@@ -7,8 +7,7 @@ in
 {
   imports = [ ./common.nix ];
 
-  home.username = "naoya";
-  home.homeDirectory = "/Users/naoya";
+  # username / homeDirectory は common.nix で環境から自動取得する
 
   # macOS 固有の dotfiles（GUI アプリの設定リンク）。
   # アプリ本体(karabiner-elements / aerospace)は Nix 管轄外で、

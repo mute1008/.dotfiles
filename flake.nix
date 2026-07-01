@@ -15,27 +15,23 @@
 
   outputs = { self, nixpkgs, home-manager, ... }:
     let
-      # 環境を1つ組み立てるヘルパー。system(CPU/OS) と module(構成) を渡す
-      mkHome = { system, module }:
-        home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
-          modules = [ module ];
-        };
+      lib = nixpkgs.lib;
+
+      # --impure 実行時に「コマンドを打ったマシン」から自動取得する。
+      # これによりプラットフォームもユーザーも固定せず、全マシン共通の1コマンドで済む。
+      #   home-manager switch --flake ~/.dotfiles#default --impure
+      system = builtins.currentSystem;
+
+      # mac か linux(WSL) かを system 名から自動判定してモジュールを選ぶ
+      module =
+        if lib.hasInfix "darwin" system
+        then ./home/darwin.nix
+        else ./home/wsl.nix;
     in
     {
-      # `home-manager switch --flake .#<名前>` で選ぶ環境たち
-      homeConfigurations = {
-        # macOS (Apple Silicon)
-        "naoya@mac" = mkHome {
-          system = "aarch64-darwin";
-          module = ./home/darwin.nix;
-        };
-
-        # WSL (Ubuntu)
-        "naoya@wsl" = mkHome {
-          system = "x86_64-linux";
-          module = ./home/wsl.nix;
-        };
+      homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [ module ];
       };
     };
 }
