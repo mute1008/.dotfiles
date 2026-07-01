@@ -27,27 +27,18 @@ home-manager generations
 home-manager switch --rollback
 ```
 
-> **flake.lock について**: 再現性のため `flake.lock` をコミットで固定する。まだ無い場合は
-> Nix 導入済みマシンで一度 `nix flake lock` を実行し、生成された `flake.lock` を commit すること
-> （ローカルに Nix が無い環境では生成できない）。
+`flake.lock` は Nix 導入済みマシンで `nix flake lock` して commit する（未導入環境では生成不可）。
 
 構成:
-- `flake.nix` … 入口。inputs=nixpkgs(24.11)+home-manager, outputs=`naoya@mac` / `mute@wsl`
-- `home/common.nix` … mac/WSL 共通（CLI ツール + dotfiles リンク + mise 導入 hook）
+- `flake.nix` … outputs=`naoya@mac` / `mute@wsl`
+- `home/common.nix` … 共通（CLI ツール + dotfiles リンク + mise 導入 hook）
 - `home/darwin.nix` … macOS 固有（karabiner / aerospace / sketchybar）
-- `home/wsl.nix` … WSL 固有（IdeaVim / GlazeWM を Windows 側へコピーする activation hook）
-- `app/*/files/` … 既存の設定ファイル。Home Manager から実体を指すリンクで参照（従来の safe_ln と同じ挙動）
+- `home/wsl.nix` … WSL 固有（IdeaVim / GlazeWM を Windows 側へコピー）
 
-補足:
-- 設定ファイル(`zshrc`, `nvim/init.lua` 等)の**中身の編集は switch 不要**でその場反映される（`mkOutOfStoreSymlink`）。switch が要るのは「入れるツールを変えた / flake・*.nix・activation hook を変えた」とき。
-- **Windows 側への反映（IdeaVim・GlazeWM）は switch 実行時にのみコピーされる**。`config.yaml` を編集しただけでは反映されないので、変更後は `home-manager switch` を実行する。
-- 言語ランタイム(python/node/go)は従来どおり mise の担当。バージョンは `app/mise/set.sh` / `mise.toml` 側で管理する。
-- Windows アプリ本体(glazewm 等)の**導入**は Nix 管轄外（winget、下記参照）。Nix が扱うのは設定ファイルの配置のみ。
-
-### install.sh との併存ルール
-- **Nix を導入したマシンでは `install.sh` を実行しない**（dotfiles の所有を Home Manager に一本化するため）。
-- `install.sh`（symlink 方式）は Nix 未導入マシン向けのフォールバックとして残す。
-- 将来的には全マシンを Home Manager へ寄せる想定。
+メモ:
+- 設定ファイルの中身編集は switch 不要（`mkOutOfStoreSymlink`）。switch が要るのはツール追加や `*.nix` 変更時。
+- Windows 側へのコピーは switch 時のみ。`config.yaml` 変更後は `home-manager switch` する。
+- Nix 導入マシンでは `install.sh` を実行しない（所有を Home Manager に一本化）。install.sh は未導入マシン用に残す。
 
 # WSL (Ubuntu)
 ```sh
