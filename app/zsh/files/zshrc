@@ -18,6 +18,14 @@ export LANG=ja_JP.UTF-8
 source ~/.dotfiles/source/alias.sh
 source ~/.dotfiles/source/export.sh
 
+# Nix (Home Manager)
+# zshrc は home.file で丸ごとリンクしているため programs.zsh の自動注入が効かない。
+# Home Manager の session 変数を明示的に読み、Nix profile を PATH に通す。
+if [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+  . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+fi
+[ -d "$HOME/.nix-profile/bin" ] && export PATH="$HOME/.nix-profile/bin:$PATH"
+
 # tmux auto-start
 if [[ -z "$TMUX" && -o interactive ]] && command -v tmux &>/dev/null; then
   export COLORFGBG="15;0"

@@ -16,11 +16,7 @@ in
 
   programs.home-manager.enable = true;
 
-  # ユーザー名 / ホームは固定せず、実行時の環境から取る（--impure 前提）。
-  # これで「セットアップしたマシンの、そのユーザー」に対して設定が入る。
-  # $HOME は mac=/Users/xxx, linux=/home/xxx に解決されるのでパス差も吸収される。
-  home.username = builtins.getEnv "USER";
-  home.homeDirectory = builtins.getEnv "HOME";
+  # username / homeDirectory は flake.nix 側で明示的に注入する（--impure 回避）。
 
   # README の brew / apt で手動導入していた CLI ツール群をここに集約。
   # mac / WSL 共通。言語ランタイム(python/node/go)は mise の担当なので入れない。
@@ -44,4 +40,14 @@ in
 
   # ~/.config 以下（nvim は files/ ディレクトリごとリンク）
   xdg.configFile."nvim".source = link "app/nvim/files";
+
+  # 言語ランタイムの所有は従来どおり mise に委ねるが、mise 本体の導入だけは
+  # switch に畳んでおく（冪等: 既に入っていれば何もしない）。これで新マシンでも
+  # 「Nix 導入 → switch」だけで mise が使える状態になり、手順分岐を避けられる。
+  # ランタイムのバージョン固定は app/mise/set.sh / mise.toml 側の責務。
+  home.activation.miseBootstrap = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ ! -x "$HOME/.local/bin/mise" ]; then
+      run ${pkgs.curl}/bin/curl -fsSL https://mise.run | run ${pkgs.bash}/bin/bash
+    fi
+  '';
 }
