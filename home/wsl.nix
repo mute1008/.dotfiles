@@ -6,7 +6,7 @@ in
 {
   imports = [ ./main.nix ];
 
-  # Windows FS は symlink 不可なのでコピー（best-effort）。
+  # Windows FS は symlink 不可なのでコピー処理を行う
   home.activation.windowsSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     _windowsSync() {
       [ -d /mnt/c/Users ] || return 0

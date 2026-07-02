@@ -16,6 +16,8 @@ in
     git
     ripgrep
     neovim
+    tmux
+    mise
     trash-cli
     coreutils
     findutils
@@ -32,10 +34,7 @@ in
   xdg.configFile."nvim".source = link "app/nvim";
   xdg.configFile."mise/config.toml".source = link "app/mise/config.toml";
 
-  home.activation.miseBootstrap = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    if [ ! -x "$HOME/.local/bin/mise" ]; then
-      run ${pkgs.curl}/bin/curl -fsSL https://mise.run | run ${pkgs.bash}/bin/bash
-    fi
-    run "$HOME/.local/bin/mise" install
+  home.activation.miseInstall = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    run ${pkgs.mise}/bin/mise install
   '';
 }

@@ -13,7 +13,8 @@ in
     "sketchybar".source = link "app/aerospace/sketchybar";
   };
 
-  # GUI アプリは brew cask で導入（初回は sudo）。
+  # Karabiner-Elementsなどのアプリはnixpkgsでは不安定になってしまう
+  # そのためnixpkgsを利用せずにここでインストールする
   home.activation.brewBootstrap = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ ! -x /opt/homebrew/bin/brew ]; then
       export NONINTERACTIVE=1
