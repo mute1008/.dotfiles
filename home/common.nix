@@ -19,14 +19,14 @@ in
   ];
 
   home.file = {
-    ".zshrc".source = link "app/zsh/files/zshrc";
-    ".gitconfig".source = link "app/git/files/gitconfig";
-    ".tmux.conf".source = link "app/tmux/files/tmux.conf";
-    ".ssh/config".source = link "app/ssh/files/config";
-    ".ideavimrc".source = link "app/intellij/files/ideavimrc";
+    ".zshrc".source = link "app/zsh/zshrc";
+    ".gitconfig".source = link "app/git/gitconfig";
+    ".tmux.conf".source = link "app/tmux/tmux.conf";
+    ".ssh/config".source = link "app/ssh/config";
+    ".ideavimrc".source = link "app/intellij/ideavimrc";
   };
-  xdg.configFile."nvim".source = link "app/nvim/files";
-  xdg.configFile."mise/config.toml".source = link "app/mise/files/config.toml";
+  xdg.configFile."nvim".source = link "app/nvim";
+  xdg.configFile."mise/config.toml".source = link "app/mise/config.toml";
 
   # 言語ランタイムは Nix ではなく mise の担当。バージョンは上の config.toml で宣言し、
   # mise 本体の導入と install はここで命令的に行う。

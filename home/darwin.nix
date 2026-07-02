@@ -8,10 +8,10 @@ in
   imports = [ ./common.nix ];
 
   # 設定リンク（本体は下の brew で導入）
-  home.file.".aerospace.toml".source = link "app/aerospace/files/aerospace.toml";
+  home.file.".aerospace.toml".source = link "app/aerospace/aerospace.toml";
   xdg.configFile = {
-    "karabiner/karabiner.json".source = link "app/karabiner/files/karabiner.json";
-    "sketchybar".source = link "app/aerospace/files/sketchybar";
+    "karabiner/karabiner.json".source = link "app/karabiner/karabiner.json";
+    "sketchybar".source = link "app/aerospace/sketchybar";
   };
 
   # GUI アプリ(aerospace/karabiner/sketchybar)は Nix で扱えないため brew cask で導入。

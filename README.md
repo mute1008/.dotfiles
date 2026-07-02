@@ -36,7 +36,7 @@ switch が何を担うか:
 |---|---|---|
 | CLI (git, neovim, ripgrep, trash-cli, coreutils, findutils, binutils) | 宣言 (`home.packages`) | `home/common.nix` |
 | dotfiles リンク (zshrc, gitconfig, tmux, ssh, ideavim, nvim) | 宣言 (symlink) | `home/common.nix` |
-| 言語ランタイム (python/node/go) | mise。バージョンは宣言、install は hook | `app/mise/files/config.toml` |
+| 言語ランタイム (python/node/go) | mise。バージョンは宣言、install は hook | `app/mise/config.toml` |
 | mac GUI (aerospace, karabiner, sketchybar) | brew cask。リストは宣言、bundle は hook | `home/Brewfile` |
 | Windows 側コピー (ideavim, glazewm) | WSL の activation hook | `home/wsl.nix` |
 | Windows ネイティブアプリ本体 | winget（Nix で扱えない） | 末尾 |
