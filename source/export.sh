@@ -14,10 +14,5 @@ export PATH="/opt/homebrew/bin/:$PATH"
 # snap
 export PATH="/snap/bin:$PATH"
 
-# bin
-export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
-export PATH="/opt/homebrew/opt/findutils/bin:$PATH"
-export PATH="/opt/homebrew/opt/coreutils/bin:$PATH"
-
 # Chrome
 export PATH="$HOME/.depot_tools:$PATH"
