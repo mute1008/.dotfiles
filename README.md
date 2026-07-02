@@ -1,8 +1,7 @@
 # dotfiles
 
 ```sh
-$ # Nix をインストール
-$ #   - https://nixos.org/download/
+$ # Nix をインストール (https://nixos.org/download/)
 ```
 
 ```sh
