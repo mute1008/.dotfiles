@@ -13,6 +13,7 @@ in
   home.homeDirectory = builtins.getEnv "HOME";
 
   home.packages = with pkgs; [
+    zsh
     git
     ripgrep
     neovim
