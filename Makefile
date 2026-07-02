@@ -1,2 +1,0 @@
-all:
-	@bash install.sh

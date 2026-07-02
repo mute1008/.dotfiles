@@ -12,7 +12,7 @@ OS のパッケージ管理で入れておく（`brew install zsh` / `apt instal
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # 2. 初回のみ: 既存の dotfiles を退避する。
-#    install.sh 由来の symlink や手置きの実ファイルが残っていると switch が
+#    既存の symlink や手置きの実ファイルが残っていると switch が
 #    "would be clobbered" で止まるため。(`-b backup` でも回避できるがこちらが確実)
 for f in ~/.zshrc ~/.gitconfig ~/.tmux.conf ~/.ssh/config ~/.ideavimrc; do
   [ -e "$f" ] && mv "$f" "$f.pre-hm"
@@ -30,8 +30,6 @@ home-manager switch --rollback
 
 `flake.lock` は Nix 導入済みマシンで `nix flake lock` して commit する（未導入環境では生成不可）。
 
-`flake.lock` は Nix 導入済みマシンで `nix flake lock` して commit する（未導入環境では生成不可）。
-
 switch が何を担うか:
 
 | 対象 | やり方 | どこ |
@@ -46,7 +44,6 @@ switch が何を担うか:
 メモ:
 - 設定ファイルの中身編集は switch 不要（`mkOutOfStoreSymlink`）。switch が要るのはツール追加や `*.nix` 変更時。
 - mac の GUI cask 導入は初回 `sudo` を要求する。Windows 側コピーは switch 時のみ反映される。
-- Nix 導入マシンでは `install.sh` を実行しない（所有を Home Manager に一本化）。install.sh は未導入マシン用に残す。
 
 # Windows（ネイティブアプリ）
 ```powershell
