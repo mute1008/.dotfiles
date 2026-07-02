@@ -27,14 +27,14 @@ in
   ];
 
   home.file = {
-    ".zshrc".source = link "app/zsh/zshrc";
-    ".gitconfig".source = link "app/git/gitconfig";
-    ".tmux.conf".source = link "app/tmux/tmux.conf";
-    ".ssh/config".source = link "app/ssh/config";
-    ".ideavimrc".source = link "app/intellij/ideavimrc";
+    ".zshrc".source = link "config/zsh/zshrc";
+    ".gitconfig".source = link "config/git/gitconfig";
+    ".tmux.conf".source = link "config/tmux/tmux.conf";
+    ".ssh/config".source = link "config/ssh/config";
+    ".ideavimrc".source = link "config/intellij/ideavimrc";
   };
-  xdg.configFile."nvim".source = link "app/nvim";
-  xdg.configFile."mise/config.toml".source = link "app/mise/config.toml";
+  xdg.configFile."nvim".source = link "config/nvim";
+  xdg.configFile."mise/config.toml".source = link "config/mise/config.toml";
 
   home.activation.miseInstall = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     run ${pkgs.mise}/bin/mise install

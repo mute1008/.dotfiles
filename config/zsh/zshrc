@@ -13,12 +13,12 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # theme
-source ~/.dotfiles/app/zsh/ys-orange.zsh-theme
+source ~/.dotfiles/config/zsh/ys-orange.zsh-theme
 
 # User configuration
 export LANG=ja_JP.UTF-8
-source ~/.dotfiles/app/zsh/alias.sh
-source ~/.dotfiles/app/zsh/export.sh
+source ~/.dotfiles/config/zsh/alias.sh
+source ~/.dotfiles/config/zsh/export.sh
 
 # nix (home-manager)
 [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"

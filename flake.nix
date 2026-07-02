@@ -14,8 +14,8 @@
       system = builtins.currentSystem;
       module =
         if nixpkgs.lib.hasInfix "darwin" system
-        then ./home/darwin.nix
-        else ./home/wsl.nix;
+        then ./nix/darwin.nix
+        else ./nix/wsl.nix;
     in
     {
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
