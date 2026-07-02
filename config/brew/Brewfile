@@ -4,6 +4,9 @@ tap "FelixKratz/formulae"
 cask "aerospace"
 brew "sketchybar"
 
+# cli
+brew "gh"
+
 # keyboard
 cask "karabiner-elements"
 
