@@ -1,6 +1,16 @@
+# tiling wm + status bar
 tap "nikitabobko/tap"
 tap "FelixKratz/formulae"
-
 cask "aerospace"
-cask "karabiner-elements"
 brew "sketchybar"
+
+# keyboard
+cask "karabiner-elements"
+
+# apps
+cask "1password"
+cask "google-chrome"
+cask "iterm2"
+cask "visual-studio-code"
+cask "jetbrains-toolbox"
+cask "rancher"
