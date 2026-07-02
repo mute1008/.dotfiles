@@ -1,27 +1,18 @@
-# WSL (Ubuntu)
+# dotfiles
+
 ```sh
-sudo apt update
-sudo apt install -y zsh git neovim ripgrep trash-cli
+$ # Nix をインストール
+$ #   - https://nixos.org/download/
 ```
 
-# macOS
 ```sh
-brew update
-brew install zsh git neovim ripgrep trash-cli coreutils binutils findutils
+$ # インストール
+$ git clone https://github.com/mute1008/.dotfiles ~/.dotfiles
+$ make
 ```
 
-
-# Windows
-```powershell
-winget source update
-winget install -e --id Google.Chrome --accept-source-agreements --accept-package-agreements
-winget install -e --id AgileBits.1Password --accept-source-agreements --accept-package-agreements
-winget install -e --id Discord.Discord --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements
-winget install -e --id glzr-io.glazewm --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.PowerToys --accept-source-agreements --accept-package-agreements
-winget install -e --id Google.JapaneseIME --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.Sysinternals.Ctrl2Cap --accept-source-agreements --accept-package-agreements
-wsl --install
-ctrl2cap /install
+```sh
+$ # デフォルトシェルの変更
+$ echo "$HOME/.nix-profile/bin/zsh" | sudo tee -a /etc/shells
+$ chsh -s "$HOME/.nix-profile/bin/zsh"
 ```
