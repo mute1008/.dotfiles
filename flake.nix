@@ -1,5 +1,5 @@
 {
-  description = "naoya's dotfiles — Home Manager (macOS + WSL)";
+  description = "dotfiles — Home Manager (macOS + WSL)";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -11,8 +11,6 @@
 
   outputs = { self, nixpkgs, home-manager, ... }:
     let
-      # --impure 前提。system/USER/HOME を実行マシンから取るので username を固定せず、
-      # 任意の Linux ユーザーでもそのまま通る。
       system = builtins.currentSystem;
       module =
         if nixpkgs.lib.hasInfix "darwin" system

@@ -3,7 +3,7 @@
 ## セットアップ
 
 ```sh
-# Nix: https://nixos.org/download/
+# Nix をインストール: https://nixos.org/download/
 git clone https://github.com/mute1008/.dotfiles ~/.dotfiles
 
 home-manager switch --flake ~/.dotfiles#default --impure   # 衝突時は -b backup
@@ -24,16 +24,10 @@ home-manager switch --rollback
 
 ## Windows
 
+アプリは `home/winget.json`（`winget export -o` で更新）を WSL の switch で `winget import` する。
+host 側で手動:
+
 ```powershell
-winget source update
-winget install -e --id Google.Chrome --accept-source-agreements --accept-package-agreements
-winget install -e --id AgileBits.1Password --accept-source-agreements --accept-package-agreements
-winget install -e --id Discord.Discord --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements
-winget install -e --id glzr-io.glazewm --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.PowerToys --accept-source-agreements --accept-package-agreements
-winget install -e --id Google.JapaneseIME --accept-source-agreements --accept-package-agreements
-winget install -e --id Microsoft.Sysinternals.Ctrl2Cap --accept-source-agreements --accept-package-agreements
 wsl --install
 ctrl2cap /install
 ```

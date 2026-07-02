@@ -5,7 +5,7 @@ let
   link = path: config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${path}";
 in
 {
-  imports = [ ./common.nix ];
+  imports = [ ./main.nix ];
 
   # 設定リンク（本体は下の brew で導入）
   home.file.".aerospace.toml".source = link "app/aerospace/aerospace.toml";
