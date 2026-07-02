@@ -6,3 +6,4 @@ java = "openjdk-21"
 
 [settings]
 python.compile = false
+ruby.compile = false

@@ -20,6 +20,11 @@ in
       export NONINTERACTIVE=1
       run ${pkgs.bash}/bin/bash -c "$(${pkgs.curl}/bin/curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
+    ${pkgs.gnugrep}/bin/grep -E '^tap ' ${dotfiles}/app/brew/Brewfile \
+      | ${pkgs.gnused}/bin/sed -E 's/^tap "([^"]+)".*/\1/' \
+      | while read -r t; do
+          run /opt/homebrew/bin/brew trust "$t" || true
+        done
     run /opt/homebrew/bin/brew bundle --file=${dotfiles}/app/brew/Brewfile
   '';
 }
