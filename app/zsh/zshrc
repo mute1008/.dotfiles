@@ -9,6 +9,8 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 bindkey -e
 zstyle ':completion:*' menu select
+# 補完で大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # theme
 source ~/.dotfiles/app/zsh/ys-orange.zsh-theme
