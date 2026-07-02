@@ -22,6 +22,7 @@ in
     coreutils
     findutils
     binutils
+    claude-code
   ];
 
   home.file = {
