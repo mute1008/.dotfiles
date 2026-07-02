@@ -8,6 +8,7 @@
 				{ "PackageIdentifier": "AgileBits.1Password" },
 				{ "PackageIdentifier": "Discord.Discord" },
 				{ "PackageIdentifier": "Microsoft.VisualStudioCode" },
+				{ "PackageIdentifier": "JetBrains.Toolbox" },
 				{ "PackageIdentifier": "glzr-io.glazewm" },
 				{ "PackageIdentifier": "Microsoft.PowerToys" },
 				{ "PackageIdentifier": "Google.JapaneseIME" },

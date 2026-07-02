@@ -48,5 +48,8 @@ nnoremap <Space>r :action FindUsages<CR>
 nnoremap <Space><Space> :action QuickImplementations<CR>
 nnoremap <Space>f :action ToggleBookmark<CR>
 
+" モード(タスク)切替
+nnoremap <Space>h :action tasks.goto<CR>
+
 " Exモードへの移行を無効化
 map Q gq
