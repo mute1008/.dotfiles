@@ -12,10 +12,12 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = builtins.currentSystem;
+      isDarwin = nixpkgs.lib.hasInfix "darwin" system;
+      isWSL = builtins.getEnv "WSL_DISTRO_NAME" != "";
       module =
-        if nixpkgs.lib.hasInfix "darwin" system
-        then ./nix/darwin.nix
-        else ./nix/wsl.nix;
+        if isDarwin then ./nix/darwin.nix
+        else if isWSL then ./nix/wsl.nix
+        else ./nix/linux.nix;
     in
     {
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
