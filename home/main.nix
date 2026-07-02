@@ -23,6 +23,7 @@ in
     findutils
     binutils
     claude-code
+    devcontainer
   ];
 
   home.file = {
