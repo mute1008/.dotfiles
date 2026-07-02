@@ -6,7 +6,7 @@ in
 {
   imports = [ ./common.nix ];
 
-  # Windows 側は symlink 不可なのでコピーで反映（switch 時のみ実行）。
+  # Windows FS は symlink 不可。
   home.activation.windowsSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ -d /mnt/c/Users ]; then
       win_user=$(/mnt/c/Windows/System32/cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')

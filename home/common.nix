@@ -2,15 +2,14 @@
 
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
-  # safe_ln 相当。Nix store にコピーせず作業ディレクトリの実体を指すので編集が即反映される。
   link = path: config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${path}";
 in
 {
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
-  # username / homeDirectory は flake.nix で注入。
 
   home.packages = with pkgs; [
+    git
     ripgrep
     neovim
     trash-cli
@@ -27,11 +26,15 @@ in
     ".ideavimrc".source = link "app/intellij/files/ideavimrc";
   };
   xdg.configFile."nvim".source = link "app/nvim/files";
+  xdg.configFile."mise/config.toml".source = link "app/mise/files/config.toml";
 
-  # ランタイムは mise 管理のまま、mise 本体の導入だけ switch に畳む（冪等）。
+  # 言語ランタイムは Nix ではなく mise の担当。バージョンは上の config.toml で宣言し、
+  # mise 本体の導入と install はここで命令的に行う。
   home.activation.miseBootstrap = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ ! -x "$HOME/.local/bin/mise" ]; then
       run ${pkgs.curl}/bin/curl -fsSL https://mise.run | run ${pkgs.bash}/bin/bash
     fi
+    run "$HOME/.local/bin/mise" settings set python.compile false
+    run "$HOME/.local/bin/mise" install
   '';
 }

@@ -1,0 +1,6 @@
+tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
+
+cask "aerospace"
+cask "karabiner-elements"
+brew "sketchybar"

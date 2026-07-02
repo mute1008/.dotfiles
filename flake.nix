@@ -21,8 +21,6 @@
         };
     in
     {
-      # home-manager switch --flake ~/.dotfiles#naoya@mac
-      # home-manager switch --flake ~/.dotfiles#mute@wsl
       homeConfigurations = {
         "naoya@mac" = mk {
           system = "aarch64-darwin";

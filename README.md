@@ -1,10 +1,11 @@
-# Nix (Home Manager) — 試験導入
+# Nix (Home Manager)
 
-macOS / WSL の dotfiles と CLI ツールを宣言的に管理する。
-言語ランタイム(python/node/go)は従来どおり mise の担当で、Nix では扱わない。
-Windows 本体(glazewm 等)は Nix 管轄外のため別管理（winget 等）。
+macOS / WSL のセットアップを Home Manager に集約する。`switch` 一発で、CLI ツール・
+dotfiles リンク・言語ランタイム・(mac)GUI アプリまで揃う。Windows ネイティブアプリ
+(glazewm 本体等)だけは Nix で扱えないので winget（末尾）で入れる。
 
-前提: このリポジトリは `~/.dotfiles` に clone してある。
+前提: このリポジトリは `~/.dotfiles` に clone してある。ログインシェルの zsh 本体だけは
+OS のパッケージ管理で入れておく（`brew install zsh` / `apt install zsh` → `chsh`）。
 
 ```sh
 # 1. Nix 本体を入れる（未導入の場合のみ）
@@ -29,31 +30,25 @@ home-manager switch --rollback
 
 `flake.lock` は Nix 導入済みマシンで `nix flake lock` して commit する（未導入環境では生成不可）。
 
-構成:
-- `flake.nix` … outputs=`naoya@mac` / `mute@wsl`
-- `home/common.nix` … 共通（CLI ツール + dotfiles リンク + mise 導入 hook）
-- `home/darwin.nix` … macOS 固有（karabiner / aerospace / sketchybar）
-- `home/wsl.nix` … WSL 固有（IdeaVim / GlazeWM を Windows 側へコピー）
+`flake.lock` は Nix 導入済みマシンで `nix flake lock` して commit する（未導入環境では生成不可）。
+
+switch が何を担うか:
+
+| 対象 | やり方 | どこ |
+|---|---|---|
+| CLI (git, neovim, ripgrep, trash-cli, coreutils, findutils, binutils) | 宣言 (`home.packages`) | `home/common.nix` |
+| dotfiles リンク (zshrc, gitconfig, tmux, ssh, ideavim, nvim) | 宣言 (symlink) | `home/common.nix` |
+| 言語ランタイム (python/node/go) | mise。バージョンは宣言、install は hook | `app/mise/files/config.toml` |
+| mac GUI (aerospace, karabiner, sketchybar) | brew cask。リストは宣言、bundle は hook | `home/Brewfile` |
+| Windows 側コピー (ideavim, glazewm) | WSL の activation hook | `home/wsl.nix` |
+| Windows ネイティブアプリ本体 | winget（Nix で扱えない） | 末尾 |
 
 メモ:
 - 設定ファイルの中身編集は switch 不要（`mkOutOfStoreSymlink`）。switch が要るのはツール追加や `*.nix` 変更時。
-- Windows 側へのコピーは switch 時のみ。`config.yaml` 変更後は `home-manager switch` する。
+- mac の GUI cask 導入は初回 `sudo` を要求する。Windows 側コピーは switch 時のみ反映される。
 - Nix 導入マシンでは `install.sh` を実行しない（所有を Home Manager に一本化）。install.sh は未導入マシン用に残す。
 
-# WSL (Ubuntu)
-```sh
-sudo apt update
-sudo apt install -y zsh git neovim ripgrep trash-cli
-```
-
-# macOS
-```sh
-brew update
-brew install zsh git neovim ripgrep trash-cli coreutils binutils findutils
-```
-
-
-# Windows
+# Windows（ネイティブアプリ）
 ```powershell
 winget source update
 winget install -e --id Google.Chrome --accept-source-agreements --accept-package-agreements
