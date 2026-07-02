@@ -11,29 +11,18 @@
 
   outputs = { self, nixpkgs, home-manager, ... }:
     let
-      mk = { system, module, username, homeDirectory }:
-        home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
-          modules = [
-            module
-            { home.username = username; home.homeDirectory = homeDirectory; }
-          ];
-        };
+      # --impure 前提。system/USER/HOME を実行マシンから取るので username を固定せず、
+      # 任意の Linux ユーザーでもそのまま通る。
+      system = builtins.currentSystem;
+      module =
+        if nixpkgs.lib.hasInfix "darwin" system
+        then ./home/darwin.nix
+        else ./home/wsl.nix;
     in
     {
-      homeConfigurations = {
-        "naoya@mac" = mk {
-          system = "aarch64-darwin";
-          module = ./home/darwin.nix;
-          username = "naoya";
-          homeDirectory = "/Users/naoya";
-        };
-        "mute@wsl" = mk {
-          system = "x86_64-linux";
-          module = ./home/wsl.nix;
-          username = "mute";
-          homeDirectory = "/home/mute";
-        };
+      homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [ module ];
       };
     };
 }
