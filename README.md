@@ -4,9 +4,18 @@
 
 ```sh
 # Nix をインストール: https://nixos.org/download/
+
+# flakes を有効化
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+
 git clone https://github.com/mute1008/.dotfiles ~/.dotfiles
 
-home-manager switch --flake ~/.dotfiles#default --impure   # 衝突時は -b backup
+# 初回は home-manager が未導入なので nix run で適用（衝突時は末尾に -b backup）
+nix run github:nix-community/home-manager/release-24.11 -- switch --flake ~/.dotfiles#default --impure
+
+# 以降の再適用
+home-manager switch --flake ~/.dotfiles#default --impure
 
 # zsh を login shell に
 echo "$HOME/.nix-profile/bin/zsh" | sudo tee -a /etc/shells
