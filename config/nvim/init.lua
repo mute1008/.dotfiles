@@ -30,6 +30,7 @@ local plugins = {
         lazy = false,
         priority = 1000,
         config = function()
+            vim.o.background = "light"
             vim.cmd[[colorscheme melange]]
         end
     },
@@ -117,7 +118,7 @@ vim.opt.termguicolors = true
 
 vim.cmd([[
     " OPTIONS
-    set background=dark
+    set background=light
     set tabstop=2
     set shiftwidth=2
     set autoindent
@@ -127,6 +128,7 @@ vim.cmd([[
     set ambiwidth=double
     set cindent
     set hidden
+    set shortmess+=I
     set clipboard+=unnamedplus
     set sh=zsh
     set cursorline
