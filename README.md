@@ -24,7 +24,7 @@ home-manager switch --rollback
 
 ## Windows
 
-アプリは `home/winget.json`（`winget export -o` で更新）を WSL の switch で `winget import` する。
+アプリは `app/winget/packages.json`（`winget export -o` で更新）を WSL の switch で `winget import` する。
 host 側で手動:
 
 ```powershell

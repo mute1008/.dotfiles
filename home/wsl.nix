@@ -27,7 +27,7 @@ in
       [ -n "$user" ] || return 0
       winget="/mnt/c/Users/$user/AppData/Local/Microsoft/WindowsApps/winget.exe"
       [ -e "$winget" ] || return 0
-      "$winget" import -i "$(wslpath -w ${dotfiles}/home/winget.json)" \
+      "$winget" import -i "$(wslpath -w ${dotfiles}/app/winget/packages.json)" \
         --accept-package-agreements --accept-source-agreements --ignore-unavailable
     }
     _wingetSync || echo "wingetSync: 一部失敗（Windows 側は手動確認）"
