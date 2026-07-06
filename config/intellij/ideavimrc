@@ -48,8 +48,9 @@ nnoremap <Space>r :action FindUsages<CR>
 nnoremap <Space><Space> :action QuickImplementations<CR>
 nnoremap <Space>f :action ToggleBookmark<CR>
 
-" モード(タスク)切替
-nnoremap <Space>h :action tasks.goto<CR>
+" セッション(モード)切替 — 自作プラグイン Editor Sessions（tasks.goto の置き換え）
+nnoremap <Space>h :action session.switch<CR>
+nnoremap <Space>x :action session.delete<CR>
 
 " Exモードへの移行を無効化
 map Q gq
