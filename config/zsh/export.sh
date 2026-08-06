@@ -11,8 +11,8 @@ export PATH="$HOME/Library/Android/sdk/build-tools/35.0.0:$PATH"
 # brew
 export PATH="/opt/homebrew/bin/:$PATH"
 
-# snap
-export PATH="/snap/bin:$PATH"
+# go
+export GOPATH="$HOME/.go"
 
 # Chrome
-export PATH="$HOME/.depot_tools:$PATH"
+export PATH="$HOME/.local/depot_tools:$PATH"
