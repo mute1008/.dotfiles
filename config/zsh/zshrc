@@ -28,6 +28,12 @@ source ~/.dotfiles/config/zsh/export.sh
 if [[ -z "$TMUX" && -o interactive ]] && command -v tmux &>/dev/null; then
   export COLORFGBG="15;0"
   while read -t 0.1 -k 1 2>/dev/null; do :; done
+
+  # Interactive SSH logins share the existing primary session.
+  if [[ -n "$SSH_CONNECTION" ]] && tmux has-session -t 0 2>/dev/null; then
+    exec tmux attach-session -t 0
+  fi
+
   tmux new-session && exit
 fi
 
@@ -43,3 +49,24 @@ if [ -f '/Users/naoya/Documents/tools/google-cloud-sdk/completion.zsh.inc' ]; th
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/naoya/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# >>> unsnooze >>>
+# unsnooze wrappers: route every interactive launch of the CLIs below through
+# unsnooze so limit stops are recorded and auto-resumed.
+unalias claude 2>/dev/null || true
+claude() {
+  if [ "${UNSNOOZE_ACTIVE}" = "1" ] || [ ! -f "/home/mute/.local/share/mise/installs/node/24.0.0/lib/node_modules/unsnooze/bin/unsnooze.js" ]; then
+    command claude "$@"
+    return $?
+  fi
+  node "/home/mute/.local/share/mise/installs/node/24.0.0/lib/node_modules/unsnooze/bin/unsnooze.js" _run claude "$@"
+}
+unalias codex 2>/dev/null || true
+codex() {
+  if [ "${UNSNOOZE_ACTIVE}" = "1" ] || [ ! -f "/home/mute/.local/share/mise/installs/node/24.0.0/lib/node_modules/unsnooze/bin/unsnooze.js" ]; then
+    command codex "$@"
+    return $?
+  fi
+  node "/home/mute/.local/share/mise/installs/node/24.0.0/lib/node_modules/unsnooze/bin/unsnooze.js" _run codex "$@"
+}
+# <<< unsnooze <<<

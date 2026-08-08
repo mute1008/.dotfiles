@@ -17,6 +17,8 @@ in
     ripgrep
     neovim
     tmux
+    tmuxPlugins.resurrect
+    tmuxPlugins.continuum
     mise
     trash-cli
     coreutils
