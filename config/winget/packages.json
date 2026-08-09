@@ -12,7 +12,8 @@
 				{ "PackageIdentifier": "glzr-io.glazewm" },
 				{ "PackageIdentifier": "Microsoft.PowerToys" },
 				{ "PackageIdentifier": "Google.JapaneseIME" },
-				{ "PackageIdentifier": "Microsoft.Sysinternals.Ctrl2Cap" }
+				{ "PackageIdentifier": "Microsoft.Sysinternals.Ctrl2Cap" },
+				{ "PackageIdentifier": "Tailscale.Tailscale" }
 			],
 			"SourceDetails": {
 				"Argument": "https://cdn.winget.microsoft.com/cache",
