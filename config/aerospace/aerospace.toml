@@ -1,4 +1,11 @@
+config-version = 2
+
 start-at-login = true
+
+# config-version = 2 では persistent-workspaces のフォールバックが空配列になるため、
+# これまでキーバインドから推論されていたワークスペースを明示する
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
 after-startup-command = [
   'exec-and-forget sketchybar --config /Users/naoya/.config/sketchybar/sketchybarrc',
   'exec-and-forget borders active_color=0xaaff9500 inactive_color=0xff494d64 width=10.0',
